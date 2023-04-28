@@ -1,0 +1,29 @@
+@mixin lineout ($color: darkorange){
+	// outline: 1px dashed $color;
+	outline: 1px dashed transparent;
+	outline-offset: -1px;
+	// background-color: rgba(70, 130, 180, 0.5);
+}
+
+@mixin title-text {
+	font-family: "Oswald", Arial, sans-serif;
+	font-weight: 400;
+  font-style: normal;
+	font-size: 1.25em; //17.5
+	line-height: 1em;
+}
+
+
+@mixin button-text {
+  @include title-text;
+  text-transform: uppercase;
+}
+
+@mixin plaint-text {
+	// font-family: 'ArialMT', Arial, sans-serif;
+	// font-weight: 400;
+	// font-size: $font-size-small;
+	// line-height: 1.29em;
+	// color: #444444;
+  // padding: 0;
+}

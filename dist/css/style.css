@@ -1,7 +1,133 @@
-body {
-  background-color: lightcoral;
+@font-face {
+  font-family: "Jost";
+  font-display: swap;
+  src: url("../fonts/Jost-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
-body h1 {
-  text-transform: uppercase;
-  color: yellow;
+@font-face {
+  font-family: "Jost";
+  font-display: swap;
+  src: url("../fonts/Jost-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NordecoCyrillic";
+  font-display: swap;
+  src: url("../fonts/NordecoCyrillic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NordecoCyrillic";
+  font-display: swap;
+  src: url("../fonts/NordecoCyrillic-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/**
+  @media (min-width: $tablet-width) {}
+  @media (min-width: $desktop-width) {}
+
+*/
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  color: black;
+  background-color: ivory;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1.143em;
+    line-height: 1.2em;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+ul li, ol li {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  outline: 1px solid red;
+  outline-offset: -1px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 57px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    padding: 135px;
+  }
+}
+
+.promo__title {
+  font-family: "NordecoCyrillic";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2em;
+  color: #0A6BE5;
+}
+
+.promo__item {
+  font-family: "Jost";
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.2em;
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid blue;
 }

@@ -1,21 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <title>Document</title>
-</head>
+<html lang="ru">
+  @@include('html/head.html', {
+    title: "Surfstat"
+  })
+
 <body>
-  <header class="main-header">
-    <p>new site header</p>
-  </header>
+
+@@include('html/header.html', {})
+
   <main class="main-layout">
-    <h1>surfstat</h1> 
+    <h1 class="visually-hidden">Сервис Surfstat для анализа спроса и предложения на торговой площадке Wildberries</h1>
+
+    <section class="promo">
+      <div class="container">
+        <div class="promo__wrapper">
+          <h2 class="promo__title">Анализ спроса и предложений на Wildberries</h2>
+          <ul class="promo__list">
+            <li class="promo__item">Топ запросов</li>
+            <li class="promo__item">Внеконкурентные ниши</li>
+            <li class="promo__item">Похожие товары</li>
+            <li class="promo__item">Взрывные тренды</li>
+          </ul>
+          <p class="promo__subtitle">Первым достается все, остальным остальное</p>
+          <a href="#" class="promo__button">Попробовать бесплатно</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="requests-table container">
+      <div class="requests-table__wrapper">
+        <h2 class="visually-hidden">Аналитическая таблица поисковых запросов</h2>
+
+        <div class="requests-table__header t-header">
+          <p class="t-header__text">Введите интересующий вас запрос и отслеживайте растущие тренды с низкой конкуренцией.</p>
+          
+          <div class="t-header__requests-filters">
+            <button type="button">Топ запросов</button>
+            <button type="button">Поисковые запросы</button>
+            <button type="button">Похожие запросы</button></div>
+          <input type="text" class="t-header__input" placeholder="Введите запрос">
+          
+          <div class="t-header__results-filter">
+            <button type="button">Фильтны</button>
+            <button type="button">За 1 неделю</button>
+          </div>
+        
+        </div>
+        
+        <div class="table">
+          <table>
+            <thead>
+                <tr>
+                    <th>
+                      <button class="search_min_max" type="button">Поисковой запрос</button>
+                      <a href="#" class="help__search"></a>
+                    </th>
+                    
+                    <th>
+                      <button class="demand_min_max" type="button">Спрос</button>
+                      <a href="#" class="help__demand"></a>
+                    </th>
+                    
+                    <th>
+                      <button class="trend_min_max" type="button">Тренд</button>
+                      <a href="#" class="help__trend"></a>
+                    </th>
+
+                    <th>
+                      <button class="supply_min_max" type="button">Предложение</button>
+                      <a href="#" class="help__supply"></a>
+                    </th>
+
+                    <th>
+                      <button class="competition_min_max" type="button">Конкуренция</button>
+                      <a href="#" class="help__competition"></a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>кроссовки Nike женские</td>
+                    <td>6166761</td>
+                    <td>+35,65%</td>
+                    <td>90</td>
+                    <td>-7,34%</td>
+                </tr>
+
+                <tr>
+                  <td>найк</td>
+                  <td>166761</td>
+                  <td>+2,00%</td>
+                  <td>90</td>
+                  <td>-7,34</td>
+                </tr>
+                <tr>
+                  <td>слайм</td>
+                  <td>166822</td>
+                  <td>0,00%</td>
+                  <td>12</td>
+                  <td>+6,94%</td>
+                </tr>
+                <tr>
+                  <td>костюм женский спортивный</td>
+                  <td>167039</td>
+                  <td>+23,73%</td>
+                  <td>120</td>
+                  <td>+5,94%</td>
+                </tr>
+                <tr>
+                  <td>клавиатура</td>
+                  <td>167800</td>
+                  <td>+11,03</td>
+                  <td>20</td>
+                  <td>+5,94%</td>
+                </tr>
+                <tr>
+                  <td>жалюзи</td>
+                  <td>168020</td>
+                  <td>+5,94%</td>
+                  <td>66</td>
+                  <td>+11,94%</td>
+                </tr>
+                <tr>
+                  <td>кофе молотый</td>
+                  <td>168249</td>
+                  <td>-5,78%</td>
+                  <td>35</td>
+                  <td>-1,73%</td>
+                </tr>
+                <tr>
+                  <td>средство для мытья посуды</td>
+                  <td>168396</td>
+                  <td>+21,12%</td>
+                  <td>135</td>
+                  <td>-1,73%</td>
+                </tr>
+                <tr>
+                  <td>карты таро</td>
+                  <td>168487</td>
+                  <td>0,00%</td>
+                  <td>43</td>
+                  <td>+5,96%</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <a href="#">prev</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">...</a>
+          <a href="#">10</a>
+          <a href="#">next</a>
+        </div>
+
+        <button class="btn-share" type="button">Поделиться</button>
+      </div>
+    </section>
   </main>
-  <footer class="main-footer">
-    <p>new site footer</p> 
-  </footer>
+
+@@include('html/footer.html', {})
+
+<template id="main-menu_mobile">
+<!--<ul class="main-heade__site-nav site-nav">
+  <li class="site-nav__item"><a href="#" class="site-nav__link">О сервисе</a></li>
+  <li class="site-nav__item"><a href="#" class="site-nav__link">Топ запросов</a></li>
+  <li class="site-nav__item"><a href="#" class="site-nav__link">Поисковые запросы</a></li>
+</ul> -->
+</template>
+
 </body>
+
 </html>

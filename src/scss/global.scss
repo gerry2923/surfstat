@@ -1,0 +1,90 @@
+// viweports
+$mobile-width: 767px; // 414 
+$tablet-width: 768px; //1024
+$desktop-width: 1440px;
+// min-width: 320px;
+
+/**
+  @media (min-width: $tablet-width) {}
+  @media (min-width: $desktop-width) {}
+
+*/
+html {
+  height: 100%;
+  @include plaint-text;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  
+  color: black;
+  background-color: ivory;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.143em;
+    line-height: 1.2em;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.container {
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 135px;
+  }
+}
+

@@ -45,7 +45,8 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "normalize.css": "^8.0.1"
   },
   "description": ""
 }

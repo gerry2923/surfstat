@@ -11,7 +11,7 @@ $desktop-width: 1440px;
 */
 html {
   height: 100%;
-  @include plaint-text;
+  @include text;
 }
 
 body {
@@ -19,8 +19,9 @@ body {
   min-height: 100%;
   margin: 0;
   
-  color: black;
-  background-color: ivory;
+  font-size: 16px;
+  color: $main-headings;
+  background-color: $bg; //ivory; 
 
   @media (min-width: $tablet-width) {
     font-size: 1.143em;
@@ -73,7 +74,7 @@ h1, h2, h3, h4 {
 
 
 .container {
-  outline: 1px solid red;
+  outline: 1px solid peachpuff;
   outline-offset: -1px;
 
   padding: 0 20px;

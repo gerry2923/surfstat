@@ -1,0 +1,45 @@
+.requests-table * {
+  @include lineout(springgreen);
+  @include lineout(transparent);
+}
+
+.requests-table {
+  background-color: $bg; //можно убрать, когдадобавитсья планшет и пк
+}
+
+// .requests-table__wrapper {
+  
+// }
+
+// .requests-table__header {
+// }
+
+// .table {
+// }
+// .search_min_max {
+// }
+// .help__search {
+// }
+// .demand_min_max {
+// }
+// .help__demand {
+// }
+// .trend_min_max {
+// }
+// .help__trend {
+// }
+// .supply_min_max {
+// }
+// .help__supply {
+// }
+// .competition_min_max {
+// }
+// .help__competition {
+// }
+
+// .requests-table__footer {}
+
+// .pagination {
+// }
+// .btn-share {
+// }

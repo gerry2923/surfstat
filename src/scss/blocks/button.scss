@@ -1,0 +1,25 @@
+.button {
+  @include text;
+  font-size: 0.9375rem;
+  line-height: 1.4667em;
+  margin: 0px;
+  padding: 10px 20px;
+  color: $main-headings;
+  background-color: transparent;
+  border: 1px solid $main-headings;
+  border-radius: 100px;
+
+  &.button_active {
+    background-color: $text-bgd-1;
+    color: $text-bgd-2;
+    border-color: $text-bgd-1;
+  }
+
+}
+
+.button_small {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: $hover;
+
+}

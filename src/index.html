@@ -14,7 +14,7 @@
     <section class="promo">
       <div class="container">
         <div class="promo__wrapper">
-          <h2 class="promo__title">Анализ спроса и предложений на Wildberries</h2>
+          <h2 class="promo__title">Анализ спроса <br>и предложений на Wildberries</h2>
           <ul class="promo__list">
             <li class="promo__item">Топ запросов</li>
             <li class="promo__item">Внеконкурентные ниши</li>
@@ -33,16 +33,21 @@
 
         <div class="requests-table__header t-header">
           <p class="t-header__text">Введите интересующий вас запрос и отслеживайте растущие тренды с низкой конкуренцией.</p>
+
+          <label class="t-header__input-label" for="requestInput">
+            <input type="text" class="t-header__input" id="requestInput" placeholder="Введите запрос">
+          </label>
           
           <div class="t-header__requests-filters">
-            <button type="button">Топ запросов</button>
-            <button type="button">Поисковые запросы</button>
-            <button type="button">Похожие запросы</button></div>
-          <input type="text" class="t-header__input" placeholder="Введите запрос">
+            <button class="t-header__requests-filters_top button button_active" type="button">Топ запросов</button>
+            <button class="t-header__requests-filters_search button" type="button">Поисковые запросы</button>
+            <button class="t-header__requests-filters_similar button" type="button">Похожие запросы</button>
+          </div>
           
           <div class="t-header__results-filter">
-            <button type="button">Фильтны</button>
-            <button type="button">За 1 неделю</button>
+            <a class="t-header__results-filter_ditails button button_small" href="#">Подробнее</a>  
+            <button class="t-header__results-filter_filter button button_small" type="button">Фильтры</button>
+            <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button>
           </div>
         
         </div>
@@ -145,18 +150,21 @@
             </tbody>
           </table>
         </div>
+        
+        <div class="requests-table__footer">
+          <div class="pagination">
+            <a href="#">prev</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">...</a>
+            <a href="#">10</a>
+            <a href="#">next</a>
+          </div>
 
-        <div class="pagination">
-          <a href="#">prev</a>
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">...</a>
-          <a href="#">10</a>
-          <a href="#">next</a>
+          <button class="btn-share" type="button">Поделиться</button>
         </div>
 
-        <button class="btn-share" type="button">Поделиться</button>
       </div>
     </section>
   </main>

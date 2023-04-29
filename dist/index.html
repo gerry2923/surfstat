@@ -12,8 +12,7 @@
 
 <header class="main-header container">
   <nav class="main-header__nav">
-    <a href="#" class="main-header__logo logo">
-      <object type="image/svg+xml" data="logo.svg" width="200" height="200">
+    <a href="#" class="main-header__logo">
         <svg width="98" height="21" viewBox="0 0 98 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M32.634 5.71027H29.9066V13.1083C29.9066 15.9212 28.7748 17.3277 26.5113 17.3277C24.2478 17.3277 23.116 15.9212 23.116 13.1083V5.71027H20.3887V13.1083C20.3887 15.3962 20.9453 17.1214 22.0585 18.2841C23.1717 19.428 24.656 20 26.5113 20C28.3667 20 29.8509 19.428 30.9642 18.2841C32.0774 17.1214 32.634 15.3962 32.634 13.1083V5.71027Z" fill="#1D1E20"/>
           <path d="M34.3038 19.775V12.4332C34.3038 10.1828 34.8326 8.49508 35.8901 7.3699C36.9662 6.22597 38.3855 5.65401 40.1481 5.65401H40.4264V8.3263H40.1481C38.0701 8.3263 37.0311 9.69526 37.0311 12.4332V19.775H34.3038Z" fill="#1D1E20"/>
@@ -41,7 +40,7 @@
     <section class="promo">
       <div class="container">
         <div class="promo__wrapper">
-          <h2 class="promo__title">Анализ спроса и предложений на Wildberries</h2>
+          <h2 class="promo__title">Анализ спроса <br>и предложений на Wildberries</h2>
           <ul class="promo__list">
             <li class="promo__item">Топ запросов</li>
             <li class="promo__item">Внеконкурентные ниши</li>
@@ -60,16 +59,21 @@
 
         <div class="requests-table__header t-header">
           <p class="t-header__text">Введите интересующий вас запрос и отслеживайте растущие тренды с низкой конкуренцией.</p>
+
+          <label class="t-header__input-label" for="requestInput">
+            <input type="text" class="t-header__input" id="requestInput" placeholder="Введите запрос">
+          </label>
           
           <div class="t-header__requests-filters">
-            <button type="button">Топ запросов</button>
-            <button type="button">Поисковые запросы</button>
-            <button type="button">Похожие запросы</button></div>
-          <input type="text" class="t-header__input" placeholder="Введите запрос">
+            <button class="t-header__requests-filters_top button button_active" type="button">Топ запросов</button>
+            <button class="t-header__requests-filters_search button" type="button">Поисковые запросы</button>
+            <button class="t-header__requests-filters_similar button" type="button">Похожие запросы</button>
+          </div>
           
           <div class="t-header__results-filter">
-            <button type="button">Фильтны</button>
-            <button type="button">За 1 неделю</button>
+            <a class="t-header__results-filter_ditails button button_small" href="#">Подробнее</a>  
+            <button class="t-header__results-filter_filter button button_small" type="button">Фильтры</button>
+            <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button>
           </div>
         
         </div>
@@ -172,18 +176,21 @@
             </tbody>
           </table>
         </div>
+        
+        <div class="requests-table__footer">
+          <div class="pagination">
+            <a href="#">prev</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">...</a>
+            <a href="#">10</a>
+            <a href="#">next</a>
+          </div>
 
-        <div class="pagination">
-          <a href="#">prev</a>
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">...</a>
-          <a href="#">10</a>
-          <a href="#">next</a>
+          <button class="btn-share" type="button">Поделиться</button>
         </div>
 
-        <button class="btn-share" type="button">Поделиться</button>
       </div>
     </section>
   </main>

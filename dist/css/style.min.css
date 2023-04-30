@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Jost";
   font-display: swap;
@@ -414,4 +415,200 @@ h1, h2, h3, h4 {
 .t-header__results-filter_time {
   padding-left: 13px;
   padding-right: 18px;
+}
+
+.table * {
+  outline: 1px dashed transparent;
+  outline-offset: -1px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+th {
+  padding: 0;
+}
+
+.table__head .table__row {
+  height: 1.4rem;
+}
+
+.table__body .table__row {
+  height: 1.96875rem;
+}
+
+.tb-pc-show {
+  display: none;
+}
+
+.tb-pc-hide {
+  display: table-cell;
+}
+
+.table__help {
+  display: none;
+}
+
+/** выравнивание в ячейках  начало*/
+.demand,
+.trend {
+  width: 24%;
+}
+
+.supply,
+.competing {
+  width: 40%;
+}
+
+.request {
+  width: 36%;
+}
+
+.request {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-size: 0.9375rem;
+  line-height: 1.47em;
+}
+
+.demand,
+.supply {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-size: 1rem;
+  line-height: 1em;
+}
+.table__body .demand,
+.table__body .supply {
+  line-height: 1.2em;
+  line-height: 1em;
+}
+
+.trend,
+.competing {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-size: 0.75rem;
+  line-height: 1em;
+  font-weight: 300;
+}
+.table__body .trend,
+.table__body .competing {
+  line-height: 1.416666667em;
+}
+
+.table__cell_positive {
+  color: #E93A45;
+}
+
+.table__cell_negative {
+  color: #14C784;
+}
+
+.table__head .request {
+  padding-top: 5px;
+  text-align: start;
+  vertical-align: top;
+}
+.table__head .request .request__btn {
+  vertical-align: top;
+}
+.table__head .demand {
+  vertical-align: top;
+  text-align: end;
+  padding-top: 2px;
+  padding-right: 5px;
+}
+.table__head .trend {
+  vertical-align: top;
+  text-align: end;
+  padding-right: 7px;
+  padding-top: 2px;
+}
+.table__head .trend .trend__btn {
+  vertical-align: top;
+}
+.table__head .supply {
+  vertical-align: top;
+  text-align: end;
+  padding-top: 2px;
+  padding-right: 5px;
+}
+.table__head .competing {
+  vertical-align: top;
+  text-align: end;
+  padding-right: 12px;
+  padding-top: 2px;
+}
+.table__head .competing .competing_btn {
+  vertical-align: top;
+}
+
+.table__body .request {
+  vertical-align: middle;
+  text-align: start;
+}
+.table__body .demand {
+  text-align: end;
+  vertical-align: bottom;
+}
+.table__body .trend {
+  text-align: end;
+  vertical-align: top;
+  padding-top: 5px;
+}
+.table__body .supply {
+  text-align: end;
+  vertical-align: bottom;
+}
+.table__body .competing {
+  text-align: end;
+  vertical-align: top;
+  padding-top: 5px;
+}
+
+.table__body .table__row:nth-child(2n) > .table__cell, .table__body .table__row:nth-child(n+1) .table__cell:first-child {
+  border-bottom: 1px solid #EBEBEB;
+}
+.table__body .table__row:nth-child(n+19) {
+  display: none;
+}
+
+.table__head-cell {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-size: 0.8125rem;
+  line-height: 1em;
+  color: #42494F;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+}
+.table__head-cell::before {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 7px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 6L9 1H1Z' fill='%239AA3AF' stroke='%239AA3AF' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.table__head-cell * {
+  outline: 1px dashed magenta;
+  outline-offset: -1px;
 }

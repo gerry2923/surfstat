@@ -1,30 +1,202 @@
-table {
+.table *{
+  @include lineout(transparent);
+}
+.table {
   border-collapse: collapse;
+}  
+th {
+  padding: 0;
+}
+.table__head .table__row{
+  height: 1.4rem;
+  // background-color: azure;
+}
+.table__body .table__row {
+  height: 1.96875rem;
+}
+// //скрытые ячейки для мобильника///
+.tb-pc-show {
+  display: none;
+  // display: table-cell;
 }
 
-td, th {
-  border: 1px solid blue;
+.tb-pc-hide {
+  display: table-cell;
+  // display: none;
+}
+.table__help {
+  display: none;
 }
 
-// .table {
-// }
-// .search_min_max {
-// }
-// .help__search {
-// }
-// .demand_min_max {
-// }
-// .help__demand {
-// }
-// .trend_min_max {
-// }
-// .help__trend {
-// }
-// .supply_min_max {
-// }
-// .help__supply {
-// }
-// .competition_min_max {
-// }
-// .help__competition {
-// }
+/** выравнивание в ячейках  начало*/
+  .demand,
+  .trend {
+    width: 24%;
+  }
+  .supply,
+  .competing {
+    width: 40%;
+  }
+
+  .request {
+    width: 36%;
+  }
+//----- настройка текста ---
+.request {
+  @include text;
+  font-size: 0.9375rem;
+  line-height: 1.47em;
+}
+.demand,
+.supply {
+  @include text;
+  font-size: 1rem;
+  line-height: 1em;//1.4375em;
+  .table__body & {
+    line-height: 1.2em;
+    // line-height: 1.4375em;
+    line-height: 1em;
+  }
+}
+
+.trend,
+.competing {
+  @include text;
+  font-size: 0.75rem;
+  line-height: 1em;//1.42em;
+  font-weight: 300;
+
+  .table__body & {
+    line-height: 1.416666667em;;
+  }
+}
+
+.table__cell_positive {
+  color: $positive;
+}
+
+.table__cell_negative {
+  color: $negative;
+}
+
+// ------ настройка выравнивания в ячейках -----
+
+.table__head {
+  & .request {
+    padding-top: 5px;
+    text-align: start;
+    vertical-align: top;
+    & .request__btn {
+      vertical-align: top;
+    }
+  }
+
+  & .demand {
+    vertical-align: top;
+    text-align: end;
+    padding-top: 2px;
+    padding-right: 5px;
+  }
+
+  & .trend {
+    vertical-align: top;
+    text-align: end;
+    padding-right: 7px;
+    padding-top: 2px;
+    & .trend__btn {
+      vertical-align: top;
+    }
+  }
+
+  & .supply {
+    vertical-align: top;
+    text-align: end;
+    padding-top: 2px;
+    padding-right: 5px;
+  }
+
+  & .competing {
+    vertical-align: top;
+    text-align: end;
+    padding-right: 12px;
+    padding-top: 2px;
+    & .competing_btn {
+      vertical-align: top;
+    }
+  }
+}
+
+.table__body {
+  & .request {
+    vertical-align: middle;
+    text-align: start;
+  }
+
+  & .demand {
+    text-align: end;
+    vertical-align: bottom;
+    // padding-top: 12px;
+  }
+
+  & .trend {
+    text-align: end;
+    vertical-align: top;
+    padding-top: 5px;
+  }
+
+  & .supply {
+    text-align: end;
+    vertical-align: bottom;
+  }
+
+  & .competing {
+    text-align: end;
+    vertical-align: top;
+    padding-top: 5px;
+  }
+}
+//  настройка внешних границ
+
+.table__body {
+  & .table__row:nth-child(2n) > .table__cell,
+  & .table__row:nth-child(n+1) .table__cell:first-child {
+    border-bottom: 1px solid $strock;
+  }
+
+  & .table__row:nth-child(n+19) {
+    display: none;
+  }
+
+}
+
+
+/////////////////////////////////
+// кнопка
+.table__head-cell{
+  @include text;
+  font-size: 0.8125rem;
+  line-height: 1em;
+  color: $texts;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 7px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 6L9 1H1Z' fill='%239AA3AF' stroke='%239AA3AF' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  & * {
+    @include lineout(magenta);
+  }
+}

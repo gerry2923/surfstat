@@ -312,6 +312,11 @@ h1, h2, h3, h4 {
 
 .requests-table {
   background-color: #F9FAFC;
+  margin-bottom: 42px;
+}
+
+.requests-table__footer {
+  display: none;
 }
 
 .t-header {
@@ -594,7 +599,7 @@ th {
   padding: 0px;
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 3px;
 }
@@ -608,7 +613,155 @@ th {
   background-position: center;
   background-size: contain;
 }
+.table__head-cell.request__btn {
+  align-items: flex-start;
+}
+.table__head-cell.request__btn::before {
+  margin-top: 3px;
+}
 .table__head-cell * {
   outline: 1px dashed magenta;
   outline-offset: -1px;
+}
+
+.main-footer * {
+  outline: 1px dashed lime;
+  outline-offset: -1px;
+}
+
+.main-footer {
+  background-color: #2D80EA;
+}
+
+.main-footer__rates {
+  padding-top: 30px;
+  padding-bottom: 156px;
+  background-image: url("../img/illustration-footer.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 217px 197px;
+}
+
+.main-footer__rates-text {
+  font-family: "NordecoCyrillic", sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.25em;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 0px 17px 0px 0px;
+  margin: 0px 0px 39px 0px;
+}
+
+.main-footer__rates_free,
+.main-footer__rates_buy {
+  display: block;
+  text-align: center;
+  width: 192px;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.main-footer__rates_buy {
+  background-color: #ffffff;
+  color: #1D1E20;
+}
+
+.main-footer__inner-wrapper {
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.main-footer__copy-link {
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.main-footer__copy-link__input {
+  display: block;
+  width: 100%;
+  height: 1.875rem;
+  padding: 4px 20px;
+  background-color: #F0F1F5;
+  border-color: transparent;
+  border-radius: 100px;
+  color: #42494F;
+}
+
+.main-footer__copy-link__btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-size: 0.8125rem;
+  line-height: 1.461538462;
+  text-align: center;
+  width: 105px;
+  height: 1.875rem;
+  background-color: #0A6BE5;
+  padding: 5px 20px;
+  color: #ffffff;
+  position: absolute;
+  border-color: transparent;
+  top: 15px;
+  right: 20px;
+}
+
+.main-footer__nav {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer__btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-size: 0.9375rem;
+  line-height: 1em;
+  color: #1D1E20;
+  padding: 4px 10px;
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  flex-direction: row;
+}
+.main-footer__btn::before {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='path-1-inside-1_1113_9784' fill='white'%3E%3Cpath d='M14.4405 7.90039C18.0405 8.21039 19.5105 10.0604 19.5105 14.1104V14.2404C19.5105 18.7104 17.7205 20.5004 13.2505 20.5004H6.74047C2.27047 20.5004 0.480469 18.7104 0.480469 14.2404V14.1104C0.480469 10.0904 1.93047 8.24039 5.47047 7.91039'/%3E%3C/mask%3E%3Cpath d='M14.5692 6.40592C13.7438 6.33485 13.0171 6.94633 12.946 7.7717C12.8749 8.59707 13.4864 9.32379 14.3118 9.39486L14.5692 6.40592ZM5.6097 9.40392C6.43455 9.32702 7.04089 8.59601 6.96399 7.77116C6.8871 6.94631 6.15609 6.33997 5.33124 6.41687L5.6097 9.40392ZM14.3118 9.39486C15.8879 9.53058 16.6955 9.97469 17.1607 10.548C17.6595 11.1627 18.0105 12.2227 18.0105 14.1104H21.0105C21.0105 11.948 20.6265 10.058 19.4903 8.65776C18.3205 7.21609 16.5931 6.5802 14.5692 6.40592L14.3118 9.39486ZM18.0105 14.1104V14.2404H21.0105V14.1104H18.0105ZM18.0105 14.2404C18.0105 16.327 17.5835 17.3985 16.9961 17.986C16.4086 18.5735 15.3371 19.0004 13.2505 19.0004V22.0004C15.6338 22.0004 17.6924 21.5323 19.1174 20.1073C20.5424 18.6823 21.0105 16.6237 21.0105 14.2404H18.0105ZM13.2505 19.0004H6.74047V22.0004H13.2505V19.0004ZM6.74047 19.0004C4.65382 19.0004 3.58237 18.5735 2.99488 17.986C2.40739 17.3985 1.98047 16.327 1.98047 14.2404H-1.01953C-1.01953 16.6237 -0.551455 18.6823 0.873558 20.1073C2.29857 21.5323 4.35712 22.0004 6.74047 22.0004V19.0004ZM1.98047 14.2404V14.1104H-1.01953V14.2404H1.98047ZM1.98047 14.1104C1.98047 12.2373 2.32656 11.1796 2.81927 10.5637C3.2773 9.99114 4.0686 9.54758 5.6097 9.40392L5.33124 6.41687C3.33233 6.60321 1.62863 7.24964 0.476665 8.6896C-0.640619 10.0862 -1.01953 11.9635 -1.01953 14.1104H1.98047Z' fill='%230A6BE5' mask='url(%23path-1-inside-1_1113_9784)'/%3E%3Cpath d='M10 14.0011V2.62109' stroke='%230A6BE5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.3504 4.85L10.0004 1.5L6.65039 4.85' stroke='%230A6BE5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 19px 19px;
+  margin-right: 5px;
+}
+
+.main-footer__btn_prev::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_609_8072)'%3E%3Cpath d='M7 1L1 7L7 13' fill='%230A6BE5' stroke='%230A6BE5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_609_8072'%3E%3Crect width='8' height='14' fill='white' transform='matrix(-1 0 0 -1 8 14)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.main-footer__btn_next::before {
+  display: none;
+}
+
+.main-footer__btn_next::after {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 19px 19px;
+  margin-right: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_609_8070)'%3E%3Cpath d='M1 1L7 7L1 13' fill='%230A6BE5' stroke='%230A6BE5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_609_8070'%3E%3Crect width='8' height='14' fill='white' transform='matrix(1 0 0 -1 0 14)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }

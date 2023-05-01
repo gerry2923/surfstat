@@ -5,6 +5,7 @@
 
 .requests-table {
   background-color: $bg; //можно убрать, когдадобавитсья планшет и пк
+  margin-bottom: 42px;
 }
 
 // .requests-table__wrapper {
@@ -16,7 +17,9 @@
 
 
 
-// .requests-table__footer {}
+.requests-table__footer{
+  display: none;
+}
 
 // .pagination {
 // }

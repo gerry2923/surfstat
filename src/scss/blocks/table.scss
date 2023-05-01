@@ -182,7 +182,7 @@ th {
   padding: 0px;
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 3px;
 
@@ -196,7 +196,16 @@ th {
     background-position: center;
     background-size: contain;
   }
+
+
+  &.request__btn {
+    align-items: flex-start;
+    &::before {
+      margin-top: 3px;
+    }
+  }
   & * {
     @include lineout(magenta);
   }
 }
+

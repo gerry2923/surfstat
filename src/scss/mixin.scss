@@ -12,6 +12,14 @@
 	line-height: 1.25em;
 }
 
+@mixin headline-2 {
+	font-family: 'NordecoCyrillic', sans-serif;
+	font-weight: 400;
+	font-size: 1.75rem;
+	line-height: 1.25em;
+}
+
+
 @mixin text {
 	font-family: 'Jost', sans-serif;
 	font-weight: 400;

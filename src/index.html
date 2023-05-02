@@ -37,11 +37,16 @@
           <label class="t-header__input-label" for="requestInput">
             <input type="text" class="t-header__input" id="requestInput" placeholder="Введите запрос">
           </label>
-          
+
           <div class="t-header__requests-filters">
-            <button class="t-header__requests-filters_top button button_active" type="button">Топ запросов</button>
-            <button class="t-header__requests-filters_search button" type="button">Поисковые запросы</button>
-            <button class="t-header__requests-filters_similar button" type="button">Похожие запросы</button>
+            <input type="radio" name="requests-filter" id="rq-top" checked>
+            <label class="button t-header__requests-filters_top" for="rq-top">Топ запросов</label>
+            
+            <input type="radio" name="requests-filter" id="rq-search">
+            <label class="button t-header__requests-filters_search" for="rq-search">Поисковые запросы</label>
+            
+            <input type="radio" name="requests-filter" id="rq-similar">
+            <label class="button t-header__requests-filters_similar" for="rq-similar">Похожие запросы</label>
           </div>
           
           <div class="t-header__results-filter">
@@ -76,14 +81,7 @@
 
 @@include('html/footer.html', {})
 
-<template id="main-menu_mobile">
-<!--<ul class="main-heade__site-nav site-nav">
-  <li class="site-nav__item"><a href="#" class="site-nav__link">О сервисе</a></li>
-  <li class="site-nav__item"><a href="#" class="site-nav__link">Топ запросов</a></li>
-  <li class="site-nav__item"><a href="#" class="site-nav__link">Поисковые запросы</a></li>
-</ul> -->
-</template>
-
+<script src="js/app.min.js"></script>
 </body>
 
 </html>

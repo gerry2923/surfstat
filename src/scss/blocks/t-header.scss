@@ -43,9 +43,36 @@
 
 .t-header__requests-filters {
   @include horisonal-scroll;
-  gap: 15px;
+  gap: 8px;
   margin-bottom: 18px;
 }
+/*-----------------------**/
+
+.t-header__requests-filters input[type=radio] {
+	appearance: none;
+  pointer-events: none;
+  margin: 0px;
+  top: 0;
+  bottom: 0;
+
+  // &:checked+button {
+  //   background-color: $text-bgd-1;
+  //   color: $text-bgd-2;
+  //   border-color: $text-bgd-1;
+  // }
+}
+.t-header__requests-filters input[type=radio]:checked + label {
+  background-color: $text-bgd-1;
+  color: $text-bgd-2;
+  border-color: $text-bgd-1;
+}
+.t-header__requests-filters_top,
+.t-header__requests-filters_search,
+.t-header__requests-filters_similar {
+  display: inline-block;
+}
+
+
 
 .t-header__results-filter {
   @include horisonal-scroll;

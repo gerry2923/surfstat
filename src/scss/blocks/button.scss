@@ -14,7 +14,12 @@
     color: $text-bgd-2;
     border-color: $text-bgd-1;
   }
+}
 
+.button:active {
+  background-color: $text-bgd-1;
+  color: $text-bgd-2;
+  border-color: $text-bgd-1;
 }
 
 .button_small {

@@ -1,0 +1,58 @@
+.main-reg *{
+  @include lineout(limegreen);
+}
+.main-reg {
+  height: 100%; 
+}
+
+.main-reg__title {
+  @include headline-2;
+  font-size: 1.5625rem;
+  line-height: 1.25em;
+  color: $main-headings;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 29px;
+  text-align: center;
+}
+
+.main-reg__title_color-1 {
+  color: $text-bgd-1;
+}
+
+.main-reg__text {
+  @include text;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  font-weight: 300;
+  color: $texts;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.main-reg__link {
+  color: $text-bgd-1;
+  text-decoration: underline;
+
+}
+
+.main-reg__options-row {
+  display: flex;
+  gap: 20px;
+}
+
+.main-reg__option-link {
+  display: inline-block;
+  @include text;
+  font-size: 0.9375rem;
+  line-height: 1.466666667em;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: $text-bgd-1;
+  color: $text-bgd-2;
+  border-radius: 100px;
+  flex-grow: 1;
+}

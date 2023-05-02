@@ -1,0 +1,29 @@
+.account-data {
+  display: flex;
+  flex-direction: row;
+  min-width: 5.625px;
+  justify-content: center;
+  gap: 12px;
+}
+
+.account-data__login {
+  @include text;
+  font-size: 0.8125rem;
+  line-height: 1.461538462em;
+  display:inline-block;
+  padding: 0.34375rem 1.25rem;
+  color: $text-bgd-2;
+  background-color: $text-bgd-1;
+  border-radius: 100px;
+
+}
+
+.account-data__email {
+  @include text;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  font-weight: 300;
+  color: $text-mail;
+  padding: 12px 0px 0px 0px;
+  margin: 0px;
+}

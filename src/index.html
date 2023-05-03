@@ -5,81 +5,97 @@
   })
 
 <body>
-
-@@include('html/header.html', {})
-
-  <main class="main-layout">
-    <h1 class="visually-hidden">Сервис Surfstat для анализа спроса и предложения на торговой площадке Wildberries</h1>
-
-    <section class="promo">
-      <div class="container">
-        <div class="promo__wrapper">
-          <h2 class="promo__title">Анализ спроса <br>и предложений на Wildberries</h2>
-          <ul class="promo__list">
-            <li class="promo__item">Топ запросов</li>
-            <li class="promo__item">Внеконкурентные ниши</li>
-            <li class="promo__item">Похожие товары</li>
-            <li class="promo__item">Взрывные тренды</li>
-          </ul>
-          <p class="promo__subtitle">Первым достается все, остальным остальное</p>
-          <a href="#" class="promo__button">Попробовать бесплатно</a>
-        </div>
-      </div>
-    </section>
-    
-    <section class="requests-table container">
-      <div class="requests-table__wrapper">
-        <h2 class="visually-hidden">Аналитическая таблица поисковых запросов</h2>
-
-        <div class="requests-table__header t-header">
-          <p class="t-header__text">Введите интересующий вас запрос и отслеживайте растущие тренды с низкой конкуренцией.</p>
-
-          <label class="t-header__input-label" for="requestInput">
-            <input type="text" class="t-header__input" id="requestInput" placeholder="Введите запрос">
-          </label>
-
-          <div class="t-header__requests-filters">
-            <input type="radio" name="requests-filter" id="rq-top" checked>
-            <label class="button t-header__requests-filters_top" for="rq-top">Топ запросов</label>
-            
-            <input type="radio" name="requests-filter" id="rq-search">
-            <label class="button t-header__requests-filters_search" for="rq-search">Поисковые запросы</label>
-            
-            <input type="radio" name="requests-filter" id="rq-similar">
-            <label class="button t-header__requests-filters_similar" for="rq-similar">Похожие запросы</label>
+<div class="wrapper">
+  
+  @@include('html/header.html', {
+    logo: "#"
+  })
+  
+    <main class="main-layout">
+      <h1 class="visually-hidden">Сервис Surfstat для анализа спроса и предложения на торговой площадке Wildberries</h1>
+  
+      <section class="promo">
+        <div class="container">
+          <div class="promo__wrapper">
+            <h2 class="promo__title">Анализ спроса <br>и предложений на Wildberries</h2>
+            <ul class="promo__list">
+              <li class="promo__item">Топ запросов</li>
+              <li class="promo__item">Внеконкурентные ниши</li>
+              <li class="promo__item">Похожие товары</li>
+              <li class="promo__item">Взрывные тренды</li>
+            </ul>
+            <p class="promo__subtitle">Первым достается все, остальным остальное</p>
+            <a href="#" class="promo__button">Попробовать бесплатно</a>
           </div>
-          
-          <div class="t-header__results-filter">
-            <a class="t-header__results-filter_ditails button button_small" href="#">Подробнее</a>  
-            <button class="t-header__results-filter_filter button button_small" type="button">Фильтры</button>
-            <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button>
+        </div>
+      </section>
+  
+      <section class="requests-table container">
+        <div class="requests-table__wrapper">
+          <h2 class="visually-hidden">Аналитическая таблица поисковых запросов</h2>
+  
+          <div class="requests-table__header t-header">
+            <p class="t-header__text">Введите интересующий вас запрос и отслеживайте растущие тренды с низкой конкуренцией.</p>
+  
+            <div class="t-header__search">
+              <input type="text" class="t-header__input" id="requestInput" placeholder="Введите запрос">
+              <button class="t-header__input-btn" type="submit"></button>
+            </div>
+  
+            <div class="t-header__requests-filters">
+              <input type="radio" name="requests-filter" id="rq-top" checked>
+              <label class="button t-header__requests-filters_top" for="rq-top">Топ запросов</label>
+  
+              <input type="radio" name="requests-filter" id="rq-search">
+              <label class="button t-header__requests-filters_search" for="rq-search">Поисковые запросы</label>
+  
+              <input type="radio" name="requests-filter" id="rq-similar">
+              <label class="button t-header__requests-filters_similar" for="rq-similar">Похожие запросы</label>
+            </div>
+  
+            <div class="t-header__results-filter">
+              <a class="t-header__results-filter_ditails button button_small" href="#">Подробнее</a>
+              <button class="t-header__results-filter_filter button button_small" type="button">Фильтры</button>
+              <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button>
+            </div>
+  
           </div>
-        
-        </div>
-        
-        <div class="table">
-         @@include('html/table.html', {})
-        </div>
-        
-        <div class="requests-table__footer">
-          <div class="pagination">
-            <a href="#">prev</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">...</a>
-            <a href="#">10</a>
-            <a href="#">next</a>
+  
+          <div class="table">
+           @@include('html/table.html', {})
           </div>
-
-          <button class="btn-share" type="button">Поделиться</button>
+  
+          <div class="requests-table__footer">
+            <div class="pagination">
+              <a href="#">prev</a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">...</a>
+              <a href="#">10</a>
+              <a href="#">next</a>
+            </div>
+  
+            <button class="btn-share" type="button">Поделиться</button>
+          </div>
+  
         </div>
-
-      </div>
-    </section>
-  </main>
-
-@@include('html/footer.html', {})
+      </section>
+  
+      <section class="rates">
+        <h2 class="visually-hidden">Выберите подходящий тариф</h2>
+        <div class="container">
+          <p class="rates__subtitle">Находите взрывные тренды, анализируйте конкурентов
+          и повышайте свою прибыль</p>
+          <a href="#" class="rates__free">Поробовать бесплатно</a>
+          <a href="#" class="rates__buy">Оплатить тариф</a>
+        </div>
+  
+      </section>
+    </main>
+  
+  @@include('html/footer.html', {})
+</div>
 
 <script src="js/app.min.js"></script>
 </body>

@@ -2,45 +2,11 @@
   @include lineout(lime);
 }
 
-.main-footer {
-  background-color: $bgd-3;
-}
-.main-footer__rates {
-  padding-top: 30px;
-  padding-bottom: 156px;
-  background-image: url('../img/illustration-footer.svg');
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 217px 197px;
-
-}
-.main-footer__rates-text {
-  @include headline-2;
-  font-weight: bold;
-  color: $text-bgd-2;
-  padding: 0px 17px 0px 0px;
-  margin: 0px 0px 39px 0px;
-}
-
-.main-footer__rates_free,
-.main-footer__rates_buy  {
-  display: block;
-  text-align: center;
-  width: 192px;
-  padding: 10px 20px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  border-color: $text-bgd-2;
-  color: $text-bgd-2;
-}
-
-.main-footer__rates_buy {
-  background-color: $text-bgd-2;
-  color: $main-headings;
-}
-// ------------------------------
+// .main-footer {
+// }
 
 .main-footer__inner-wrapper {
+
   background-color: $text-bgd-2;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -50,6 +16,10 @@
   padding-top: 15px;
   position: relative;
 } 
+.main-footer__copy-link_hide {
+  display: none;
+}
+
 .main-footer__copy-link__input {
   display: block;
   width: 100%;

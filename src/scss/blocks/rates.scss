@@ -1,0 +1,40 @@
+.rates {
+  padding-top: 30px;
+  padding-bottom: 157px;
+  background-color: $bgd-3;
+  background-image: url('../img/illustration-footer.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 217px 197px;
+
+}
+
+.rates__subtitle {
+  @include headline-2;
+  font-weight: bold;
+  color: $text-bgd-2;
+  padding: 0px 17px 0px 0px;
+  margin: 0px 0px 40px 0px;
+}
+
+.rates__free,
+.rates__buy {
+  @include text;
+  font-size: 0.9375rem;
+  line-height: 1.4666666667em;
+  display: inline-block;
+  text-align: center;
+  width: 192px;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: 1px solid $text-bgd-2;
+  color: $text-bgd-2;
+  border-radius: 100px;
+}
+
+
+.rates__buy {
+  background-color: $text-bgd-2;
+  color: $main-headings;
+}

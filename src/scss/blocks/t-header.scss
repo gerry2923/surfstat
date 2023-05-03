@@ -1,32 +1,33 @@
+.t-header * {
+  @include lineout(limegreen);
+}
 .t-header {
   position: relative;
-
 }
 
 .t-header__text {
   margin: 0px 0px 20px 0px;
   line-height: 1.4375em;
 }
-.t-header__input-label {
-  display: block;
-  width: 100%;
+.t-header__search {
   position: relative;
   margin-bottom: 20px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 22px;
-    display: block;
-    width: 20px;
-    height: 21px;
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.58317 17.9993C13.9554 17.9993 17.4998 14.4549 17.4998 10.0827C17.4998 5.71043 13.9554 2.16602 9.58317 2.16602C5.21092 2.16602 1.6665 5.71043 1.6665 10.0827C1.6665 14.4549 5.21092 17.9993 9.58317 17.9993Z' stroke='%239AA3AF' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.3332 18.8327L16.6665 17.166' stroke='%239AA3AF' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
 }
+
+.t-header__input-btn {
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  display: block;
+  width: 20px;
+  height: 21px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.58317 17.9993C13.9554 17.9993 17.4998 14.4549 17.4998 10.0827C17.4998 5.71043 13.9554 2.16602 9.58317 2.16602C5.21092 2.16602 1.6665 5.71043 1.6665 10.0827C1.6665 14.4549 5.21092 17.9993 9.58317 17.9993Z' stroke='%239AA3AF' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.3332 18.8327L16.6665 17.166' stroke='%239AA3AF' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+}
+
 
 .t-header__input {
   @include text;
@@ -39,6 +40,7 @@
   background-color: $hover;
   width: inherit;
   display: block;
+  width: 100%;
 }
 
 .t-header__requests-filters {

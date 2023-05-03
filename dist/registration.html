@@ -12,11 +12,12 @@
 
 <body>
 
-<header class="main-header ">
-  <nav class="main-header__nav container">
+<div class="wrapper">
+  <header class="main-header ">
+  <nav class="main-header__nav ">
     
     <div class="main-header__top-menu">
-      <a href="#" class="main-header__logo">
+      <a href="index.html" class="main-header__logo">
         <object type="image/svg+xml" data="../img/logo.svg" width="98" height="21">
           <img src="../img/logo.png" width="98" height="21" alt="логотип surfstat" />
         </object>
@@ -25,8 +26,7 @@
       <button class="site-nav_show" type="button"></button>
     </div>
     
-    
-    <div class="main-header__menu main-header__menu_hide">
+    <div class="main-header__menu main-header__menu_hide ">
       <div class="main-header__account-data account-data">
         <img src="../img/avatar.svg" alt="Аватар пользователя" class="account-data__pic" width="67" height="67">
         <div class="accoutn-data__wrapper">
@@ -49,45 +49,39 @@
           <a href="#" class="main-header__menu-link">Поисковые запросы</a>
         </li>
       </ul>
+
     </div>
+    
   </nav>
 </header>
 
-
-<main class="main-reg container">
-  <h1 class="main-reg__title">Добро пожаловать на <span class="main-reg__title main-reg__title_color-1">Surfstat</span>.</h1>
   
-  <p class="main-reg__text">
-    Для того, чтобы посмотреть статистику по запросу <a class="main-reg__link" href="#">светильник для кухни</a>, пожалуйста, войдите <br>в свой профиль или зарегистрируйтесь.
-  </p>
-
-  <div class="main-reg__options">
-    
-    <div class="main-reg__options-row">
-      <a href="#" class="main-reg__option-link">Войти</a>
-      <a href="#" class="main-reg__option-link">Зарегистрироваться</a>
+  <main class="main-reg container">
+    <h1 class="main-reg__title">Добро пожаловать на <span class="main-reg__title main-reg__title_color-1">Surfstat</span>.</h1>
+  
+    <p class="main-reg__text">
+      Для того, чтобы посмотреть статистику по запросу <a class="main-reg__link" href="#">светильник для кухни</a>, пожалуйста, войдите <br>в свой профиль или зарегистрируйтесь.
+    </p>
+  
+    <div class="main-reg__options">
+  
+      <div class="main-reg__options-row">
+        <a href="#" class="main-reg__option-link">Войти</a>
+        <a href="#" class="main-reg__option-link">Зарегистрироваться</a>
+      </div>
+  
+      <div class="main-reg__options-row">
+        <a href="#" class="main-reg__option-link">Войти с помощью</a>
+      </div>
+  
     </div>
-
-    <div class="main-reg__options-row">
-      <a href="#" class="main-reg__option-link">Войти с помощью</a> 
-    </div>
-
-  </div>
-
-</main>
-
-<footer class="main-footer">
-
-  <div class="main-footer__rates">
-    <div class="container">
-      <p class="main-footer__rates-text">Находите взрывные тренды, анализируйте конкурентов
-        и повышайте свою прибыль.</p>
-      <a href="#" class="main-footer__rates_free button">Поробовать бесплатно</a>
-      <a href="#" class="main-footer__rates_buy button">Оплатить тариф</a>
-    </div>
-  </div>
-
+  
+  </main>
+  
+  <footer class="main-footer">
+  
   <div class="main-footer__inner-wrapper">
+    <!-- main-footer__copy-link_hide  -->
     <div class="main-footer__copy-link container">
       <input class="main-footer__copy-link__input" type="text" value="https://surfstat.ru/statistic/lustra-..." id="copyLink">
       <button class="main-footer__copy-link__btn  button" type="button">Копировать</button>
@@ -101,6 +95,7 @@
       
   </div>
 </footer>
+</div>
 
 <script src="js/app.min.js"></script>
 </body>

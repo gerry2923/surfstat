@@ -43,6 +43,8 @@ html {
 body {
   min-width: 320px;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-size: 16px;
   color: #1D1E20;
@@ -108,7 +110,7 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  outline: 1px solid peachpuff;
+  outline: 1px solid transparent;
   outline-offset: -1px;
   padding: 0 20px;
   margin: 0 auto;
@@ -821,6 +823,7 @@ th {
   background-color: #ffffff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  box-shadow: 0px 5px 13px 4px rgba(0, 0, 0, 0.01);
 }
 
 .main-footer__copy-link {
@@ -924,12 +927,12 @@ th {
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_609_8070)'%3E%3Cpath d='M1 1L7 7L1 13' fill='%230A6BE5' stroke='%230A6BE5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_609_8070'%3E%3Crect width='8' height='14' fill='white' transform='matrix(1 0 0 -1 0 14)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 }
 
-.main-reg * {
+.welcome * {
   outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
-.main-reg__title {
+.welcome__title {
   font-family: "NordecoCyrillic", sans-serif;
   font-weight: 400;
   font-size: 1.75rem;
@@ -945,11 +948,11 @@ th {
   text-align: center;
 }
 
-.main-reg__title_color-1 {
+.welcome__title_color-1 {
   color: #0A6BE5;
 }
 
-.main-reg__text {
+.welcome__text {
   font-family: "Jost", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -963,23 +966,23 @@ th {
   margin: 0px 0px 0px 0px;
 }
 
-.main-reg__link {
+.welcome__link {
   color: #0A6BE5;
   text-decoration: underline;
 }
 
-.main-reg__options {
+.welcome__options {
   margin-top: 49px;
 }
 
-.main-reg__options-row {
+.welcome__options-row {
   display: flex;
   justify-content: center;
   gap: 4.83vw;
   margin-bottom: 50px;
 }
 
-.main-reg__option-link {
+.welcome__option-link {
   display: block;
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -995,7 +998,7 @@ th {
   width: 171px;
 }
 
-.main-reg__options-row:nth-child(2) .main-reg__option-link {
+.welcome__options-row:nth-child(2) .welcome__option-link {
   background-color: transparent;
   color: #1D1E20;
   display: flex;
@@ -1006,7 +1009,7 @@ th {
   border: 1px solid #1D1E20;
 }
 
-.main-reg__options-row:nth-child(2) .main-reg__option-link::after {
+.welcome__options-row:nth-child(2) .welcome__option-link::after {
   content: "";
   display: block;
   width: 19px;
@@ -1015,4 +1018,9 @@ th {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.main-reg * {
+  outline: 1px dashed transparent;
+  outline-offset: -1px;
 }

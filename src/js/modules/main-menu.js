@@ -26,7 +26,7 @@ const showHideMenu = (evt)=> {
 const searchBtn = document.querySelector('.t-header__input-btn');
 
 const showRegistrationPage0 = () => {
-  window.location = 'registration.html';
+  window.location = 'welcome.html';
 
 };
 

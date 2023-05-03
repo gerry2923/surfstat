@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', {
-    title: "Регистрация"
-  })
-
+@@include('html/head.html', {
+  title: 'Регистрация'
+})
 <body>
-
-<div class="wrapper">
   @@include('html/header.html', {
-    logo: "index.html"
+    logo:'index.html'
   })
-  
-  <main class="main-reg container">
-    <h1 class="main-reg__title">Добро пожаловать на <span class="main-reg__title main-reg__title_color-1">Surfstat</span>.</h1>
-  
-    <p class="main-reg__text">
-      Для того, чтобы посмотреть статистику по запросу <a class="main-reg__link" href="#">светильник для кухни</a>, пожалуйста, войдите <br>в свой профиль или зарегистрируйтесь.
-    </p>
-  
-    <div class="main-reg__options">
-  
-      <div class="main-reg__options-row">
-        <a href="#" class="main-reg__option-link">Войти</a>
-        <a href="#" class="main-reg__option-link">Зарегистрироваться</a>
-      </div>
-  
-      <div class="main-reg__options-row">
-        <a href="#" class="main-reg__option-link">Войти с помощью</a>
-      </div>
-  
-    </div>
-  
+  <main class="main-reg">
+    <h1 class="main-reg__title">Регистрация на<span class="main-reg__title_color-1">Surfstat</span></h1>
+    
+    <p class="main-reg__text">Surfstat — это сервис для анализа спроса и предложений на Wildberries.<br>Анализируйте конкурентов и повышайте свою прибыль! Давайте начнем!</p>
+
+    <form action="" class="main-reg__registration-form">
+      
+      <input type="email" class="main-reg__email">
+      
+      <input type="password" class="main-reg__password">
+      
+      <input type="password" class="main-reg__confirm-password">
+      
+      <input type="check" class="main-reg__agree">
+      
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <a href="#" class="main-reg__login-witw">Войти с помощью</a>
   </main>
-  
   @@include('html/footer.html', {})
-</div>
-
-<script src="js/app.min.js"></script>
 </body>
-
 </html>

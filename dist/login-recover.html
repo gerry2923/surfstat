@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Вход</title>
+  <title>Восстановление пароля</title>
   <link rel="icon" type="image/x-icon" href="../img/Favicon.svg">
 </head>
 <body>
@@ -52,35 +52,19 @@
   </nav>
 </header>
 
-  <main class="main-login">
-    <h1 class="visually-hidden">Авторизация зарегистрированного пользователя</h1>
-    <section class="form-login">
-
-      <div class="container">
-        <h2 class="form-login__title">Войти в личный кабинет</h2>
-        
-        <form action="">
-          <div class="form-login__wrapper">
-            <input type="email" placeholder="Введите e-mail" class="form-login__email">
-            
-            <div class="form-login__pwd-wrapper">
-              <input type="password" placeholder="Введите пароль" class="form-login__pwd">
-              <button class="form-login__btn"></button>
-            </div>
-            
-            <a href="login-recover.html" class="form-login__recover">Не помню пароль</a>
-            
-            <button class="form-login__submit" type="submit">Войти</button>
-          </div>
-
-          <a href="#" class="form-login__login-with">Войти с помощью</a>
-        
-        </form>
-
-      </div>
-
-    </section>
+  <main class="main-recover">
+    <h1 class="visually-hidden">Восстановление пароля пользователя</h1>
+    <div class="container">
+      <p class="main-recover__text">Для восстановления пароля введите e-mail, указанный при регистрации</p>
+      <form action="" class="main-recover__form">
+        <div class="main-recover__wrapper">
+          <input type="text" class="main-recover__email" placeholder="Введите e-mail">
+          <button class="main-recover__submit" type="submit">Восстановить</button>
+        </div>
+      </form>
+    </div>
   </main>
+  
   <footer class="main-footer">
   
   <div class="main-footer__inner-wrapper">
@@ -98,5 +82,11 @@
       
   </div>
 </footer>
+
+  <div class="pop-up__recover">
+    <button class="pop-up__close" type="button"></button>
+    <p class="pop-up_recover__text">Мы отправили ссылку для восстановления пароля на ваш 
+      e-mail, указанный при регистрации. Пожалуйста, проверьте свою почту.</p>
+  </div>
 </body>
 </html>

@@ -1,22 +1,56 @@
-.form-login {
+.form-login * {
+  @include lineout(transparent);
 }
-.container {
-}
+
 .form-login__title {
+  @include headline-2;
+  font-size: 1.5625rem;
+  line-height: 1.24em;
+  color: $main-headings;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 .form-login__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .form-login__email {
+  @include input-email;
 }
 .form-login__pwd-wrapper {
+  position: relative;
+  width: 100%;
 }
 .form-login__pwd {
+  @include input-pwd;
 }
 .form-login__btn {
+  @include input-pwd-show-hide-btn;
 }
+
 .form-login__recover {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.470588235em;
+  color: $texts;
+  text-decoration: underline;
+  align-self: flex-start;
+  margin-left: 19px;
+  margin-bottom: 37px;
+  margin-top: 6px;
 }
 .form-login__submit {
+  @include blue-btn;
+  width: 190px;
+  margin-bottom: 10px;
 }
 .form-login__login-with {
+  @include white-btn;
+  width: 190px;
+  @include googleIcon;
 }

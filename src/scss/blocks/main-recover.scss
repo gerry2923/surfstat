@@ -1,0 +1,22 @@
+.main-recover *{
+  @include lineout(transparent);
+}
+
+.main-recover__text {
+  @include text-J-300-16-23;
+  margin-top: 50px;
+  margin-bottom: 37px;
+}
+// .main-recover__form {
+// }
+.main-recover__wrapper {
+}
+.main-recover__email {
+  @include input-email;
+  margin-bottom: 51px;
+}
+.main-recover__submit {
+  @include blue-btn;
+  width: 171px;
+  margin: 0 auto;
+}

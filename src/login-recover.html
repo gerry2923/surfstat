@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+  title: 'Восстановление пароля'
+})
+<body>
+  @@include('html/header.html', {
+    logo:'index.html'
+  })
+  <main class="main-recover">
+    <h1 class="visually-hidden">Восстановление пароля пользователя</h1>
+    <div class="container">
+      <p class="main-recover__text">Для восстановления пароля введите e-mail, указанный при регистрации</p>
+      <form action="" class="main-recover__form">
+        <div class="main-recover__wrapper">
+          <input type="text" class="main-recover__email" placeholder="Введите e-mail">
+          <button class="main-recover__submit" type="submit">Восстановить</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  @@include('html/footer.html', {})
+
+  <div class="pop-up__recover">
+    <button class="pop-up__close" type="button"></button>
+    <p class="pop-up_recover__text">Мы отправили ссылку для восстановления пароля на ваш 
+      e-mail, указанный при регистрации. Пожалуйста, проверьте свою почту.</p>
+  </div>
+</body>
+</html>

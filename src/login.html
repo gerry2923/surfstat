@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/head.html', {
-  title: 'Регистрация'
+  title: 'Вход'
 })
 <body>
   @@include('html/header.html', {
     logo:'index.html'
   })
-  <main class="main-reg">
+  <main class="main-login">
+    <h1 class="visually-hidden">Авторизация зарегистрированного пользователя</h1>
+    <section class="form-login">
 
+      <div class="container">
+        <h2 class="form-login__title">Войти в личный кабинет</h2>
+        
+        <form action="">
+          <div class="form-login__wrapper">
+            <input type="email" placeholder="Введите e-mail" class="form-login__email">
+            
+            <div class="form-login__pwd-wrapper">
+              <input type="password" placeholder="Введите пароль" class="form-login__pwd">
+              <button class="form-login__btn"></button>
+            </div>
+            
+            <a href="login-recover.html" class="form-login__recover">Не помню пароль</a>
+            
+            <button class="form-login__submit" type="submit">Войти</button>
+          </div>
+
+          <a href="#" class="form-login__login-with">Войти с помощью</a>
+        
+        </form>
+
+      </div>
+
+    </section>
   </main>
   @@include('html/footer.html', {})
 </body>

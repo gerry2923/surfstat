@@ -8,7 +8,55 @@
     logo:'index.html'
   })
   <main class="main-reg">
+    <div class="container">
 
+      <div class="main-reg__wrapper">
+        <section class="welcome" style="display: none;">
+          <h2 class="welcome__titel">Добро пожаловать на <span class="welcome__title_color-1">Surfstat</span> </h2>
+          <p class="welcome__text">Surfstat — это сервис для анализа спроса 
+            и предложений на Wildberries.</p>
+          <p class="welcome__text">Благодаря умным алгоритмам сервиса, вы сможете определить наиболее популярные товары и категории.Также вы сможете находить взрывные тренды и похожие товары.</p>
+          <p class="welcome__text">Анализируйте конкурентов и повышайте свою прибыль!</p>
+          <p class="welcome__text">Давайте начнем!</p>
+        </section>
+        
+        <section class="registration">
+          <h1 class="registration__title">Регистрация на <span class="main-reg__title_color-1">Surfstat</span></h1>
+          
+          <p class="registration__text">Сервис дает вам<br><span class="main-reg__title_color-1">бесплатный пробный период на 3 дня</span>. 
+            <br>По окончанию пробного периода вам необходимо <br>оплатить услуги сервиса в личном кабинете. 
+            <br>Давайте начнем!
+          <form action="" class="registration-form form">
+          
+            <div class="form__wrapper">
+
+              <input type="email" class="form__email" placeholder="Введите e-mail">
+              
+              <div class="form__btn-wrapper">
+                <input type="password" class="form__password" size="40" placeholder="Введите пароль">
+                <button class="form__btn form__btn_pwd-1"></button>
+              </div>
+                
+              <div class="form__btn-wrapper">
+                <input type="password" class="form__confirm-password" placeholder="Введите пароль">
+                <button class="form__btn form__btn_pwd-2"></button>
+              </div> 
+            
+              <div class="form__agree-wrapper">
+                <input id="agree" type="checkbox" class="form__agree">
+                <label class="form__agree-label" for="agree">Я согласен с <a class="form__agree-link" href="#">пользовательским соглашением</a> и с <a class="form__agree-link" href="#">политикой обработки персональных данных</a></label>
+              </div>
+
+              <button class="form__submit" type="submit">Зарегистрироваться</button>
+            </div>
+
+          </form>
+
+          <a href="#" class="form__login-with">Войти с помощью</a>
+        </section>
+      </div>
+
+    </div>
   </main>
   @@include('html/footer.html', {})
 </body>

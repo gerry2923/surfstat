@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    title: "О сервисе"
+  })
+
+<body>
+
+
+  @@include('html/header.html', {
+    logo: "index.html"
+  })
+  
+  <main class="description">
+    <h1 class="visually-hidden">Сервис Surfstat для анализа спроса и предложения на торговой площадке Wildberries</h1>
+  
+    <section class="promo">
+      <div class="container">
+        <div class="promo__wrapper">
+          <h2 class="promo__title">Анализ спроса <br>и предложений на Wildberries</h2>
+          <ul class="promo__list">
+            
+            <li class="promo__item">Топ запросов</li>
+            
+            <li class="promo__item">Внеконкурентные ниши</li>
+            
+            <li class="promo__item">Похожие товары</li>
+            
+            <li class="promo__item">Взрывные тренды</li>
+          </ul>
+          <p class="promo__subtitle">Первым достается все, остальным остальное</p>
+          <a href="registration-trial.html" class="promo__button">Попробовать бесплатно</a>
+        </div>
+      </div>
+    </section>
+    <section class="about-service container">
+      <ul class="about-service__list">
+        
+        
+        <li class="about-service__item">
+          <h3 class="about-service__item-title">Как работает Surfstat?</h3>
+          <p class="about-service__item-text">Сервис показывает спрос по поисковой фразе, т.е. сколько раз пользователи набирали тот или иной запрос в поисковой строке маркетплейса Wildberries.</p>
+          <button class="about-service__item-button"></button>
+        </li>
+        
+        <li class="about-service__item">
+          <h3 class="about-service__item-title">На сколько точная информация в статистике?</h3>
+          <p class="about-service__item-text">Surfstat получает самые точные данные напрямую от от Wildberries, без сторонних сервисов. Данные проверяются ежедневно, как автоматически, так и вручную. Если Вы обнаружили ошибки в сервисе, напишите нам на info@surfstat.ru</p>
+          <button class="about-service__item-button"></button>
+        </li>
+        
+        <li class="about-service__item">
+          <h3 class="about-service__item-title">Есть ли бесплатный период с доступом к полному функционалу сервиса?</h3>
+          <p class="about-service__item-text">Surfstat дает вам возможность попробовать полную бесплатную версию в течение 3-х дней. По окончании пробного периода вам необходимо оплатить услуги сервиса в личном кабинете.</p>
+          <button class="about-service__item-button"></button>
+        </li>
+        
+        <li class="about-service__item">
+          <h3 class="about-service__item-title">Как получить полный доступ к сервису?</h3>
+          <p class="about-service__item-text">Чтобы получить полный доступ, вам необходимо зарегистрироваться. Сервис дает Вам беслптный пробный период на 3 дн яс полным оступом к Surfstat. По окончании пробного периода вам необходимо оплатить услуги сервиса в личном кабинете.</p>
+          <button class="about-service__item-button"></button>
+        </li>
+        
+        <li class="about-service__item">
+          <h3 class="about-service__item-title">Что мне это даст?</h3>
+          <p class="about-service__item-text">Визуализация тренад по запросу дает возможность оказаться "на гребне волны" продаж в нужное время.</p>
+          <p class="about-service__item-text">Количество конкурентов по запросу помогает найти свободные ниши и сократить расходы на рекламу.</p>
+          <p class="about-service__item-text">Покупатели ищут товар по-разному. Например, "Форма для выпечки тортов", "раздвижное кондитерское кольцо" и т.д. Инструмент "похожие запросы" показывает альтернативные поисковые фразы, что увеличивает охват аудитории.</p>
+          <button class="about-service__item-button"></button>
+        </li>
+        
+        <li class="about-service__item">
+          <h3 class="about-service__item-title">Как правильно сформулировать запрос?</h3>
+          <p class="about-service__item-text">Попробуйте вводить названия брендов, профессиональне термины. Их могут употреблять в разных словоформах. Пробуйте правильное и неправильное написание. Часто пользователи могут писать с ошибками, также и на иностранном языке (вайлдберис, вайлдберриз, wildberries).</p>
+          <p class="about-service__item-text">Исследуйте похожие запросы. Пользуйтесь сервисами-синонимайзерами. Пользователи ищут свой товар по разному(освещение, светильник, люстра, бра, торшер, светодиодная лента).</p>
+         
+          <button class="about-service__item-button"></button>
+        </li>
+      </ul>
+    </section>
+    <section class="rates">
+      <h2 class="visually-hidden">Выберите подходящий тариф</h2>
+      <div class="container">
+        <p class="rates__subtitle">Находите взрывные тренды, анализируйте конкурентов
+        и повышайте свою прибыль</p>
+        <a href="registration-trial.html" class="rates__free">Поробовать бесплатно</a>
+        <a href="registration.html" class="rates__buy">Оплатить тариф</a>
+      </div>
+
+    </section>
+
+  </main>
+  
+  @@include('html/footer.html', {})
+
+
+<script src="js/app.min.js"></script>
+</body>
+
+</html>

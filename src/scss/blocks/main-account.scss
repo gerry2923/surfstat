@@ -1,0 +1,110 @@
+.main-account * {
+  // @include lineout(mediumslateblue);
+}
+// .main-account__wrapper {
+// }
+.main-account__title {
+  @include Nord-400-25-31;
+  margin-top: 50px;
+  margin-bottom: 22px;
+}
+.main-account__title_color-1 {
+  color: $text-bgd-1;
+}
+.main-account__text {
+  @include text-J-300-16-23;
+  text-align: center;
+  margin-bottom: 28px;
+
+  &:nth-child(4) {
+    margin-bottom: 29px;
+    margin-top: 31px;
+  }
+}
+
+.main-account__rate {
+  @include text-J-300-16-23;
+  width: 374px;
+  height: 90px;
+  margin: 0px auto 0px;
+  padding: 0px 20px;
+  background-color: $text-bgd-2;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px 4px rgba($color: #000000, $alpha: 0.07);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-account__rate_limit {
+  margin-bottom: 30px;
+}
+.main-account__rate_value {
+  display: inline-block;
+  padding: 4px 11px;
+  border: none;
+  border-radius: 100px;
+  background-color: $hover;
+}
+
+.main-account__rate_price {
+  box-shadow: none;
+  border: 1px solid $texts;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 50px;
+}
+
+.main-account__rate_value-blue {
+  background-color: $text-bgd-1;
+  color: $text-bgd-2;
+  font-weight: 300;
+}
+
+.main-account__btn-pay {
+  @include blue-btn;
+  width: 171px;
+  margin: 0px auto 50px;
+}
+.main-account__requests-wrapper {
+  display: flex; 
+  flex-direction: row;
+  gap: 20px;
+}
+
+.main-account__requests {
+  @include text-J-400-15-22;
+  max-width: 285px;
+  min-width: 177px;
+  padding: 20px;
+  border: 1px solid $main-headings;
+  border-radius: 20px;
+  background-color: $text-bgd-2;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // gap:8px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4297 0.929688L18.4997 6.99969L12.4297 13.0697' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.5 7H18.33' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 20px 14px;
+  }
+}
+
+.main-account__rate_value-error {
+  color: $texts;
+  border: 1px solid $error;
+}
+
+.main-account__rate-error {
+  color: $error;
+}

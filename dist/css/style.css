@@ -1478,3 +1478,210 @@ th {
   width: 171px;
   margin: 0 auto;
 }
+
+.pop-up__recover {
+  position: relative;
+  padding: 40px;
+  width: 330px;
+  border-radius: 20px;
+}
+
+.pop-up__close {
+  width: 1.125rem;
+  height: 1.125rem;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.pop-up_recover__text,
+.pop-up__greeting-text {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  color: #42494F;
+  margin: 0px;
+  color: #42494F;
+}
+
+.pop-up__greeting {
+  position: relative;
+  padding: 70px 50px;
+  width: 374px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.pop-up__link {
+  width: 177px;
+}
+
+.pop-up__link_blue {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.466666667em;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #0A6BE5;
+  border-radius: 100px;
+  border: none;
+  margin: 0;
+  margin: 0 auto;
+}
+
+.pop-up__greeting-text:nth-child(2) {
+  margin-bottom: 23px;
+}
+
+.pop-up__greeting-text:nth-child(3) {
+  margin-bottom: 50px;
+}
+
+.main-account__title {
+  font-family: "NordecoCyrillic", sans-serif;
+  font-weight: 400;
+  font-size: 1.5625rem;
+  line-height: 1.25em;
+  color: #1D1E20;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 22px;
+}
+
+.main-account__title_color-1 {
+  color: #0A6BE5;
+}
+
+.main-account__text {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  color: #42494F;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.main-account__text:nth-child(4) {
+  margin-bottom: 29px;
+  margin-top: 31px;
+}
+
+.main-account__rate {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  color: #42494F;
+  width: 374px;
+  height: 90px;
+  margin: 0px auto 0px;
+  padding: 0px 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px 4px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-account__rate_limit {
+  margin-bottom: 30px;
+}
+
+.main-account__rate_value {
+  display: inline-block;
+  padding: 4px 11px;
+  border: none;
+  border-radius: 100px;
+  background-color: #F0F1F5;
+}
+
+.main-account__rate_price {
+  box-shadow: none;
+  border: 1px solid #42494F;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 50px;
+}
+
+.main-account__rate_value-blue {
+  background-color: #0A6BE5;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.main-account__btn-pay {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.466666667em;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #0A6BE5;
+  border-radius: 100px;
+  border: none;
+  margin: 0;
+  width: 171px;
+  margin: 0px auto 50px;
+}
+
+.main-account__requests-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.main-account__requests {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.466666667em;
+  color: #1D1E20;
+  max-width: 285px;
+  min-width: 177px;
+  padding: 20px;
+  border: 1px solid #1D1E20;
+  border-radius: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-account__requests::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4297 0.929688L18.4997 6.99969L12.4297 13.0697' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.5 7H18.33' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 20px 14px;
+}
+
+.main-account__rate_value-error {
+  color: #42494F;
+  border: 1px solid #B72929;
+}
+
+.main-account__rate-error {
+  color: #B72929;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+  title: 'Личный кабинет'
+})
+<body>
+  @@include('html/header.html', {
+    logo:'index.html'
+  })
+  <main class="main-account">
+    <div class="container">
+      <div class="main-account__wrapper">
+        
+        <h1 class="main-account__title">Добро пожаловать на <span class="main-account__title_color-1">Surfstat</span>.</h1>
+        
+        <p class="main-account__text">Мы подготовили для вас полезные отчеты, позволяющие решить любые задачи для анализа продаж на Wildberries</p>
+      
+        <p class="main-account__rate main-account__rate_limit">Тариф оплачен до <span id="rateDate"class="main-account__rate_value">1 мая 2023г.</span></p>
+      
+        <p class="main-account__text">Вы можете использовать все инструменты сервиса</p>
+      
+        <p class="main-account__rate main-account__rate_price">Стоимость тарифа<br> на 1 месяц <span id="ratePrice" class="main-account__rate_value main-account__rate_value-blue">297 руб.</span></p>
+
+
+        <a href="#" class="main-account__btn-pay">Оплатить</a>
+      
+        <div class="main-account__requests-wrapper">
+
+          <a href="#" class="main-account__requests main-account__requests_user">Топ запросов пользователей</a>
+
+          <a href="#" class="main-account__requests main-account__requests_search">Поисковые запросы</a>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  @@include('html/footer.html', {})
+
+  
+</body>
+</html>

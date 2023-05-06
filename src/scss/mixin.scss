@@ -18,6 +18,14 @@
 	line-height: 1.25em; // 35
 }
 
+@mixin Nord-400-25-31 {
+	font-family: 'NordecoCyrillic', sans-serif;
+	font-weight: 400;
+	font-size: 1.5625rem;
+	line-height: 1.25em;
+	color: $main-headings;
+	text-align: center;
+}
 
 @mixin text {
 	font-family: 'Jost', sans-serif;
@@ -32,6 +40,14 @@
 	font-size: 1rem;
 	line-height: 1.4375em;
 	color: $texts;
+}
+
+@mixin text-J-400-15-22 {
+	font-family: 'Jost', sans-serif;
+	font-weight: 400;
+	font-size: 0.9375rem;
+	line-height: 1.466666667em;
+	color: $main-headings;
 }
 
 @mixin buttons-links {

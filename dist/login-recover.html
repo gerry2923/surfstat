@@ -27,7 +27,7 @@
       <div class="main-header__account-data account-data">
         <img src="../img/avatar.svg" alt="Аватар пользователя" class="account-data__pic" width="67" height="67">
         <div class="accoutn-data__wrapper">
-          <a href="registration.html" class="account-data__login">Личный кабинет</a>
+          <a href="account-unpaid.html" class="account-data__login">Личный кабинет</a>
           <p class="account-data__email">potok-expert@yandex.ru</p> 
         </div>
 
@@ -83,10 +83,12 @@
   </div>
 </footer>
 
-  <div class="pop-up__recover">
-    <button class="pop-up__close" type="button"></button>
-    <p class="pop-up_recover__text">Мы отправили ссылку для восстановления пароля на ваш 
-      e-mail, указанный при регистрации. Пожалуйста, проверьте свою почту.</p>
-  </div>
+  <template class="pop_up__recover-template">
+    <div class="pop-up__recover">
+      <button class="pop-up__close" type="button"></button>
+      <p class="pop-up_recover__text">Мы отправили ссылку для восстановления пароля на ваш
+        e-mail, указанный при регистрации. Пожалуйста, проверьте свою почту.</p>
+    </div>
+  </template>
 </body>
 </html>

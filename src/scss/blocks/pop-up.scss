@@ -1,6 +1,54 @@
+
 .pop-up__recover {
+  position: relative;
+  padding: 40px;
+  width: 330px;
+  border-radius: 20px;
 }
 .pop-up__close {
+  width: 1.125rem;
+  height: 1.125rem;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  background-image: url('../img/close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
 }
-.pop-up_recover__text {
+.pop-up_recover__text,
+.pop-up__greeting-text {
+  @include text-J-300-16-23;
+  margin: 0px;
+  color: $texts;
+}
+
+.pop-up__greeting {
+  position: relative;
+  padding: 70px 50px;
+  width: 374px;
+  border-radius: 20px;
+  // background-color: mediumpurple;
+  text-align: center;
+}
+
+.pop-up__link {
+  width:177px;
+}
+
+.pop-up__link_blue{
+  @include blue-btn;
+  margin: 0 auto;
+
+}
+
+.pop-up__greeting-text:nth-child(2) {
+  margin-bottom: 23px;
+}
+
+.pop-up__greeting-text:nth-child(3) {
+  margin-bottom: 50px;
 }

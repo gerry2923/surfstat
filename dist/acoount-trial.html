@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Вход</title>
+  <title>Личный кабинет. Пробный период.</title>
   <link rel="icon" type="image/x-icon" href="../img/Favicon.svg">
 </head>
 <body>
@@ -27,7 +27,7 @@
       <div class="main-header__account-data account-data">
         <img src="../img/avatar.svg" alt="Аватар пользователя" class="account-data__pic" width="67" height="67">
         <div class="accoutn-data__wrapper">
-          <a href="account-unpaid.html" class="account-data__login">Личный кабинет</a>
+          <a href="account-trial.html" class="account-data__login">Личный кабинет</a>
           <p class="account-data__email">potok-expert@yandex.ru</p> 
         </div>
 
@@ -52,35 +52,34 @@
   </nav>
 </header>
 
-  <main class="main-login">
-    <h1 class="visually-hidden">Авторизация зарегистрированного пользователя</h1>
-    <section class="form-login">
-
-      <div class="container">
-        <h2 class="form-login__title">Войти в личный кабинет</h2>
+  <main class="main-account-trial">
+    <div class="container">
+      <div class="main-account__wrapper">
         
-        <form action="">
-          <div class="form-login__wrapper">
-            <input type="email" placeholder="Введите e-mail" class="form-login__email">
-            
-            <div class="form-login__pwd-wrapper">
-              <input type="password" placeholder="Введите пароль" class="form-login__pwd">
-              <button class="form-login__btn"></button>
-            </div>
-            
-            <a href="login-recover.html" class="form-login__recover">Не помню пароль</a>
-            
-            <button class="form-login__submit" type="submit">Войти</button>
-          </div>
-
-          <a href="#" class="form-login__login-with">Войти с помощью</a>
+        <h1 class="main-account__title">Добро пожаловать на <span class="main-account__title_color-1">Surfstat</span>.</h1>
         
-        </form>
+        <p class="main-account__text">Мы подготовили для вас полезные отчеты, позволяющие решить любые задачи для анализа продаж на Wildberries</p>
+      
+        <p class="main-account__rate main-account__rate_limit">Тариф оплачен до <span id="rateDate"class="main-account__rate_value">1 мая 2023г.</span></p>
+      
+        <p class="main-account__text">Вы можете использовать все инструменты сервиса</p>
+      
+        <p class="main-account__rate main-account__rate_price">Стоимость тарифа<br> на 1 месяц <span id="ratePrice" class="main-account__rate_value main-account__rate_value-blue">297 руб.</span></p>
 
+
+        <a href="#" class="main-account__btn-pay">Оплатить</a>
+      
+        <div class="main-account__requests-wrapper">
+
+          <a href="#" class="main-account__requests main-account__requests_user">Топ запросов пользователей</a>
+
+          <a href="#" class="main-account__requests main-account__requests_search">Поисковые запросы</a>
+
+        </div>
       </div>
-
-    </section>
+    </div>
   </main>
+  
   <footer class="main-footer">
   
   <div class="main-footer__inner-wrapper">
@@ -98,5 +97,7 @@
       
   </div>
 </footer>
+
+  
 </body>
 </html>

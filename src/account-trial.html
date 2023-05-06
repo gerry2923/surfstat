@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+  title: 'Личный кабинет. Пробный период.'
+})
+<body>
+  @@include('html/header.html', {
+    logo:'index.html'
+  })
+  <main class="main-account-trial">
+    <div class="container">
+      <div class="main-account__wrapper">
+        
+        <h1 class="main-account__title">Добро пожаловать на <span class="main-account__title_color-1">Surfstat</span>.</h1>
+        
+        <p class="main-account__text">Мы подготовили для вас полезные отчеты, позволяющие решить любые задачи для анализа продаж на Wildberries</p>
+      
+        <p class="main-account__rate main-account__rate_limit">Бесплатный пробный<br> период истекает <span id="rateDate"class="main-account__rate_value">1 апреля 2023г.</span></p>
+      
+        <p class="main-account__text">Для того, чтобы получить полный доступ ко всем инструментам сервис, вам необходимо оплатить тариф.</p>
+      
+        <p class="main-account__rate main-account__rate_price">Стоимость тарифа<br> на 1 месяц <span id="ratePrice" class="main-account__rate_value main-account__rate_value-blue">297 руб.</span></p>
+
+
+        <a href="#" class="main-account__btn-pay">Оплатить</a>
+      
+        <div class="main-account__requests-wrapper">
+
+          <a href="#" class="main-account__requests main-account__requests_user">Топ запросов пользователей</a>
+
+          <a href="#" class="main-account__requests main-account__requests_search">Поисковые запросы</a>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  @@include('html/footer.html', {})
+
+   <template class="pop-up_registration-congratulations">
+     <div class="pop-up__greeting">
+      <button class="pop-up__close"></button>
+      <p class="pop-up__greeting-text">Поздравляем!</p>
+      <p class="pop-up__greeting-text">Тариф оплачен. Теперь вы можете использовать все инструменты сервиса Surfstat.</p>
+      <a href="" class="pop-up__link pop-up__link_blue">Перейти к аналитике</a>
+     </div>
+   </template>
+  
+</body>
+</html>

@@ -1,0 +1,58 @@
+.agreement__title {
+  @include text-J-400-19-27;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.agreement__text,
+.rights-obligations__title,
+.responsibility__title,
+.terms-of-agreement__title {
+  @include text-J-300-16-23;
+  margin-bottom: 25px;
+}
+
+.rights-obligations__title,
+.responsibility__title,
+.terms-of-agreement__title {
+  font-weight: 400;
+}
+
+.agreement__list-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.agreement__text-item {
+  margin-bottom: 10px;
+}
+
+.agreement__link {
+  @include blue-btn;
+  width: 171px;
+  padding: 10px 13px;
+  margin: 0 auto 40px;
+}
+.agreement__header .agreement__text:nth-child(3) {
+  margin-bottom: 28px;
+}
+
+
+.agreement__btn {
+  @include text-J-300-17-25;
+  border: none;
+  margin: 0px auto 49px;
+  outline: none;
+  background-color: transparent;
+  padding: 0px 0px 0px 0px; 
+  display: block;
+  border-bottom: 1px solid $text-bgd-1;
+}
+
+.agreement__text-wrapper {
+  padding-bottom: 50px;
+}
+.agreement__text-wrapper_hide{
+  display: none;
+}

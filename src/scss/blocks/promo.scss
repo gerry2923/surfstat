@@ -15,6 +15,10 @@ z-index: -1;
   & .container {
     padding: 0px 9px; 
   }
+
+  .description & {
+    background-image: none;
+  }
 }
 .promo__wrapper {
   display: flex;

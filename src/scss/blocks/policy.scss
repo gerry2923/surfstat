@@ -1,0 +1,89 @@
+.policy * {
+  @include lineout(darkviolet);
+}
+.policy__title {
+  @include text-J-400-19-27;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.policy li,
+.policy p {
+  @include text-J-300-16-23;
+}
+
+.policy__list{
+  counter-reset: list1;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.policy__item {
+  margin-bottom: 30px;
+}
+.policy__item::before{
+  counter-increment: list1;
+  content: counter(list1)'.';
+  margin-right: 10px;
+}
+.policy__sublist {
+  counter-reset: list2;
+}
+.policy__subitem::before{
+  counter-increment: list2;
+  content: counter(list1)'.'counter(list2)'.';
+  margin-right: 10px;
+}
+.policy ol ol ul li{
+  list-style-type: '- ';
+  list-style-position: inside;
+}
+.policy__item,
+.policy__subitem,
+.policy__sub-subitem {
+  text-indent: 10px;
+}
+
+.policy__site-link,
+.policy__email-link,
+.policy__doc-link {
+  color: $text-bgd-1;
+  text-decoration: underline;
+}
+
+.policy ol li:nth-child(5) ol li .policy__sub-sublist{
+  counter-reset: list3;
+}
+.policy ol li:nth-child(5) ol li .policy__sub-sublist .policy__sub-subitem {
+  list-style-type: none;
+}
+
+.policy ol li:nth-child(5) ol li .policy__sub-sublist .policy__sub-subitem::before {
+  counter-increment: list3;
+  content: counter(list1)'.'counter(list2)'.'counter(list3)'.';
+}
+
+.policy__btn {
+  @include text-J-300-17-25;
+  display: block;
+  margin: 29px auto 49px;
+  padding: 0px;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $text-bgd-1;
+  background-color: transparent;
+}
+
+.policy__link {
+  @include blue-btn;
+  width: 171px;
+  padding: 10px 13px;
+  margin: 0 auto 40px;
+  text-decoration: none;
+}
+
+.policy__items-wrapper_hide {
+  display: none;
+}

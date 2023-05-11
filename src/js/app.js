@@ -8,3 +8,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper();
 
 addEvents();
+
+document.addEventListener('DOMContentLoaded', ()=> {
+  console.log('loading new page ... ');
+})

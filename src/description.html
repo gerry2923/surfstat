@@ -38,29 +38,29 @@
         
         
         <li class="about-service__item">
-          <h3 class="about-service__item-title">Как работает Surfstat?</h3>
+          <h3 class="about-service__item-title">Как работает Surfstat ?</h3>
           <p class="about-service__item-text">Сервис показывает спрос по поисковой фразе, т.е. сколько раз пользователи набирали тот или иной запрос в поисковой строке маркетплейса Wildberries.</p>
-          <button class="about-service__item-button"></button>
+          <button class="about-service__item-button about-service__item-button_close"></button>
         </li>
-        
+
         <li class="about-service__item">
-          <h3 class="about-service__item-title">На сколько точная информация в статистике?</h3>
-          <p class="about-service__item-text">Surfstat получает самые точные данные напрямую от от Wildberries, без сторонних сервисов. Данные проверяются ежедневно, как автоматически, так и вручную. Если Вы обнаружили ошибки в сервисе, напишите нам на info@surfstat.ru</p>
+          <h3 class="about-service__item-title">Как получить полный доступ к сервису ?</h3>
+          <p class="about-service__item-text">Чтобы получить полный доступ, вам необходимо зарегистрироваться. Сервис дает Вам беслптный пробный период на 3 дн яс полным оступом к Surfstat. По окончании пробного периода вам необходимо оплатить услуги сервиса в личном кабинете.</p>
           <button class="about-service__item-button"></button>
         </li>
-        
+
         <li class="about-service__item">
           <h3 class="about-service__item-title">Есть ли бесплатный период с доступом к полному функционалу сервиса?</h3>
           <p class="about-service__item-text">Surfstat дает вам возможность попробовать полную бесплатную версию в течение 3-х дней. По окончании пробного периода вам необходимо оплатить услуги сервиса в личном кабинете.</p>
           <button class="about-service__item-button"></button>
         </li>
-        
+
         <li class="about-service__item">
-          <h3 class="about-service__item-title">Как получить полный доступ к сервису?</h3>
-          <p class="about-service__item-text">Чтобы получить полный доступ, вам необходимо зарегистрироваться. Сервис дает Вам беслптный пробный период на 3 дн яс полным оступом к Surfstat. По окончании пробного периода вам необходимо оплатить услуги сервиса в личном кабинете.</p>
+          <h3 class="about-service__item-title">На сколько точная информация в статистике?</h3>
+          <p class="about-service__item-text">Surfstat получает самые точные данные напрямую от от Wildberries, без сторонних сервисов. Данные проверяются ежедневно, как автоматически, так и вручную. Если Вы обнаружили ошибки в сервисе, напишите нам на info@surfstat.ru</p>
           <button class="about-service__item-button"></button>
         </li>
-        
+
         <li class="about-service__item">
           <h3 class="about-service__item-title">Что мне это даст?</h3>
           <p class="about-service__item-text">Визуализация тренад по запросу дает возможность оказаться "на гребне волны" продаж в нужное время.</p>
@@ -94,7 +94,48 @@
   @@include('html/footer.html', {})
 
 
-<script src="js/app.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', ()=> {
+  console.log('loading new page 2 ... ');
+  
+  const closeBtn = document.querySelectorAll('.about-service__item-button');
+  const textDescription = document.querySelectorAll('.about-service__item-text');
+
+  const onAccordion = (evt) => {
+    const textElementsList = evt.target.parentElement.querySelectorAll('.about-service__item-text');
+
+    if (textElementsList[0].style.display === 'none') {
+      for(let i = 0; i < textElementsList.length; i++) {
+        textElementsList[i].style.display = 'block';
+      }
+      evt.target.classList.add('about-service__item-button_close');
+    }else {
+      for(let i = 0; i < textElementsList.length; i++) {
+        textElementsList[i].style.display = 'none';
+      }
+      evt.target.classList.remove('about-service__item-button_close');
+    }
+  };
+
+
+  const setBtnEvt = () => {
+    for(let i = 0; i < closeBtn.length; i++) {
+      closeBtn[i].addEventListener('pointerdown', onAccordion);
+    }
+  };
+
+  const setDisplayBtn = () => {
+    for (let i = 0; i < textDescription.length; i++) {
+      textDescription[i].style.display = "none"; 
+    }
+  }
+
+  setDisplayBtn();
+  setBtnEvt();
+  
+
+})
+</script>
 </body>
 
 </html>

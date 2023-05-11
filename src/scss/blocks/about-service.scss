@@ -1,0 +1,82 @@
+.about-service__list * {
+  @include lineout(transparent);
+}
+
+.about-service__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 53px;
+  margin-bottom: 47px;
+
+}
+
+.about-service__item {
+  position: relative;
+  min-height: 80px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid $additional-texts;
+}
+
+.about-service__item-title {
+  @include Nord-400-25-31;
+  color: $main-headings;
+  margin: 0px 0px;
+  padding: 0px 60px 20px 0px;
+  text-align: start;
+  
+}
+.about-service__item-text {
+  @include text-J-300-16-23;
+  color: $texts;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  display: none;
+  padding-right: 10px;
+  padding-top: 5px;
+
+}
+// .about-service__item:nth-child(n){
+//   display: none;
+// }
+
+
+// .about-service__item:nth-child(5),
+// .about-service__item:nth-child(5) .about-service__item-text{
+//   display: block;
+// }
+
+.about-service__item-button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: none;
+  outline: none;
+  margin: 0px 0px;
+  padding: 0px 0px 0px;
+  background-color: transparent;
+  background-image: url('../img/circle-cross-default.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+
+  // &:hover {
+  //   background-image: url('../img/circle-cross-hover.svg');
+  // }
+}
+.about-service__item-button:hover{
+  background-image: url('../img/circle-cross-hover.svg');
+}
+
+
+// .about-service__item-button:focus {
+//   background-image: url('../img/circle-cross-close.svg');
+// }
+// .about-service__item-button:active {
+//   background-color: magenta;
+// }
+.about-service__item-button.about-service__item-button_close {
+  background-image: url('../img/circle-cross-close.svg');
+}

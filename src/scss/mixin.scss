@@ -1,6 +1,6 @@
 @mixin lineout ($color: darkorange){
-	outline: 1px dashed $color;
-	// outline: 1px dashed transparent;
+	// outline: 1px dashed $color;
+	outline: 1px dashed transparent;
 	outline-offset: -1px;
 	// background-color: rgba(70, 130, 180, 0.5);
 }
@@ -18,7 +18,7 @@
 	line-height: 1.25em; // 35
 }
 
-@mixin Nord-400-25-31 {
+@mixin Nord-400-25-31 { //31.25px = 1.25em
 	font-family: 'NordecoCyrillic', sans-serif;
 	font-weight: 400;
 	font-size: 1.5625rem;
@@ -48,6 +48,22 @@
 	font-size: 0.9375rem;
 	line-height: 1.466666667em;
 	color: $main-headings;
+}
+
+@mixin text-J-400-19-27 {
+	font-family: 'Jost', sans-serif;
+	font-weight: 400;
+	font-size: 1.1875rem;
+	line-height: 1.421052632em;
+	color: $main-headings;
+}
+
+@mixin text-J-300-17-25 {
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	font-size: 1.0625rem;
+	line-height: 1.470588235em;
+	color: $text-bgd-1;
 }
 
 @mixin buttons-links {

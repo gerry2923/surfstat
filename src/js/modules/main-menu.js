@@ -37,5 +37,22 @@ const addEvents = () => {
 
 }
 
+// ------------------------------------------------
+// const descriptionBtnList = document.querySelectorAll('.about-service__item-button');
+// // const descriptionText = document.querySelectorAll('.about-service__item-text');
 
+// const onAccordion = (evt) => {
+//   const element = evt.target.previousElementSibling;
+//   if(element.style.display === 'none') {
+//     element.style.display = 'block';
+//   } else {
+//     element.style.display = 'none';
+//   }
+// };
+
+// const setAccorditonEvents = () => {
+//   for( let i = 0; i < descriptionBtnList.length; i++) {
+//     descriptionBtnList[i].addEventListener('pointerdown', onAccordion);
+//   }
+// }
 export {addEvents};

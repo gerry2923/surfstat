@@ -350,6 +350,10 @@
     .catch(err => {
         console.error('Error in copying text: ', err);
     });
+
+    if (!shareContainer.classList.contains('.main-footer__copy-link_hide')) {
+      shareContainer.classList.add('main-footer__copy-link_hide');
+    }
   }
 
 </script>

@@ -1972,3 +1972,159 @@ th {
 .policy__items-wrapper_hide {
   display: none;
 }
+
+.description-card * {
+  outline: 1px dashed transparent;
+  outline-offset: -1px;
+}
+
+.description-card {
+  width: 414px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 5px 13px 4px rgba(0, 0, 0, 0.09);
+  position: relative;
+  background-color: #ffffff;
+}
+
+.description-card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.description-card__radio-btn {
+  margin: 0px;
+  appearance: none;
+}
+.description-card__radio-btn::before {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.466666667em;
+  color: #1D1E20;
+  background-color: transparent;
+  padding: 8px 15px;
+  outline: 1px solid #1D1E20;
+  outline-offset: -1px;
+  border-radius: 100px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  margin: 0;
+  content: "Поисковый запрос";
+}
+.description-card__radio-btn:checked {
+  appearance: none;
+}
+.description-card__radio-btn:checked::before {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.466666667em;
+  color: #ffffff;
+  padding: 8px 15px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #0A6BE5;
+  border-radius: 100px;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+.description-card__header-item:nth-child(2) .description-card__radio-btn::before {
+  content: "Спрос";
+}
+.description-card__header-item:nth-child(3) .description-card__radio-btn::before {
+  content: "Тренд";
+}
+.description-card__header-item:nth-child(4) .description-card__radio-btn::before {
+  content: "Предложение";
+}
+.description-card__header-item:nth-child(5) .description-card__radio-btn::before {
+  content: "Конкуренция";
+}
+
+.description-card__text {
+  margin-top: 21px;
+  margin-bottom: 19px;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  color: #42494F;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.description-card__text::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  align-self: flex-start;
+  background-image: url("../img/hint-gray.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 15px 15px;
+  border-radius: 50%;
+}
+
+.descripton-card__definition-list {
+  position: relative;
+  width: 354px;
+  padding: 30px;
+  border: 1px solid #1D1E20;
+  border-radius: 10px;
+  margin: 0px auto 25px;
+}
+.descripton-card__definition-list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -47px;
+  left: 108px;
+  width: 134px;
+  height: 5px;
+  border-radius: 100px;
+  background-color: black;
+}
+
+.description-card__definition-item {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  color: #42494F;
+}
+
+.description-card__btn-close {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.description-card_disabled {
+  display: none;
+}

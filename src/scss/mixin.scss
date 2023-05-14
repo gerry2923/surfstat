@@ -98,6 +98,23 @@
 	margin: 0;
 }
 
+@mixin blue-btn_mobile-thin {
+	display: block;
+	font-family: 'Jost', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.9375rem;
+	line-height: 1.466666667em;
+	color: $text-bgd-2;
+	padding: 8px 15px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $text-bgd-1;
+	border-radius: 100px;
+	border: none;
+	margin: 0;
+}
+
 @mixin white-btn {
 	display: block;
 	font-family: 'Jost', sans-serif;
@@ -108,6 +125,25 @@
 	color: $main-headings;
 	background-color: transparent;
 	padding: 10px 20px;
+	outline: 1px solid $main-headings;
+	outline-offset: -1px;
+	border-radius: 100px;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	margin: 0;
+}
+
+@mixin white-btn_mobile-thin {
+	display: block;
+	font-family: 'Jost', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.9375rem;
+	line-height: 1.466666667em;
+	color: $main-headings;
+	background-color: transparent;
+	padding: 8px 15px;
 	outline: 1px solid $main-headings;
 	outline-offset: -1px;
 	border-radius: 100px;

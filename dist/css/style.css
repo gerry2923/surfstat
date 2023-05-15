@@ -302,7 +302,7 @@ h1, h2, h3, h4 {
 }
 
 .promo * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed MediumVioletRed;
   outline-offset: -1px;
 }
 
@@ -420,7 +420,7 @@ h1, h2, h3, h4 {
 }
 
 .requests-table * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed springgreen;
   outline-offset: -1px;
   outline: 1px dashed transparent;
   outline-offset: -1px;
@@ -441,7 +441,7 @@ h1, h2, h3, h4 {
 }
 
 .t-header * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed limegreen;
   outline-offset: -1px;
 }
 
@@ -768,7 +768,7 @@ th {
   margin-top: 3px;
 }
 .table__head-cell * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed magenta;
   outline-offset: -1px;
 }
 
@@ -818,7 +818,7 @@ th {
 }
 
 .main-footer * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed lime;
   outline-offset: -1px;
 }
 
@@ -935,7 +935,7 @@ th {
 }
 
 .welcome * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed limegreen;
   outline-offset: -1px;
 }
 
@@ -1028,12 +1028,12 @@ th {
 }
 
 .main-reg * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed lime;
   outline-offset: -1px;
 }
 
 .registration * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed darkcyan;
   outline-offset: -1px;
 }
 
@@ -1157,7 +1157,7 @@ th {
 }
 
 .form__agree-wrapper {
-  outline: 1px dashed transparent;
+  outline: 1px dashed red;
   outline-offset: -1px;
   position: relative;
   margin-top: -3px;
@@ -1851,7 +1851,7 @@ th {
 }
 
 .policy * {
-  outline: 1px dashed transparent;
+  outline: 1px dashed darkviolet;
   outline-offset: -1px;
 }
 
@@ -1973,35 +1973,70 @@ th {
   display: none;
 }
 
-.description-card * {
-  outline: 1px dashed transparent;
+.card * {
+  outline: 1px dashed MidnightBlue;
   outline-offset: -1px;
 }
 
-.description-card {
+.card {
+  outline: 1px dashed red;
+  outline-offset: -1px;
   width: 414px;
+  height: 451px;
   padding-top: 30px;
   padding-bottom: 30px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  box-shadow: 0px 5px 13px 4px rgba(0, 0, 0, 0.09);
+  display: flex;
+  flex-direction: column;
   position: relative;
   background-color: #ffffff;
+  box-shadow: 0px 5px 13px 4px rgba(0, 0, 0, 0.09);
+}
+.card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 140px;
+  width: 134px;
+  height: 5px;
+  border-radius: 100px;
+  background-color: black;
 }
 
-.description-card__header {
+.card__close-btn {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.card__header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 15px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.description-card__radio-btn {
+.card__input {
   margin: 0px;
   appearance: none;
 }
-.description-card__radio-btn::before {
+.card__input::before {
   display: block;
   font-family: "Jost", sans-serif;
   font-style: normal;
@@ -2020,10 +2055,10 @@ th {
   margin: 0;
   content: "Поисковый запрос";
 }
-.description-card__radio-btn:checked {
+.card__input:checked {
   appearance: none;
 }
-.description-card__radio-btn:checked::before {
+.card__input:checked::before {
   display: block;
   font-family: "Jost", sans-serif;
   font-style: normal;
@@ -2040,33 +2075,40 @@ th {
   margin: 0;
   outline: none;
 }
-.description-card__header-item:nth-child(2) .description-card__radio-btn::before {
+.card__header-item:nth-child(2) .card__input::before {
   content: "Спрос";
 }
-.description-card__header-item:nth-child(3) .description-card__radio-btn::before {
+.card__header-item:nth-child(3) .card__input::before {
   content: "Тренд";
 }
-.description-card__header-item:nth-child(4) .description-card__radio-btn::before {
+.card__header-item:nth-child(4) .card__input::before {
   content: "Предложение";
 }
-.description-card__header-item:nth-child(5) .description-card__radio-btn::before {
+.card__header-item:nth-child(5) .card__input::before {
   content: "Конкуренция";
 }
 
-.description-card__text {
-  margin-top: 21px;
-  margin-bottom: 19px;
+.card__content {
+  margin: 0px auto 20px;
+  flex: 1 1 auto;
+}
+
+.card__content-item {
   font-family: "Jost", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.4375em;
   color: #42494F;
+}
+
+.card__text {
+  margin: 0px 0px 20px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-.description-card__text::before {
+.card__text::before {
   content: "";
   display: inline-block;
   width: 15px;
@@ -2076,55 +2118,73 @@ th {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 15px 15px;
+  outline: 1px dotted red;
+  outline-offset: -1px;
   border-radius: 50%;
 }
 
-.descripton-card__definition-list {
-  position: relative;
+.card__content-wrapper {
   width: 354px;
+  height: 100%;
   padding: 30px;
   border: 1px solid #1D1E20;
   border-radius: 10px;
-  margin: 0px auto 25px;
-}
-.descripton-card__definition-list::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -47px;
-  left: 108px;
-  width: 134px;
-  height: 5px;
-  border-radius: 100px;
-  background-color: black;
 }
 
-.description-card__definition-item {
+.card__reset-btn {
   font-family: "Jost", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.4375em;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.466666667em;
+  color: #1D1E20;
+  color: #9AA3AF;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card__reset-btn:active {
   color: #42494F;
 }
-
-.description-card__btn-close {
-  display: block;
-  width: 18px;
+.card__reset-btn::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
   height: 18px;
-  margin: 0px;
-  padding: 0px;
-  position: absolute;
-  top: 21px;
-  right: 21px;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  background-image: url("../img/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px 18px;
+  background: url("../img/reset.svg") no-repeat center;
+  background-size: 16px 18px;
+  margin-right: 10px;
 }
 
-.description-card_disabled {
+.tips {
+  height: 346px;
+}
+
+.tips__label_disabled,
+.tips_disabled,
+.tips__reset-btn {
   display: none;
+}
+
+.filter__label_disabled,
+.filter_disabled {
+  display: none;
+}
+
+.filter__header-item:nth-child(1) .filter__input::before {
+  content: "Популярность запросов";
+}
+
+.filter__header-item:nth-child(2) .filter__input::before {
+  content: "Тренд";
+}
+
+.filter__header-item:nth-child(3) .filter__input::before {
+  content: "Количество предложений";
+}
+
+.filter__header-item:nth-child(4) .filter__input::before {
+  content: "Конкуренция";
 }

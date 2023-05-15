@@ -1,0 +1,156 @@
+.card * {
+  @include lineout(MidnightBlue);
+}
+.card {
+  @include lineout(red);
+  width: 414px;
+  height: 451px; //346px;//
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $text-bgd-2;  
+  box-shadow: 0px 5px 13px 4px rgba($color: #000000, $alpha: 0.09);
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 140px;
+
+    width: 134px;
+    height: 5px;
+    border-radius: 100px;
+    background-color: black;
+  }
+}
+.card__close-btn {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  background-image: url('../img/close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+.card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card__input {
+  margin: 0px;
+  appearance: none;
+  &::before {
+    @include white-btn_mobile-thin;
+    content: 'Поисковый запрос';
+  }
+
+  &:checked {
+    appearance: none;
+    &::before {
+      @include blue-btn_mobile-thin;
+      outline: none;
+    }
+  }
+
+  .card__header-item:nth-child(2) &::before {
+    content: 'Спрос';
+  }
+
+  .card__header-item:nth-child(3) &::before {
+    content: 'Тренд';
+  }
+  .card__header-item:nth-child(4) &::before {
+    content: 'Предложение';
+  }
+  .card__header-item:nth-child(5) &::before {
+    content: 'Конкуренция';
+  }
+}
+
+.card__content {
+  margin: 0px auto 20px;
+  flex: 1 1 auto;
+
+}
+.card__content-item {
+  @include text-J-300-16-23;
+}
+
+.card__text {
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    align-self: flex-start;
+    background-image: url('../img/hint-gray.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px 15px;
+    
+    outline: 1px dotted red;
+    outline-offset: -1px;
+    border-radius: 50%;
+  }
+}
+
+.card__content-wrapper {
+  width: 354px;
+  height: 100%;
+  padding: 30px;
+  border: 1px solid $main-headings;
+  border-radius: 10px;
+}
+
+// .card__label {
+
+// }
+
+.card__reset-btn {
+  @include text-J-400-15-22;
+  color: $additional-texts;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  &:active {
+    color: $texts;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    background: url('../img/reset.svg') no-repeat center;
+    background-size: 16px 18px;
+    margin-right: 10px;
+  }
+}

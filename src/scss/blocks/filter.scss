@@ -1,0 +1,20 @@
+.filter__label_disabled,
+.filter_disabled {
+  display: none;
+}
+
+.filter__header-item:nth-child(1) .filter__input::before {
+  content: "Популярность запросов";
+}
+
+.filter__header-item:nth-child(2) .filter__input::before {
+  content: "Тренд";
+}
+
+.filter__header-item:nth-child(3) .filter__input::before {
+  content: "Количество предложений";
+}
+
+.filter__header-item:nth-child(4) .filter__input::before {
+  content: "Конкуренция";
+}

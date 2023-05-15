@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Surfstat</title>
   <link rel="icon" type="image/x-icon" href="../img/Favicon.svg">
@@ -414,103 +415,239 @@
 
 </script>
   
-  <div class="description-card container">
-    <h2 class="visually-hidden">Описание параметров запроса</h2>
-    <button type="button" class="description-card__btn-close" onpointerdown="openCloseDescriptionCard()"></button>
-    <ul class="description-card__header">
-      <li class="description-card__header-item">
-        <input class="description-card__radio-btn" onchange="onchangeRadioDescription(this)" type="radio" name="description-help" id="request" value="request" checked>
-      </li>
+  <template class="card-template">
+    <div class="card container">
+      <h2 class="visually-hidden"></h2>
+      <button class="card__close-btn" type="button"></button>
+    
+      <ul class="card__header">
+        <li class="card__header-item">
+          <input type="radio" class="card__input" name="card_name" checked>
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input" name="card_name">
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input" name="card_name">
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input" name="card_name">
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input" name="card_name">
+        </li>
+      </ul>
+    
+      <ul class="card__content">
+        <li class="card__content-item">
+          <p class="card__text">Выберете интересующий вас параметр</p>
+          <div class="card__content-wrapper">
+            <label for="" class="card__label">Динамика запросов относительно предыдущего месяца.</label>
+          </div>
+        </li>
+      </ul>
+    
+      <button class="card__reset-btn" type="button">Сбросить фильтр</button>
+    </div>
+  </template>
+
+    <div class="card tips container" style="display: none;">
+      <h2 class="visually-hidden">Подсказки параметров запроса</h2>
+      <button class="card__close-btn tips__close-btn" type="button"></button>
+    
+      <ul class="card__header">
+        <li class="card__header-item">
+          <input type="radio" class="card__input tips__input" name="tips-radio" id="request" checked>
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input tips__input" name="tips-radio" id="demand">
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input tips__input" name="tips-radio" id="trend">
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input tips__input" name="tips-radio" id="supply">
+        </li>
+    
+        <li class="card__header-item">
+          <input type="radio" class="card__input tips__input" name="tips-radio" id="competing">
+        </li>
+      </ul>
+    
+      <ul class="card__content">
+        <li class="card__content-item">
+          <p class="card__text">Выберете интересующий вас параметр</p>
+          <div class="card__content-wrapper">
+            <label for="request" class="card__label tips__label">То слово или фраза, которые пользователи вводят в поисковую строку.</label>
+          </div>
+        </li>
+
+        <li class="card__content-item">
+          <p class="card__text">Выберете интересующий вас параметр</p>
+          <div class="card__content-wrapper">
+            <label for="demand" class="card__label tips__label">Количествово запросов, набранных пользователями в поисковой строке.</label>
+          </div>
+        </li>
+
+        <li class="card__content-item">
+          <p class="card__text">Выберете интересующий вас параметр</p>
+          <div class="card__content-wrapper">
+            <label for="trend" class="card__label tips__label">Количество товарных карточек по запросу.</label>
+          </div>
+        </li>
+
+        <li class="card__content-item">
+          <p class="card__text">Выберете интересующий вас параметр</p>
+          <div class="card__content-wrapper">
+            <label for="supply" class="card__label tips__label">Динамика запроса относительно предыдущего месяца.</label>
+          </div>
+        </li>
+
+        <li class="card__content-item">
+          <p class="card__text">Выберете интересующий вас параметр</p>
+          <div class="card__content-wrapper">
+            <label for="competing" class="card__label tips__label">Соотношение спроса к предложению.</label>
+          </div>
+        </li>
+      </ul>
+    
+      <button class="card__reset-btn tips__reset-btn" type="button">Сбросить фильтр</button>
+    </div>
+
+    <form action="">
+      <div class="card filter container">
+        <h2 class="visually-hidden">Фильтры таблицы статистики</h2>
+        <button class="card__close-btn filter__close-btn" type="submit"></button>
       
-      <li class="description-card__header-item">
-        <input class="description-card__radio-btn" onchange="onchangeRadioDescription(this)" type="radio" name="description-help" id="demand" value="demand">
-      </li>
-      <li class="description-card__header-item">
-        <input class="description-card__radio-btn" onchange="onchangeRadioDescription(this)" type="radio" name="description-help" id="trend" value="trend">
-      </li>
-      <li class="description-card__header-item">
-        <input class="description-card__radio-btn" onchange="onchangeRadioDescription(this)" type="radio" name="description-help" id="supply" value="supply">
-      </li>
-      <li class="description-card__header-item">
-        <input class="description-card__radio-btn" onchange="onchangeRadioDescription(this)" type="radio" name="description-help" id="competing" value="competing">
-      </li>
-    </ul>
-
-    <p class="description-card__text">Выберете интересующий вас параметр</p>
-
-    <ul class="descripton-card__definition-list">
-      <li class="description-card__definition-item">
-        <label for="request">То слово или фраза, которые пользователи вводят в поисковую строку.</label>
-      </li>
-
-      <li class="description-card__definition-item">
-        <label for="demand">Количествово запросов, набранных пользователями в поисковой строке</label>
-      </li>
-
-      <li class="description-card__definition-item">
-        <label for="trend">Количество товарных карточек по запросу</label>
+        <ul class="card__header">
+          <li class="card__header-item filter__header-item">
+            <input type="radio" class="card__input filter__input" name="filter_name" id="filter-popularity" checked>
+          </li>
       
-      </li>
+          <li class="card__header-item filter__header-item">
+            <input type="radio" class="card__input filter__input" name="filter_name" id="filter-trend">
+          </li>
+      
+          <li class="card__header-item filter__header-item">
+            <input type="radio" class="card__input filter__input" name="filter_name" id="filter-demande-nmbr">
+          </li>
+      
+          <li class="card__header-item filter__header-item">
+            <input type="radio" class="card__input filter__input" name="filter_name" id="filter-competing">
+          </li>
+        </ul>
+      
+        <ul class="card__content">
+          <li class="card__content-item">
+            <p class="card__text">Выберете границы значений частности запросов</p>
+            <div class="card__content-wrapper">
+              <label for="filter-popularity" class="card__label filter__label"></label>
+              
+              <div id="popularity-slider"></div>
 
-      <li class="description-card__definition-item">
-        <label for="supply">Динамика запроса относительно предыдущего месяца</label>
-      </li>
 
-      <li class="description-card__definition-item">
-        <label for="competing">Соотношение спроса к предложению</label>
-      </li>
+            </div>
+          </li>
 
-    </ul>
-  </div>
-  
-  <div class="filter-card" style="display: none;"></div>
+          <li class="card__content-item" style="display:none">
+            <p class="card__text">Выберете тренд:<br>положительный или отрицательный</p>
+            <div class="card__content-wrapper">
+              <label for="filter-trend" class="card__label filter__label"></label>
+            </div>
+          </li>
 
+          <li class="card__content-item" style="display:none">
+            <p class="card__text">Выберете границы значений количества карточек в выдаче</p>
+            <div class="card__content-wrapper">
+              <label for="filter-demande-nmbr" class="card__label filter__label"></label>
+            </div>
+          </li>
 
+          <li class="card__content-item" style="display:none">
+            <p class="card__text">Выберете границы соотношения спроса к предложению</p>
+            <div class="card__content-wrapper">
+              <label for="filter-competing" class="card__label filter__label"></label>
+            </div>
+          </li>
+        </ul>
+      
+        <button class="card__reset-btn filter__reset-btn" type="button">Сбросить фильтр</button>
+      </div>
+    </form>
+
+<script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
 <script src="js/app.min.js"></script>
+<!-- карточка с подсказками фильтров таблицы-->
+
 <script>
-  // modal window description-card
-  const descripionCardList = document.querySelectorAll('.description-card__definition-item');
-  const chekedRadio = document.querySelector(".description-card__radio-btn:checked");
-  const descriptionCardCloseBtn = document.querySelector('.description-card__btn-close');
- 
-  const setDisableRadioLabel = (id) => {
-      for(const liItem of descripionCardList) {
-        if(liItem.children[0].htmlFor === id) {
-          liItem.style.display = 'block';
-        } else {
-          liItem.style.display = 'none';
-        }
+  const openTipsCard = document.querySelector('.t-header__results-filter_ditails');
+  const closeTipsCard = document.querySelector('.tips__close-btn');
+  const tipsCard = document.querySelector('.tips');
+
+  const inputTipsList = document.querySelectorAll('.tips__input');
+  const labelTispList = document.querySelectorAll('.tips__label');
+  
+  const initpage = () => {
+    console.log('initpage...');
+
+    const resetTipsCard = () => {
+      inputTipsList.item(0).checked = true;
+      setDisplayLabel(inputTipsList.item(0).id);
+    };
+
+    const onCloseOpenTipsCard = () => {
+      if(tipsCard.classList.contains('tips_disabled')) {
+        tipsCard.classList.remove('tips_disabled');
+        resetTipsCard();
+      } else {
+        tipsCard.classList.add('tips_disabled');
       }
     };
 
-  const initCard = () => {
-    setDisableRadioLabel(chekedRadio.id);
-    const card = document.querySelector('.description-card');
-    if(!card.classList.contains('description-card_disabled')) {
-      card.classList.add('description-card_disabled');
-    } else {
-      card.classList.remove('description-card_disabled');
-    }
-  };
+    const setDisplayLabel  = (id) => {
 
-  const onchangeRadioDescription = (radioElem) => setDisableRadioLabel(radioElem.id);
-  
-  const openCloseDescriptionCard = () => {
-    const descriptionCard = document.querySelector('.description-card');
+      labelTispList.forEach( (label) => {
+        const tipLabelListItem = label.parentElement.parentElement;
 
-    if(descriptionCard.classList.contains('description-card_disabled')) {
-      descriptionCard.classList.remove('description-card_disabled');
-      document.querySelector('.description-card__header-item input').checked = true;
-    } else {
-      descriptionCard.classList.add('description-card_disabled');
-    }
-  };
+        if(label.htmlFor === id) { 
+          tipLabelListItem.style.display = 'block';
+        } else {
+          tipLabelListItem.style.display = 'none';
+        }
+      });
+    };
 
-  document.addEventListener('DOMContentLoaded', initCard);
+    const onCheckedRadioTips = evt => setDisplayLabel(evt.target.id);
+
+    openTipsCard.addEventListener('pointerdown', onCloseOpenTipsCard);
+    closeTipsCard.addEventListener('pointerdown', onCloseOpenTipsCard);
     
+    inputTipsList.forEach(inputElement => {
+      inputElement.addEventListener('change', onCheckedRadioTips);
+    });
+
+    setDisplayLabel(inputTipsList.item(0).id);
+
+    const popularitySlider = document.querySelector('.popularity-slider');
+    noUiSlider.create();
+
+  
+  };
+  
+  document.addEventListener('DOMContentLoaded', initpage);
 
 
 </script>
+
+
+<script></script>
 </body>
 
 </html>

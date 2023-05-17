@@ -101,7 +101,7 @@
   
             <div class="t-header__results-filter">
               <button type="button" class="t-header__results-filter_ditails button button_small" onpointerdown="openCloseDescriptionCard()">Подробнее</button> 
-              <button class="t-header__results-filter_filter button button_small" type="button">Фильтры</button>
+              <button class="t-header__results-filter_filter button button_small" type="button" id="filters">Фильтры</button>
               <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button>
             </div>
   
@@ -549,10 +549,14 @@
             <p class="card__text">Выберете границы значений частности запросов</p>
             <div class="card__content-wrapper">
               <label for="filter-popularity" class="card__label filter__label"></label>
+              <form>
+                <div id="popularity-slider-scroll"></div>
+                <div class="popularity-slider__input-container">
+                  <input type="text" id="popularity-input-min" value="0">
+                  <input type="text" id="popularity-input-max" value="100">
+                </div>
+              </form>
               
-              <div id="popularity-slider"></div>
-
-
             </div>
           </li>
 
@@ -582,10 +586,9 @@
       </div>
     </form>
 
-<script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+
 <script src="js/app.min.js"></script>
 <!-- карточка с подсказками фильтров таблицы-->
-
 <script>
   const openTipsCard = document.querySelector('.t-header__results-filter_ditails');
   const closeTipsCard = document.querySelector('.tips__close-btn');
@@ -636,7 +639,6 @@
     setDisplayLabel(inputTipsList.item(0).id);
 
     const popularitySlider = document.querySelector('.popularity-slider');
-    noUiSlider.create();
 
   
   };
@@ -647,7 +649,99 @@
 </script>
 
 
-<script></script>
+<script>
+
+const sliderElement = document.querySelector('.popularity-slider-scroll');
+const inputMin = document.getElementById('popularity-input-min');
+const inputMax = document.getElementById('popularity-input-max');
+const inputs = [inputMin, inputMax];
+
+console.log(sliderElement);
+console.log(inputs);
+
+noUiSlider.create(sliderElement, {
+  start: [20, 80],
+  connect: true,
+  tooltips: true,
+  range: {
+      'min': 0,
+      'max': 100
+  },
+  format: wNumb({
+    decimals: 0,
+    thousand: '.',
+  }),
+
+  
+});
+
+sliderElement.noUiSlider.on('update', function(values, handle) {
+  inputs[handle].value = values[handle];
+});
+
+// Listen to keydown events on the input field.
+inputs.forEach(function (input, handle) {
+
+  input.addEventListener('change', function () {
+      sliderElement.noUiSlider.setHandle(handle, this.value);
+  });
+
+  input.addEventListener('keydown', function (e) {
+
+      var values = sliderElement.noUiSlider.get();
+      var value = Number(values[handle]);
+
+      // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+      var steps = sliderElement.noUiSlider.steps();
+
+      // [down, up]
+      var step = steps[handle];
+
+      var position;
+
+      // 13 is enter,
+      // 38 is key up,
+      // 40 is key down.
+      switch (e.which) {
+
+          case 13:
+              sliderElement.noUiSlider.setHandle(handle, this.value);
+              break;
+
+          case 38:
+
+              // Get step to go increase slider value (up)
+              position = step[1];
+
+              // false = no step is set
+              if (position === false) {
+                  position = 1;
+              }
+
+              // null = edge of slider
+              if (position !== null) {
+                  sliderElement.noUiSlider.setHandle(handle, value + position);
+              }
+
+              break;
+
+          case 40:
+
+              position = step[0];
+
+              if (position === false) {
+                  position = 1;
+              }
+
+              if (position !== null) {
+                  sliderElement.noUiSlider.setHandle(handle, value - position);
+              }
+
+              break;
+      }
+  });
+});
+</script>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+import * as wNumb from './modules/wNumb.js';
+import * as noUislider from "./modules/nouislider.js";
 import * as flsFunctions from "./modules/functions.js";
 import { addEvents} from "./modules/main-menu.js";
 

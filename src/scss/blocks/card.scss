@@ -1,10 +1,14 @@
 .card * {
-  @include lineout(MidnightBlue);
+  @include lineout(blue);
 }
 .card {
-  @include lineout(red);
-  width: 414px;
-  height: 451px; //346px;//
+  // @include lineout(red);
+  min-width: 320px;
+  max-width: 447px;
+
+  // width: 100%;
+  // width: 414px;
+  // max-height: 451px; //346px;//
   padding-top: 30px;
   padding-bottom: 30px;
   border-top-left-radius: 10px;
@@ -18,10 +22,10 @@
   &::after {
     content: "";
     display: block;
-    position: absolute;
-    bottom: 10px;
-    left: 140px;
-
+    // position: absolute;
+    // bottom: 10px;
+    // left: 140px;
+    align-self: center;
     width: 134px;
     height: 5px;
     border-radius: 100px;
@@ -49,24 +53,51 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 15px;
+  gap: 9px;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  padding-right: 7px;
+
+  @media (min-width: 414px) {
+    column-gap: 15px;
+    row-gap: 10px;
+  }
 }
 
 .card__input {
   margin: 0px;
   appearance: none;
+
   &::before {
-    @include white-btn_mobile-thin;
+    @include white-btn_mobile-super-thin;
+    // max-width: 120px;
+    // white-space: normal;
+    // line-height: 1em;
+    // min-height: 38px;
+
     content: 'Поисковый запрос';
+
+    @media (min-width: 414px) {
+      @include white-btn_mobile-thin;
+    }
+
   }
 
   &:checked {
     appearance: none;
     &::before {
-      @include blue-btn_mobile-thin;
+      @include blue-btn_mobile-super-thin;
+      // max-width: 120px;
+      // min-height: 38px;
+      // white-space: normal;
+      // line-height: 1em;
       outline: none;
+
+      @media (min-width: 414px) {
+        @include blue-btn_mobile-thin;
+        width: fit-content;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -86,44 +117,53 @@
 }
 
 .card__content {
-  margin: 0px auto 20px;
+  align-self: center;
+  // margin: 0px auto 20px;
+  margin-bottom: 20px;
   flex: 1 1 auto;
-
+  width: 100%;
 }
 .card__content-item {
   @include text-J-300-16-23;
+  width: 100%;
 }
 
 .card__text {
-  margin: 0px 0px 20px 0px;
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  margin: 0px 0px 20px 25px;
+  // display: flex;
+  // flex-direction: row;
   align-items: center;
-  gap: 10px;
+  // gap: 10px;
 
   &::before {
     content: "";
     display: inline-block;
     width: 15px;
     height: 15px;
-    align-self: flex-start;
+    // align-self: flex-start;
     background-image: url('../img/hint-gray.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 15px 15px;
     
-    outline: 1px dotted red;
-    outline-offset: -1px;
+    // outline: 1px dotted red;
+    // outline-offset: -1px;
     border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: -25px;
   }
 }
 
 .card__content-wrapper {
-  width: 354px;
+  width: 100%;
+  // width: 354px;
   height: 100%;
   padding: 30px;
   border: 1px solid $main-headings;
   border-radius: 10px;
+  background-color: $text-bgd-2;
 }
 
 // .card__label {

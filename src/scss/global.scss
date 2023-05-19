@@ -25,6 +25,8 @@ body {
   color: $main-headings;
   background-color: $bg; //ivory; 
 
+  position: relative;
+  
   @media (min-width: $tablet-width) {
     font-size: 1.143em;
     line-height: 1.2em;

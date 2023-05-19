@@ -49,6 +49,7 @@ body {
   font-size: 16px;
   color: #1D1E20;
   background-color: #F9FAFC;
+  position: relative;
 }
 @media (min-width: 1024px) {
   body {
@@ -302,7 +303,7 @@ h1, h2, h3, h4 {
 }
 
 .promo * {
-  outline: 1px dashed MediumVioletRed;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -420,7 +421,7 @@ h1, h2, h3, h4 {
 }
 
 .requests-table * {
-  outline: 1px dashed springgreen;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
   outline: 1px dashed transparent;
   outline-offset: -1px;
@@ -441,7 +442,7 @@ h1, h2, h3, h4 {
 }
 
 .t-header * {
-  outline: 1px dashed limegreen;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -768,7 +769,7 @@ th {
   margin-top: 3px;
 }
 .table__head-cell * {
-  outline: 1px dashed magenta;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -818,7 +819,7 @@ th {
 }
 
 .main-footer * {
-  outline: 1px dashed lime;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -935,7 +936,7 @@ th {
 }
 
 .welcome * {
-  outline: 1px dashed limegreen;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -1028,12 +1029,12 @@ th {
 }
 
 .main-reg * {
-  outline: 1px dashed lime;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
 .registration * {
-  outline: 1px dashed darkcyan;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -1157,7 +1158,7 @@ th {
 }
 
 .form__agree-wrapper {
-  outline: 1px dashed red;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
   position: relative;
   margin-top: -3px;
@@ -1851,7 +1852,7 @@ th {
 }
 
 .policy * {
-  outline: 1px dashed darkviolet;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -1974,15 +1975,13 @@ th {
 }
 
 .card * {
-  outline: 1px dashed MidnightBlue;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
 .card {
-  outline: 1px dashed red;
-  outline-offset: -1px;
-  width: 414px;
-  height: 451px;
+  min-width: 320px;
+  max-width: 447px;
   padding-top: 30px;
   padding-bottom: 30px;
   border-top-left-radius: 10px;
@@ -1996,9 +1995,7 @@ th {
 .card::after {
   content: "";
   display: block;
-  position: absolute;
-  bottom: 10px;
-  left: 140px;
+  align-self: center;
   width: 134px;
   height: 5px;
   border-radius: 100px;
@@ -2027,9 +2024,16 @@ th {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 15px;
+  gap: 9px;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  padding-right: 7px;
+}
+@media (min-width: 414px) {
+  .card__header {
+    column-gap: 15px;
+    row-gap: 10px;
+  }
 }
 
 .card__input {
@@ -2041,11 +2045,11 @@ th {
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 0.846rem;
   line-height: 1.466666667em;
   color: #1D1E20;
   background-color: transparent;
-  padding: 8px 15px;
+  padding: 4px 8px;
   outline: 1px solid #1D1E20;
   outline-offset: -1px;
   border-radius: 100px;
@@ -2055,6 +2059,26 @@ th {
   margin: 0;
   content: "Поисковый запрос";
 }
+@media (min-width: 414px) {
+  .card__input::before {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.466666667em;
+    color: #1D1E20;
+    background-color: transparent;
+    padding: 8px 15px;
+    outline: 1px solid #1D1E20;
+    outline-offset: -1px;
+    border-radius: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    margin: 0;
+  }
+}
 .card__input:checked {
   appearance: none;
 }
@@ -2063,10 +2087,10 @@ th {
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 0.846rem;
   line-height: 1.466666667em;
   color: #ffffff;
-  padding: 8px 15px;
+  padding: 4px 8px;
   text-align: center;
   vertical-align: middle;
   background-color: #0A6BE5;
@@ -2074,6 +2098,26 @@ th {
   border: none;
   margin: 0;
   outline: none;
+}
+@media (min-width: 414px) {
+  .card__input:checked::before {
+    display: block;
+    font-family: "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.466666667em;
+    color: #ffffff;
+    padding: 8px 15px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #0A6BE5;
+    border-radius: 100px;
+    border: none;
+    margin: 0;
+    width: fit-content;
+    white-space: nowrap;
+  }
 }
 .card__header-item:nth-child(2) .card__input::before {
   content: "Спрос";
@@ -2089,8 +2133,10 @@ th {
 }
 
 .card__content {
-  margin: 0px auto 20px;
+  align-self: center;
+  margin-bottom: 20px;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .card__content-item {
@@ -2099,36 +2145,36 @@ th {
   font-size: 1rem;
   line-height: 1.4375em;
   color: #42494F;
+  width: 100%;
 }
 
 .card__text {
-  margin: 0px 0px 20px 0px;
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  margin: 0px 0px 20px 25px;
   align-items: center;
-  gap: 10px;
 }
 .card__text::before {
   content: "";
   display: inline-block;
   width: 15px;
   height: 15px;
-  align-self: flex-start;
   background-image: url("../img/hint-gray.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 15px 15px;
-  outline: 1px dotted red;
-  outline-offset: -1px;
   border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: -25px;
 }
 
 .card__content-wrapper {
-  width: 354px;
+  width: 100%;
   height: 100%;
   padding: 30px;
   border: 1px solid #1D1E20;
   border-radius: 10px;
+  background-color: #ffffff;
 }
 
 .card__reset-btn {
@@ -2187,4 +2233,132 @@ th {
 
 .filter__header-item:nth-child(4) .filter__input::before {
   content: "Конкуренция";
+}
+
+.filter-form {
+  position: fixed;
+  top: 7vh;
+  left: 0px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.filter {
+  padding-bottom: 8px;
+}
+.filter::after {
+  margin-top: 21px;
+}
+
+.popularity-filter__wrapper #popularity-slider-scroll {
+  margin-bottom: 20px;
+  margin-top: 33px;
+}
+.popularity-filter__wrapper .popularity-slider__input-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 3.96%;
+  margin-bottom: 20px;
+}
+.popularity-filter__wrapper .popularity-slider__input-container > input[type=text] {
+  height: 50px;
+  width: 48.02%;
+  padding: 14px 20px;
+  border-radius: 5px;
+  border: 1px solid #ebebeb;
+  background-color: #F0F1F5;
+  box-sizing: border-box;
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  color: #42494F;
+}
+.popularity-filter__wrapper .noUi-tooltip {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  color: #42494F;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 0px 6px;
+  background-color: #ebebeb;
+  border-radius: 3px;
+  border: none;
+}
+.popularity-filter__wrapper .noUi-horizontal {
+  height: 6px;
+}
+.popularity-filter__wrapper .noUi-horizontal .noUi-handle {
+  width: 13px;
+  height: 13px;
+  right: -7px;
+  top: -3px;
+}
+.popularity-filter__wrapper .noUi-handle.noUi-handle-upper::after, .popularity-filter__wrapper .noUi-handle.noUi-handle-upper::before, .popularity-filter__wrapper .noUi-handle.noUi-handle-lower::after, .popularity-filter__wrapper .noUi-handle.noUi-handle-lower::before {
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 4px;
+  left: 5px;
+}
+.popularity-filter__wrapper .noUi-handle.noUi-handle-upper::after, .popularity-filter__wrapper .noUi-handle.noUi-handle-lower::after {
+  left: 7px;
+}
+.popularity-filter__wrapper .noUi-target {
+  background-color: #ebebeb;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+}
+.popularity-filter__wrapper .noUi-connects {
+  border-radius: 20px;
+}
+.popularity-filter__wrapper .noUi-connect {
+  background-color: #0A6BE5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.popularity-filter__wrapper .noUi-handle {
+  background-color: #0A6BE5;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trend-filter__content-wrapper {
+  border-color: #e8e8e8;
+  border-radius: 5px;
+}
+
+.trend-filter__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 14px;
+}
+.trend-filter__wrapper > label {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.470588235em;
+  color: #0A6BE5;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+}
+.trend-filter__wrapper > label > input[type=radio] {
+  appearance: none;
+  margin: 0;
+}
+.trend-filter__wrapper > label > input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #F0F1F5;
+}
+.trend-filter__wrapper > label > input[type=radio]:checked::before {
+  outline: 5px solid #0A6BE5;
+  outline-offset: -5px;
 }

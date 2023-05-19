@@ -1,6 +1,6 @@
 @mixin lineout ($color: darkorange){
-	outline: 1px dashed $color;
-	// outline: 1px dashed transparent;
+	// outline: 1px dashed $color;
+	outline: 1px dashed transparent;
 	outline-offset: -1px;
 	// background-color: rgba(70, 130, 180, 0.5);
 }
@@ -115,6 +115,23 @@
 	margin: 0;
 }
 
+@mixin blue-btn_mobile-super-thin {
+	display: block;
+	font-family: 'Jost', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.846rem;
+	line-height: 1.466666667em;
+	color: $text-bgd-2;
+	padding: 4px 8px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $text-bgd-1;
+	border-radius: 100px;
+	border: none;
+	margin: 0;
+}
+
 @mixin white-btn {
 	display: block;
 	font-family: 'Jost', sans-serif;
@@ -144,6 +161,26 @@
 	color: $main-headings;
 	background-color: transparent;
 	padding: 8px 15px;
+	outline: 1px solid $main-headings;
+	outline-offset: -1px;
+	border-radius: 100px;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	margin: 0;
+}
+
+
+@mixin white-btn_mobile-super-thin {
+	display: block;
+	font-family: 'Jost', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.846rem;
+	line-height: 1.466666667em;
+	color: $main-headings;
+	background-color: transparent;
+	padding: 4px 8px;
 	outline: 1px solid $main-headings;
 	outline-offset: -1px;
 	border-radius: 100px;

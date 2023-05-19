@@ -1,5 +1,10 @@
 .tips {
   height: 346px;
+  position: fixed;
+  top: 7vh;
+  left: 0px;
+  z-index: 100;
+  cursor: pointer;
 }
 
 .tips__label_disabled,

@@ -1,5 +1,6 @@
 .filter__label_disabled,
-.filter_disabled {
+.filter_disabled,
+.filter__card_disabled {
   display: none;
 }
 
@@ -35,13 +36,13 @@
 }
 
 // popularity slider ---- S T A R T
-.popularity-filter__wrapper {
-  & #popularity-slider-scroll {
+.slider__wrapper {
+  & .slider__scroll {
     margin-bottom: 20px;
     margin-top: 33px;
   }
 
-  & .popularity-slider__input-container {
+  & .slider__input-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -63,7 +64,7 @@
     }
   }
 
-
+// -----------------------------------
   & .noUi-tooltip {
     font-family: 'Jost', Arial, Helvetica, sans-serif;
     color: #42494F;

@@ -13,7 +13,6 @@
 
 <body>
 
-  
   <header class="main-header ">
   <nav class="main-header__nav ">
     
@@ -98,9 +97,8 @@
               <input type="radio" name="requests-filter" id="rq-similar">
               <label class="button t-header__requests-filters_similar" for="rq-similar">Похожие запросы</label>
             </div>
-  
             <div class="t-header__results-filter">
-              <button type="button" class="t-header__results-filter_ditails button button_small" onpointerdown="openCloseDescriptionCard()">Подробнее</button> 
+              <button type="button" class="t-header__results-filter_ditails button button_small">Подробнее</button> 
               <button class="t-header__results-filter_filter button button_small" type="button" id="filters">Фильтры</button>
               <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button>
             </div>
@@ -455,7 +453,7 @@
     </div>
   </template>
 
-    <div class="card tips container" style="display: none;">
+    <div class="card tips container">
       <h2 class="visually-hidden">Подсказки параметров запроса</h2>
       <button class="card__close-btn tips__close-btn" type="button"></button>
     
@@ -520,7 +518,6 @@
     
       <button class="card__reset-btn tips__reset-btn" type="button">Сбросить фильтр</button>
     </div>
-<!-- --------------------------------------- -->
     <form action="" class="filter-form filter_disabled">
       <div class="card filter container">
         <h2 class="visually-hidden">Фильтры таблицы статистики</h2>
@@ -545,35 +542,31 @@
         </ul>
       
         <ul class="card__content">
-          <li class="card__content-item"  style="display:none">
+          <li class="card__content-item">
             <p class="card__text">Выберете границы значений частности запросов</p>
             
             <div class="card__content-wrapper">
               
               <label for="filter-popularity" class="card__label filter__label"></label>
-              <!--  -->
-              <div class="popularity-filter__wrapper">
-                <div id="popularity-slider-scroll"></div>
-                <div class="popularity-slider__input-container">
+              <div class="popularity-filter__wrapper slider__wrapper">
+                <div id="popularity-slider-scroll" class="slider__scroll"></div>
+                <div class="popularity-slider__input-container slider__input-container">
                   <input type="text" id="popularity-input-min" value="0">
                   <input type="text" id="popularity-input-max" value="100">
                 </div>
               </div>
-              <!--  -->
             </div>
           </li>
 
-          <li class="card__content-item" style="display:none" >
+          <li class="card__content-item">
             <p class="card__text">Выберете тренд:<br>положительный или отрицательный</p>
             <div class="card__content-wrapper trend-filter__content-wrapper">
               <label for="filter-trend" class="card__label filter__label"></label>
 
-              <!--  -->
               <div class="trend-filter__wrapper">
                 <label for="positive"><input type="radio" name="trend"  id="positive" value="pos" checked>Положительный</label> 
                 <label for="negative"><input type="radio" name="trend" id="negative" value="neg">Отрицательный</label>
               </div>
-              <!--  -->
 
             </div>
           </li>
@@ -582,10 +575,9 @@
             <p class="card__text">Выберете границы значений количества карточек в выдаче</p>
             <div class="card__content-wrapper">
               <label for="filter-demande-nmbr" class="card__label filter__label"></label>
-
-              <div class="demand-nmbr-filter__wrapper">
-                <div id="demand-nmbr-slider-scroll"></div>
-                <div class="demand-nmbr-slider__input-container">
+              <div class="demand-nmbr-filter__wrapper slider__wrapper">
+                <div id="demand-nmbr-slider-scroll" class="slider__scroll"></div>
+                <div class="demand-nmbr-slider__input-container slider__input-container">
                   <input type="text" id="demand-nmbr-input-min" value="0">
                   <input type="text" id="demand-nmbr-input-max" value="100">
                 </div>
@@ -593,10 +585,18 @@
             </div>
           </li>
 
-          <li class="card__content-item" style="display:none">
+          <li class="card__content-item">
             <p class="card__text">Выберете границы соотношения спроса к предложению</p>
             <div class="card__content-wrapper">
               <label for="filter-competing" class="card__label filter__label"></label>
+
+              <div class="competing-filter__wrapper slider__wrapper">
+                <div id="competing-slider-scroll" class="slider__scroll"></div>
+                <div class="competing-slider__input-container slider__input-container">
+                  <input type="text" id="competing-input-min" value="0">
+                  <input type="text" id="competing-input-max" value="100">
+                </div>
+              </div>
             </div>
           </li>
         </ul>

@@ -1,11 +1,14 @@
 // .main-header *:not(.main-header__menu *) {
 //   // @include lineout(limegreen);
 // }
+.main-header {
+  box-shadow: none;
+}
 
-// .main-header {
-//   // background-color: $text-bgd-2;
-
-// }
+.main-header_shadow {
+  // background-color: $text-bgd-2;
+  box-shadow: '0px 5px 13px 4px rgba(0, 0, 0, 0.09)';
+}
 
 // .main-header__nav {
 //   // background-color: $text-bgd-2;

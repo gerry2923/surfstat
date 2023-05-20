@@ -33,10 +33,21 @@
         </div>
       </div>
     </div>
+
+
   </main>
   
   @@include('html/footer.html', {})
 
+  <div class="successfully-paid-msg container successfully-paid-msg__disabled">
+    
+    <button class="button_close successfully-paid-msg__button" type="button"></button>
+    <p class="successfully-paid-msg__text">Поздравляем! </p>
+    <p class="successfully-paid-msg__text">Тариф оплачен. Теперь вы можете использовать все инструменты сервиса Surfstat.</p>
+    <a href="index.html" class="successfully-paid-msg__link">Перейти к аналитике</a>
   
+  </div>
+
+  <script src="js/app.min.js"></script>
 </body>
 </html>

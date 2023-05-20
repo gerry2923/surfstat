@@ -149,40 +149,13 @@
 
     <div class="main-footer__nav">
       <button class="main-footer__btn main-footer__btn_prev" type="button">Назад</button>
-      <button class="main-footer__btn main-footer__btn_share" type="button" onpointerdown="showLink()">Поделиться</button>
+      <button class="main-footer__btn main-footer__btn_share" type="button">Поделиться</button>
       <button class="main-footer__btn main-footer__btn_next">Вперед</button>  
     </div>
       
   </div>
 </footer>
 
-<script>
-  const shareBtn = document.querySelector('.main-footer__btn_share');
-  const shareContainer = document.querySelector('.main-footer__copy-link');
-
-  const showLink = ()=> {
-    if(shareContainer.classList.contains('main-footer__copy-link_hide')) {
-      shareContainer.classList.remove('main-footer__copy-link_hide');
-    }
-  };
-
-  document.getElementById('copyLinkBtn').onpointerdown = function() {
-    let text = document.getElementById('copyLinkInput').value;
-
-    navigator.clipboard.writeText(text)
-    .then(() => {
-        console.log('Text copied to clipboard');
-    })
-    .catch(err => {
-        console.error('Error in copying text: ', err);
-    });
-
-    if (!shareContainer.classList.contains('.main-footer__copy-link_hide')) {
-      shareContainer.classList.add('main-footer__copy-link_hide');
-    }
-  }
-
-</script>
 
 
 <script>

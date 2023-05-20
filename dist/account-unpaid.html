@@ -79,6 +79,8 @@
         </div>
       </div>
     </div>
+
+
   </main>
   
   <footer class="main-footer">
@@ -93,41 +95,23 @@
 
     <div class="main-footer__nav">
       <button class="main-footer__btn main-footer__btn_prev" type="button">Назад</button>
-      <button class="main-footer__btn main-footer__btn_share" type="button" onpointerdown="showLink()">Поделиться</button>
+      <button class="main-footer__btn main-footer__btn_share" type="button">Поделиться</button>
       <button class="main-footer__btn main-footer__btn_next">Вперед</button>  
     </div>
       
   </div>
 </footer>
 
-<script>
-  const shareBtn = document.querySelector('.main-footer__btn_share');
-  const shareContainer = document.querySelector('.main-footer__copy-link');
 
-  const showLink = ()=> {
-    if(shareContainer.classList.contains('main-footer__copy-link_hide')) {
-      shareContainer.classList.remove('main-footer__copy-link_hide');
-    }
-  };
-
-  document.getElementById('copyLinkBtn').onpointerdown = function() {
-    let text = document.getElementById('copyLinkInput').value;
-
-    navigator.clipboard.writeText(text)
-    .then(() => {
-        console.log('Text copied to clipboard');
-    })
-    .catch(err => {
-        console.error('Error in copying text: ', err);
-    });
-
-    if (!shareContainer.classList.contains('.main-footer__copy-link_hide')) {
-      shareContainer.classList.add('main-footer__copy-link_hide');
-    }
-  }
-
-</script>
-
+  <div class="successfully-paid-msg container successfully-paid-msg__disabled">
+    
+    <button class="button_close successfully-paid-msg__button" type="button"></button>
+    <p class="successfully-paid-msg__text">Поздравляем! </p>
+    <p class="successfully-paid-msg__text">Тариф оплачен. Теперь вы можете использовать все инструменты сервиса Surfstat.</p>
+    <a href="index.html" class="successfully-paid-msg__link">Перейти к аналитике</a>
   
+  </div>
+
+  <script src="js/app.min.js"></script>
 </body>
 </html>

@@ -2,57 +2,32 @@ const menuBtn = document.querySelector('.site-nav_show');
 const menu = document.querySelector('.main-header__menu');
 const loginMainHeader = document.querySelector('.main-header__login');
 const mainHeader = document.querySelector('.main-header');
+const searchBtn = document.querySelector('.t-header__input-btn');
 
 const showHideMenu = (evt)=> {
   if(menu.classList.contains('main-header__menu_hide')) {
-
     menu.classList.remove('main-header__menu_hide');
     loginMainHeader.classList.add('main-header__login_hide');
     evt.target.classList.add('site-nav_hide');
-    mainHeader.style.boxShadow = 'none';
+    mainHeader.classList.remove('main-header_shadow');
 
   }
   else {
     menu.classList.add('main-header__menu_hide');
     loginMainHeader.classList.remove('main-header__login_hide');
     evt.target.classList.remove('site-nav_hide');
-    mainHeader.style.boxShadow = '0px 5px 13px 4px rgba(0, 0, 0, 0.09)';
+    mainHeader.classList.add('main-header_shadow');
   }
 }
 
-
-// ------------------------------------------------------------
-
-const searchBtn = document.querySelector('.t-header__input-btn');
-
 const showRegistrationPage0 = () => {
   window.location = 'welcome.html';
-
 };
 
-
-const addEvents = () => {
+export const setMainMenuEvt = () => {
   menuBtn.addEventListener('pointerdown', showHideMenu);
-  searchBtn.addEventListener('pointerdown', showRegistrationPage0);
-
 }
 
-// ------------------------------------------------
-// const descriptionBtnList = document.querySelectorAll('.about-service__item-button');
-// // const descriptionText = document.querySelectorAll('.about-service__item-text');
-
-// const onAccordion = (evt) => {
-//   const element = evt.target.previousElementSibling;
-//   if(element.style.display === 'none') {
-//     element.style.display = 'block';
-//   } else {
-//     element.style.display = 'none';
-//   }
-// };
-
-// const setAccorditonEvents = () => {
-//   for( let i = 0; i < descriptionBtnList.length; i++) {
-//     descriptionBtnList[i].addEventListener('pointerdown', onAccordion);
-//   }
-// }
-export {addEvents};
+export const setUnregSearchBtnEvt = () => {
+  searchBtn.addEventListener('pointerdown', showRegistrationPage0);
+};

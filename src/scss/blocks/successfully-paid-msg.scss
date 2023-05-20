@@ -1,0 +1,51 @@
+.successfully-paid-msg *{
+  @include lineout(limegreen);
+}
+
+.successfully-paid-msg {
+  @include lineout(red);
+  position: fixed;
+  top: 7vh;
+  left: 0px;
+  z-index: 100;
+  cursor: pointer;
+
+  background-color: $bg;
+  border-radius: 20px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  min-width: 320px;
+  max-width: 374px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_close {
+  @include button-close;
+}
+
+.successfully-paid-msg__button {
+  // @include button-close;
+  position: absolute;
+  top: 20px;
+  right: 21px;
+}
+
+.successfully-paid-msg__text {
+  @include text-J-300-16-23;
+  text-align: center;
+  margin: 0px 0px 25px;
+  width: 85%;
+}
+
+.successfully-paid-msg__link {
+  @include blue-btn;
+  margin-top: 23px;
+  width: 177px;
+}
+
+.successfully-paid-msg__disabled {
+  display: none;
+}

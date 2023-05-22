@@ -28,7 +28,7 @@
       <div class="main-header__account-data account-data">
         <img src="../img/avatar.svg" alt="Аватар пользователя" class="account-data__pic" width="67" height="67">
         <div class="accoutn-data__wrapper">
-          <a href="account-unpaid.html" class="account-data__login">Личный кабинет</a>
+          <a href="account-trial.html" class="account-data__login">Личный кабинет</a>
           <p class="account-data__email">potok-expert@yandex.ru</p> 
         </div>
 
@@ -36,7 +36,7 @@
 
       <ul class="main-header__menu-list">
         <li class="main-header__menu-item">
-          <a href="description.html" class="main-header__menu-link">О сервисе</a>
+          <a href="about-service.html" class="main-header__menu-link">О сервисе</a>
         </li>
 
         <li class="main-header__menu-item">
@@ -83,7 +83,7 @@
   
   <footer class="main-footer">
   
-  <div class="main-footer__inner-wrapper">
+  <!-- <div class="main-footer__inner-wrapper"> -->
     <!-- main-footer__copy-link_hide  -->
     <div class="main-footer__copy-link main-footer__copy-link_hide container">
       <input class="main-footer__copy-link__input" type="text" value="https://surfstat.ru/statistic/lustra-..." id="copyLinkInput">
@@ -97,18 +97,18 @@
       <button class="main-footer__btn main-footer__btn_next">Вперед</button>  
     </div>
       
-  </div>
+  <!-- </div> -->
 </footer>
 
-
-   <template class="pop-up_registration-congratulations">
-     <div class="pop-up__greeting">
-      <button class="pop-up__close"></button>
-      <p class="pop-up__greeting-text">Поздравляем!</p>
-      <p class="pop-up__greeting-text">Тариф оплачен. Теперь вы можете использовать все инструменты сервиса Surfstat.</p>
-      <a href="" class="pop-up__link pop-up__link_blue">Перейти к аналитике</a>
-     </div>
-   </template>
+  <div class="successfully-paid-msg container successfully-paid-msg__disabled">
+    
+    <button class="button_close successfully-paid-msg__button" type="button"></button>
+    <p class="successfully-paid-msg__text">Поздравляем! </p>
+    <p class="successfully-paid-msg__text">Тариф оплачен. Теперь вы можете использовать все инструменты сервиса Surfstat.</p>
+    <a href="index.html" class="successfully-paid-msg__link">Перейти к аналитике</a>
   
+  </div>
+  
+  <script src="js/app.min.js"></script>
 </body>
 </html>

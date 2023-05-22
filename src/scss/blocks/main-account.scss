@@ -1,8 +1,9 @@
 .main-account * {
-  // @include lineout(mediumslateblue);
+  @include lineout(mediumslateblue);
 }
-// .main-account__wrapper {
-// }
+.main-account__wrapper {
+padding-bottom: 60px;
+}
 .main-account__title {
   @include Nord-400-25-31;
   margin-top: 50px;
@@ -24,7 +25,10 @@
 
 .main-account__rate {
   @include text-J-300-16-23;
-  width: 374px;
+  font-size: 0.87rem;
+  // width: 374px;
+  width: 100%;
+  max-width: 374px;
   height: 90px;
   margin: 0px auto 0px;
   padding: 0px 20px;
@@ -35,7 +39,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  column-gap: 15px;
   align-items: center;
+  text-align: center;
+
+
+  @media (min-width: 360px) {
+    column-gap: normal;
+    text-align: start;
+    & .main-account__rate_value {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 414px) {
+    font-size: 1rem;
+
+    & .main-account__rate_value {
+      text-align: start;
+      white-space: nowrap;
+    }
+   
+  }
 }
 
 .main-account__rate_limit {
@@ -71,13 +96,16 @@
 .main-account__requests-wrapper {
   display: flex; 
   flex-direction: row;
-  gap: 20px;
+  justify-content: center;
+  gap: 6%;//20px;
 }
 
 .main-account__requests {
   @include text-J-400-15-22;
+  font-size: 0.86rem;
+  width: 47%;
   max-width: 285px;
-  min-width: 177px;
+  // min-width: 177px;
   padding: 20px;
   border: 1px solid $main-headings;
   border-radius: 20px;
@@ -86,9 +114,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
   // gap:8px;
 
-  &::after {
+  @media (min-width: 414px) {
+    font-size: 0.9375rem;
+    text-align: start;
+
+    &::after {
     content: "";
     display: block;
     width: 45px;
@@ -97,6 +130,7 @@
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 20px 14px;
+    }
   }
 }
 

@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', {
-    title: "О сервисе"
-  })
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>О сервисе</title>
+  <link rel="icon" type="image/x-icon" href="../img/Favicon.svg">
+</head>
 
 <body>
 
 
-  @@include('html/header.html', {
-    logo: "index.html"
-  })
+  <header class="main-header ">
+  <nav class="main-header__nav ">
+    
+    <div class="main-header__top-menu">
+      <a href="index.html" class="main-header__logo">
+        <object type="image/svg+xml" data="../img/logo.svg" width="98" height="21" style="pointer-events: none;">
+          <img src="../img/logo.png" width="98" height="21" alt="логотип surfstat" />
+        </object>
+      </a>
+      <a href="../login.html" class="main-header__login">Личный кабинет</a>
+      <button class="site-nav_show" type="button"></button>
+    </div>
+    
+    <div class="main-header__menu main-header__menu_hide ">
+      <div class="main-header__account-data account-data">
+        <img src="../img/avatar.svg" alt="Аватар пользователя" class="account-data__pic" width="67" height="67">
+        <div class="accoutn-data__wrapper">
+          <a href="account-trial.html" class="account-data__login">Личный кабинет</a>
+          <p class="account-data__email">potok-expert@yandex.ru</p> 
+        </div>
+
+      </div>
+
+      <ul class="main-header__menu-list">
+        <li class="main-header__menu-item">
+          <a href="about-service.html" class="main-header__menu-link">О сервисе</a>
+        </li>
+
+        <li class="main-header__menu-item">
+          <a href="#" class="main-header__menu-link">Топ запросов</a>
+        </li>
+
+        <li class="main-header__menu-item">
+          <a href="#" class="main-header__menu-link">Поисковые запросы</a>
+        </li>
+      </ul>
+
+    </div>
+    
+  </nav>
+</header>
+
   
-  <main class="description">
+  <main class="about-service">
     <h1 class="visually-hidden">Сервис Surfstat для анализа спроса и предложения на торговой площадке Wildberries</h1>
   
     <section class="promo">
@@ -40,7 +86,7 @@
         <li class="about-service__item">
           <h3 class="about-service__item-title">Как работает Surfstat ?</h3>
           <p class="about-service__item-text">Сервис показывает спрос по поисковой фразе, т.е. сколько раз пользователи набирали тот или иной запрос в поисковой строке маркетплейса Wildberries.</p>
-          <button class="about-service__item-button about-service__item-button_close"></button>
+          <button class="about-service__item-button"></button>
         </li>
 
         <li class="about-service__item">
@@ -91,50 +137,25 @@
 
   </main>
   
-  @@include('html/footer.html', {})
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', ()=> {
-  console.log('loading new page 2 ... ');
+  <footer class="main-footer">
   
-  const closeBtn = document.querySelectorAll('.about-service__item-button');
-  const textDescription = document.querySelectorAll('.about-service__item-text');
+  <!-- <div class="main-footer__inner-wrapper"> -->
+    <!-- main-footer__copy-link_hide  -->
+    <div class="main-footer__copy-link main-footer__copy-link_hide container">
+      <input class="main-footer__copy-link__input" type="text" value="https://surfstat.ru/statistic/lustra-..." id="copyLinkInput">
 
-  const onAccordion = (evt) => {
-    const textElementsList = evt.target.parentElement.querySelectorAll('.about-service__item-text');
+      <button id="copyLinkBtn" class="main-footer__copy-link__btn  button" type="button">Копировать</button>
+    </div>
 
-    if (textElementsList[0].style.display === 'none') {
-      for(let i = 0; i < textElementsList.length; i++) {
-        textElementsList[i].style.display = 'block';
-      }
-      evt.target.classList.add('about-service__item-button_close');
-    }else {
-      for(let i = 0; i < textElementsList.length; i++) {
-        textElementsList[i].style.display = 'none';
-      }
-      evt.target.classList.remove('about-service__item-button_close');
-    }
-  };
+    <div class="main-footer__nav">
+      <button class="main-footer__btn main-footer__btn_prev" type="button">Назад</button>
+      <button class="main-footer__btn main-footer__btn_share" type="button">Поделиться</button>
+      <button class="main-footer__btn main-footer__btn_next">Вперед</button>  
+    </div>
+      
+  <!-- </div> -->
+</footer>
 
-
-  const setBtnEvt = () => {
-    for(let i = 0; i < closeBtn.length; i++) {
-      closeBtn[i].addEventListener('pointerdown', onAccordion);
-    }
-  };
-
-  const setDisplayBtn = () => {
-    for (let i = 0; i < textDescription.length; i++) {
-      textDescription[i].style.display = "none"; 
-    }
-  }
-
-  setDisplayBtn();
-  setBtnEvt();
-  
-})
-</script>
 
 <script src="js/app.min.js"></script>
 </body>

@@ -31,10 +31,13 @@
   color: $texts;
   margin-top: 0px;
   margin-bottom: 20px;
-  display: none;
   padding-right: 10px;
   padding-top: 5px;
 
+}
+
+.about-service__item-text_hide {
+  display: none;
 }
 // .about-service__item:nth-child(n){
 //   display: none;
@@ -66,7 +69,7 @@
   //   background-image: url('../img/circle-cross-hover.svg');
   // }
 }
-.about-service__item-button:hover{
+.about-service__item-button:active{
   background-image: url('../img/circle-cross-hover.svg');
 }
 

@@ -5,7 +5,8 @@ import { setMainMenuEvt, setUnregSearchBtnEvt} from "./modules/main-menu.js";
 import { setShowLinkBtnEvt, setCopyLinkBtnEvt } from "./modules/footer.js";
 import { initTips } from "./modules/tips.js"; 
 import { initFilters } from "./modules/filters.js";
-import { initAcoountUnpaid } from "./modules/account.js";
+import { initAcoountPay } from "./modules/account.js";
+import { initAboutService } from "./modules/about-service.js";
 
 flsFunctions.isWebp();
 
@@ -25,16 +26,19 @@ const loadMain = () => {
       break;
 
     case 'main-account-trial': console.log(mainName);
+      initAcoountPay(); 
       break;
     
     case 'main-account-unpaid': console.log(mainName);
-      initAcoountUnpaid();
+      initAcoountPay();
       break;
 
     case 'main-account': console.log(mainName);
+      initAcoountPay();
       break;
 
-    case 'description': console.log(mainName);
+    case 'about-service': console.log(mainName);
+      initAboutService();
       break;
 
     case 'main-recover': console.log(mainName);

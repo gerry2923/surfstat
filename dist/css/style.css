@@ -831,14 +831,28 @@ th {
   outline-offset: -1px;
 }
 
-.main-footer__inner-wrapper {
+.main-footer {
   background-color: #ffffff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 0px 5px 13px 4px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8px;
+}
+.main-footer::after {
+  content: "";
+  display: block;
+  width: 134px;
+  height: 5px;
+  background-color: black;
+  border-radius: 100px;
+  margin-top: 8px;
 }
 
 .main-footer__copy-link {
+  width: 100%;
   padding-top: 15px;
   position: relative;
 }
@@ -856,6 +870,10 @@ th {
   border-color: transparent;
   border-radius: 100px;
   color: #42494F;
+}
+.main-footer__copy-link__input:focus-visible {
+  outline-width: 1px;
+  outline-color: #9AA3AF;
 }
 
 .main-footer__copy-link__btn {
@@ -879,13 +897,14 @@ th {
 
 .main-footer__nav {
   margin-bottom: 20px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-left: 10px;
   padding-right: 4px;
-  padding-top: 13px;
+  padding-top: 9px;
 }
 
 .main-footer__btn {
@@ -1566,6 +1585,15 @@ th {
   margin-bottom: 50px;
 }
 
+.main-account * {
+  outline: 1px dashed mediumslateblue;
+  outline-offset: -1px;
+}
+
+.main-account__wrapper {
+  padding-bottom: 60px;
+}
+
 .main-account__title {
   font-family: "NordecoCyrillic", sans-serif;
   font-weight: 400;
@@ -1601,7 +1629,9 @@ th {
   font-size: 1rem;
   line-height: 1.4375em;
   color: #42494F;
-  width: 374px;
+  font-size: 0.87rem;
+  width: 100%;
+  max-width: 374px;
   height: 90px;
   margin: 0px auto 0px;
   padding: 0px 20px;
@@ -1612,7 +1642,27 @@ th {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  column-gap: 15px;
   align-items: center;
+  text-align: center;
+}
+@media (min-width: 360px) {
+  .main-account__rate {
+    column-gap: normal;
+    text-align: start;
+  }
+  .main-account__rate .main-account__rate_value {
+    text-align: center;
+  }
+}
+@media (min-width: 414px) {
+  .main-account__rate {
+    font-size: 1rem;
+  }
+  .main-account__rate .main-account__rate_value {
+    text-align: start;
+    white-space: nowrap;
+  }
 }
 
 .main-account__rate_limit {
@@ -1663,7 +1713,8 @@ th {
 .main-account__requests-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: center;
+  gap: 6%;
 }
 
 .main-account__requests {
@@ -1672,8 +1723,9 @@ th {
   font-size: 0.9375rem;
   line-height: 1.466666667em;
   color: #1D1E20;
+  font-size: 0.86rem;
+  width: 47%;
   max-width: 285px;
-  min-width: 177px;
   padding: 20px;
   border: 1px solid #1D1E20;
   border-radius: 20px;
@@ -1681,16 +1733,23 @@ th {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
 }
-.main-account__requests::after {
-  content: "";
-  display: block;
-  width: 45px;
-  height: 14px;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4297 0.929688L18.4997 6.99969L12.4297 13.0697' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.5 7H18.33' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: 20px 14px;
+@media (min-width: 414px) {
+  .main-account__requests {
+    font-size: 0.9375rem;
+    text-align: start;
+  }
+  .main-account__requests::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4297 0.929688L18.4997 6.99969L12.4297 13.0697' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.5 7H18.33' stroke='%231D1E20' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 20px 14px;
+  }
 }
 
 .main-account__rate_value-error {
@@ -1744,9 +1803,12 @@ th {
   color: #42494F;
   margin-top: 0px;
   margin-bottom: 20px;
-  display: none;
   padding-right: 10px;
   padding-top: 5px;
+}
+
+.about-service__item-text_hide {
+  display: none;
 }
 
 .about-service__item-button {
@@ -1766,7 +1828,7 @@ th {
   background-size: 40px 40px;
 }
 
-.about-service__item-button:hover {
+.about-service__item-button:active {
   background-image: url("../img/circle-cross-hover.svg");
 }
 

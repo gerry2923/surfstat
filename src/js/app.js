@@ -7,6 +7,8 @@ import { initTips } from "./modules/tips.js";
 import { initFilters } from "./modules/filters.js";
 import { initAcoountPay } from "./modules/account.js";
 import { initAboutService } from "./modules/about-service.js";
+import { initPolicy } from "./modules/processing-policy.js";
+import { initAgreement } from "./modules/user-agreement.js";
 
 flsFunctions.isWebp();
 
@@ -15,7 +17,7 @@ flsFunctions.isWebp();
 
 // функции -----------------------------------------
 const loadMain = () => {
-  const mainName = document.querySelector('main').className;
+  const mainName = document.querySelector('main').classList[0];
 
   switch(mainName) {
     case 'main-layout': console.log(mainName);
@@ -48,6 +50,7 @@ const loadMain = () => {
       break;
 
     case 'policy': console.log(mainName);
+      initPolicy();
       break;
 
     case 'main-reg-trial': console.log(mainName);
@@ -57,6 +60,7 @@ const loadMain = () => {
       break;
 
     case 'agreement': console.log(mainName);
+      initAgreement();
       break;
 
     case 'welcome': console.log(mainName);

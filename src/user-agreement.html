@@ -24,7 +24,7 @@
         Если Вы не согласны с условиями данного соглашения, не используйте Сайт www.surfstat.ru!
       </p>
 
-      <button type="button" class="agreement__btn" onpointerdown="showAllAgreement()">Раскрыть полный текст</button>
+      <button type="button" class="agreement__btn">Раскрыть полный текст</button>
 
     </section>
     
@@ -87,31 +87,13 @@
         </ul>
       </section>
     </div>
-    <a href="index.html" class="agreement__link" onpointerdown="backToIndex()">Вернуться на главную</a>
+    <a href="index.html" class="agreement__link">Вернуться на главную</a>
   
   </main>
   
   @@include('html/footer.html', {})
 
-
-<script>
-  const agreementWrapper = document.querySelector('.agreement__text-wrapper');  
-  const agreementBtn = document.querySelector('.agreement__btn');
-
-  const showAllAgreement = () => {
-    if(agreementWrapper.classList.contains('agreement__text-wrapper_hide')) {
-      agreementWrapper.classList.remove('agreement__text-wrapper_hide');
-      agreementBtn.style.display = 'none';
-    }
-  };
-
-  const backToIndex =() => {
-    if(!agreementWrapper.classList.contains('agreement__text-wrapper_hide')) {
-      agreementWrapper.classList.add('agreement__text-wrapper_hide');
-      agreementBtn.style.display = 'block';
-    }
-  };
-</script>
+<script src="js/app.min.js"></script>
 </body>
 
 </html>

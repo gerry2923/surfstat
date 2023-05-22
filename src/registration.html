@@ -33,12 +33,16 @@
               <input type="email" class="form__email" placeholder="Введите e-mail">
               
               <div class="form__btn-wrapper">
-                <input type="password" class="form__password" size="40" placeholder="Введите пароль">
+                <div class="form__input-container">
+                  <input type="password" class="form__password" size="40" placeholder="Введите пароль">
+                </div>
                 <button class="form__btn form__btn_pwd-1"></button>
               </div>
                 
               <div class="form__btn-wrapper">
-                <input type="password" class="form__confirm-password" placeholder="Введите пароль">
+                <div class="form__input-container">
+                  <input type="password" class="form__confirm-password" placeholder="Введите пароль">
+                </div>
                 <button class="form__btn form__btn_pwd-2"></button>
               </div> 
             
@@ -59,5 +63,6 @@
     </div>
   </main>
   @@include('html/footer.html', {})
+  <script src="js/app.min.js"></script>
 </body>
 </html>

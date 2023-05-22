@@ -75,6 +75,9 @@
   border-bottom: 1px solid $text-bgd-1;
   background-color: transparent;
 }
+.policy__btn_hide {
+  display: none;
+}
 
 .policy__link {
   @include blue-btn;

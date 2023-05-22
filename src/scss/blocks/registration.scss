@@ -2,14 +2,17 @@
   @include lineout(darkcyan);
 
 }
-
+.registration {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .registration__title {
   @include headline-2;
   font-size: 1.5625rem;
   line-height: 1.25em;
   color: $main-headings;
   text-align: center;
-  margin-top: 50px;
+  // margin-top: 50px;
 }
 
 .main-reg__title_color-1 {
@@ -46,7 +49,6 @@
   margin: 0px 0px;
   padding: 8px 20px;
   border-radius: 100px;
-  
   color: $texts;
   border: none;
   outline: none;
@@ -60,6 +62,10 @@
   &::placeholder {
     color: $additional-texts;
   }
+
+  &:focus-visible::placeholder {
+    color: transparent;
+  }
 }
 // поле ввода тексе
 .form__password,
@@ -68,6 +74,13 @@
   font-size: 1.375rem;
   // line-height: 1.2em;
   letter-spacing: 0.1em;
+
+}
+
+.form__password:focus-visible::placeholder,
+.form__confirm-password:focus-visible::placeholder {
+  // color: transparent;
+  background-image: none;;
 }
 
 

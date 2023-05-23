@@ -311,7 +311,7 @@ h1, h2, h3, h4 {
 }
 
 .promo * {
-  outline: 1px dashed MediumVioletRed;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -429,7 +429,7 @@ h1, h2, h3, h4 {
 }
 
 .requests-table * {
-  outline: 1px dashed springgreen;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
   outline: 1px dashed transparent;
   outline-offset: -1px;
@@ -450,7 +450,7 @@ h1, h2, h3, h4 {
 }
 
 .t-header * {
-  outline: 1px dashed limegreen;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -777,7 +777,7 @@ th {
   margin-top: 3px;
 }
 .table__head-cell * {
-  outline: 1px dashed magenta;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -827,7 +827,7 @@ th {
 }
 
 .main-footer * {
-  outline: 1px dashed lime;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -963,7 +963,7 @@ th {
 }
 
 .welcome * {
-  outline: 1px dashed limegreen;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -1056,12 +1056,12 @@ th {
 }
 
 .main-reg * {
-  outline: 1px dashed lime;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
 .registration * {
-  outline: 1px dashed darkcyan;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -1109,9 +1109,7 @@ th {
   margin-top: 30px;
 }
 
-.form__email,
-.form__password,
-.form__confirm-password {
+.form__email {
   width: 100%;
   height: 42px;
   background-color: #F0F1F5;
@@ -1137,67 +1135,8 @@ th {
   color: transparent;
 }
 
-.form__password,
-.form__confirm-password {
-  font-weight: 300;
-  font-size: 1.375rem;
-  letter-spacing: 0.1em;
-}
-
-.form__password:focus-visible::placeholder,
-.form__confirm-password:focus-visible::placeholder {
-  background-image: none;
-}
-
-.form__password::placeholder,
-.form__confirm-password::placeholder {
-  vertical-align: top;
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.2em;
-  line-height: 1.4375em;
-  font-weight: 300;
-  font-size: 0.75rem;
-  line-height: 1.416666667em;
-  color: #9AA3AF;
-  font-weight: 300;
-  background-image: url("../img/dots.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 95px 5px;
-  height: 26px;
-  position: relative;
-  top: -6px;
-  letter-spacing: 0;
-}
-
-.form__btn-wrapper {
-  position: relative;
-}
-
-.form__btn {
-  margin: 0px;
-  padding: 0px;
-  outline: none;
-  border: none;
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  background-color: transparent;
-  background-image: url("../img/eye-slash.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.form__btn:active {
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6854 6.99945C10.6854 8.48445 9.48543 9.68445 8.00043 9.68445C6.51543 9.68445 5.31543 8.48445 5.31543 6.99945C5.31543 5.51445 6.51543 4.31445 8.00043 4.31445C9.48543 4.31445 10.6854 5.51445 10.6854 6.99945Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99988 13.2016C10.6474 13.2016 13.1149 11.6416 14.8324 8.94156C15.5074 7.88406 15.5074 6.10656 14.8324 5.04906C13.1149 2.34906 10.6474 0.789062 7.99988 0.789062C5.35238 0.789062 2.88488 2.34906 1.16738 5.04906C0.492383 6.10656 0.492383 7.88406 1.16738 8.94156C2.88488 11.6416 5.35238 13.2016 7.99988 13.2016Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-}
-
 .form__agree-wrapper {
-  outline: 1px dashed red;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
   position: relative;
   margin-top: -3px;
@@ -1298,6 +1237,86 @@ th {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.125rem 1.125rem;
+}
+
+.form__btn-wrapper {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  border-radius: 100px;
+  background-color: #F0F1F5;
+  padding: 4px 20px 4px 13px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: stretch;
+}
+.form__btn-wrapper:hover {
+  border: 1px solid #9AA3AF;
+}
+
+.form__btn-wrapper .form__input-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.form__btn-wrapper .form__input-container::before {
+  content: "Введите пароль";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.416666667em;
+  color: #9AA3AF;
+}
+
+.form__password {
+  padding-top: 12px;
+  text-indent: 2px;
+  display: inline-block;
+  text-align: start;
+  vertical-align: bottom;
+  width: 100%;
+  height: 80%;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.16em;
+  border: none;
+  background-color: transparent;
+}
+.form__password::placeholder {
+  color: #9AA3AF;
+}
+
+.form__btn {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: none;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  background-color: transparent;
+  background-image: url("../img/eye-slash.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.form__btn:active {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6854 6.99945C10.6854 8.48445 9.48543 9.68445 8.00043 9.68445C6.51543 9.68445 5.31543 8.48445 5.31543 6.99945C5.31543 5.51445 6.51543 4.31445 8.00043 4.31445C9.48543 4.31445 10.6854 5.51445 10.6854 6.99945Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99988 13.2016C10.6474 13.2016 13.1149 11.6416 14.8324 8.94156C15.5074 7.88406 15.5074 6.10656 14.8324 5.04906C13.1149 2.34906 10.6474 0.789062 7.99988 0.789062C5.35238 0.789062 2.88488 2.34906 1.16738 5.04906C0.492383 6.10656 0.492383 7.88406 1.16738 8.94156C2.88488 11.6416 5.35238 13.2016 7.99988 13.2016Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.form__btn-wrapper input[type=text] {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 17px;
+  color: #42494F;
+  text-indent: 5px;
 }
 
 .form-login * {
@@ -1598,7 +1617,7 @@ th {
 }
 
 .main-account * {
-  outline: 1px dashed mediumslateblue;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -1938,7 +1957,7 @@ th {
 }
 
 .policy * {
-  outline: 1px dashed darkviolet;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -2065,7 +2084,7 @@ th {
 }
 
 .card * {
-  outline: 1px dashed blue;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
@@ -2460,12 +2479,12 @@ th {
 }
 
 .successfully-paid-msg * {
-  outline: 1px dashed limegreen;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
 }
 
 .successfully-paid-msg {
-  outline: 1px dashed red;
+  outline: 1px dashed transparent;
   outline-offset: -1px;
   position: fixed;
   top: 7vh;

@@ -1,6 +1,6 @@
 @mixin lineout ($color: darkorange){
-	outline: 1px dashed $color;
-	// outline: 1px dashed transparent;
+	// outline: 1px dashed $color;
+	outline: 1px dashed transparent;
 	outline-offset: -1px;
 	// background-color: rgba(70, 130, 180, 0.5);
 }
@@ -64,6 +64,15 @@
 	font-size: 1.0625rem;
 	line-height: 1.470588235em;
 	color: $text-bgd-1;
+}
+
+
+@mixin text-J-300-12-17 {
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	font-size: 0.75rem;
+	line-height: 1.416666667em;
+	color: $additional-texts;
 }
 
 @mixin buttons-links {

@@ -9,6 +9,7 @@ import { initAcoountPay } from "./modules/account.js";
 import { initAboutService } from "./modules/about-service.js";
 import { initPolicy } from "./modules/processing-policy.js";
 import { initAgreement } from "./modules/user-agreement.js";
+import { initRegistration } from "./modules/registration.js";
 
 flsFunctions.isWebp();
 
@@ -57,6 +58,7 @@ const loadMain = () => {
       break;
 
     case 'main-reg': console.log(mainName);
+      initRegistration();
       break;
 
     case 'agreement': console.log(mainName);

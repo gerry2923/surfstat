@@ -72,7 +72,7 @@
           
           <p class="registration__text">Surfstat — это сервис для анализа спроса и предложений на Wildberries.<br>Анализируйте конкурентов и повышайте свою прибыль! Давайте начнем!</p>
           
-          <form action="" class="registration-form form">
+          <form class="registration-form form">
           
             <div class="form__wrapper">
 
@@ -82,22 +82,24 @@
                 <div class="form__input-container">
                   <input type="password" class="form__password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
                 </div>
-                <button class="form__btn form__btn_pwd-1"></button>
+                <button type="button" class="form__btn form__btn_pwd-1"></button>
               </div>
                 
               <div class="form__btn-wrapper">
                 <div class="form__input-container">
-                  <input type="text" class="form__password form__password-confirm" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                  <input type="password" class="form__password form__password-confirm" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
                 </div>
-                <button class="form__btn form__btn_pwd-2"></button>
+                <button type="button" class="form__btn form__btn_pwd-2"></button>
               </div> 
             
               <div class="form__agree-wrapper">
-                <div class="form__input-container"><input id="agree" type="checkbox" class="form__agree"></div>
+                <div class="form__input-container">
+                  <input id="agree" type="checkbox" class="form__agree">
+                </div>
                 <label class="form__agree-label" for="agree">Я согласен с <a class="form__agree-link" href="user-agreement.html">пользовательским соглашением</a> и с <a class="form__agree-link" href="processing-policy.html">политикой обработки персональных данных</a></label>
               </div>
 
-              <button class="form__submit" type="submit">Зарегистрироваться</button>
+              <input class="form__submit" type="submit" value="Зарегистрироваться"></input>
             </div>
 
           </form>

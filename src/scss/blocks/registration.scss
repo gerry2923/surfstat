@@ -245,6 +245,11 @@
   }
 }
 
+.form__email_error::placeholder {
+  color: $error;
+}
+
+
 //  .form__btn_pwd-1 {
 
 //  }

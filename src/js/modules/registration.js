@@ -1,6 +1,9 @@
 const formBtnPwd1 = document.querySelector('.form__btn_pwd-1');
 const formBtnPwd2 = document.querySelector('.form__btn_pwd-2');
 const formSubmit = document.querySelector('.form__submit');
+const  inputEmail = document.querySelector('.form__email');
+const inputPassword = document.querySelector('.form__password');
+const imputConfirmPassword = document.querySelector('.form__password-confirm'); 
 
 
 
@@ -42,8 +45,29 @@ const toggleInputTextStyle  = (evt) => {
   }
 };
 
+
+const checkEmail = (inputText) => {
+  const emailRegex = /^\w*@[a-z]*\.[a-z]*$/;
+
+  return emailRegex.test(inputText);
+};
+
+
 const checkFormValidity = (evt) => {
   evt.preventDefault();
+  if (inputEmail.value) {
+    const isValid = checkEmail(inputEmail.value);
+    console.log(isValid);
+    
+    if(!isValid) {
+      inputEmail.classList.add('form__email_error');
+      inputEmail.value = '';
+    } else {
+      if(inputEmail.classList.contains('form__email_error')) {
+        inputEmail.classList.remove('form__email_error');
+      }
+    }
+  }
   console.log('checking validity');
 };
 

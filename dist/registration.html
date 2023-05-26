@@ -78,35 +78,35 @@
 
               <input type="email" class="form__email" placeholder="Введите e-mail">
               
-              <div class="form__btn-wrapper">
+              <div class="form__btn-wrapper" tabindex="0">
                 <div class="form__input-container">
-                  <input type="password" class="form__password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                  <input tabindex='0' type="password" class="form__password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
                 </div>
-                <button type="button" class="form__btn form__btn_pwd-1"></button>
+                <button type="button" class="form__btn form__btn_pwd-1" tabindex='0'></button>
               </div>
                 
               <div class="form__btn-wrapper">
                 <div class="form__input-container">
-                  <input type="password" class="form__password form__password-confirm" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                  <input tabindex="0" type="password" class="form__password form__password-confirm" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" tabindex='1'>
                 </div>
-                <button type="button" class="form__btn form__btn_pwd-2"></button>
+                <button type="button" class="form__btn form__btn_pwd-2" tabindex='0'></button>
               </div> 
             
               <div class="form__agree-wrapper">
                 <div class="form__input-container">
-                  <input id="agree" type="checkbox" class="form__agree">
+                  <input id="agree" type="checkbox" class="form__agree" tabindex='0'>
                 </div>
                 <label class="form__agree-label" for="agree">Я согласен с <a class="form__agree-link" href="user-agreement.html">пользовательским соглашением</a> и с <a class="form__agree-link" href="processing-policy.html">политикой обработки персональных данных</a></label>
               </div>
 
-              <input class="form__submit" type="submit" value="Зарегистрироваться"></input>
+              <input class="form__submit" type="submit" value="Зарегистрироваться" tabindex='1'></input>
             </div>
 
           </form>
 
           
 
-          <a href="#" class="form__login-with">Войти с помощью</a>
+          <a href="#" class="form__login-with" tabindex='1'>Войти с помощью</a>
         </section>
       </div>
 

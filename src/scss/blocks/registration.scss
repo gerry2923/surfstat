@@ -1,7 +1,7 @@
-.registration *{
-  @include lineout(darkcyan);
+// .registration *{
+//   // @include lineout(darkcyan);
 
-}
+// }
 .registration {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -67,7 +67,7 @@
 }
 
 .form__agree-wrapper {
-  @include lineout(red);
+  // @include lineout(red);
   position: relative;
   margin-top: -3px;
   margin-bottom: 17px;
@@ -96,6 +96,13 @@
     background-size: 18px 18px;
     border: none;
   }
+}
+
+
+.form__agree_error {
+  border: none;
+  outline: 2px solid $error;
+  outline-offset: -2px;
 }
 
 .form__agree-label {
@@ -161,6 +168,16 @@
     outline: 1px solid $additional-texts;
     outline-offset: -1px;
   }
+
+  &:focus-visible {
+    outline: 1px solid magenta;
+    outline-offset: -1px;
+  }
+}
+
+input:focus-visible {
+  outline: 1px solid Aquamarine;
+  outline-offset: -1px;
 }
 
 .form__btn-wrapper .form__input-container {
@@ -183,6 +200,11 @@
     content: 'Введите пароль еще раз';
   }
 }
+
+.form__btn-wrapper .form__input-container_error::before {
+  color: $error;
+}
+
 
 .form__password {
   padding-top: 12px;
@@ -250,9 +272,11 @@
 }
 
 
-//  .form__btn_pwd-1 {
-
-//  }
+ .form__btn_pwd-1:focus-visible,
+ .form__btn_pwd-2:focus-visible {
+  outline-offset: -1px;
+  outline: 1px solid $additional-texts;
+ }
 
 //  .form__btn_pwd-2 {
 

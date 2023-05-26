@@ -826,11 +826,6 @@ th {
   color: #1D1E20;
 }
 
-.main-footer * {
-  outline: 1px dashed lime;
-  outline-offset: -1px;
-}
-
 .main-footer {
   background-color: #ffffff;
   border-top-left-radius: 10px;
@@ -1055,16 +1050,6 @@ th {
   background-size: contain;
 }
 
-.main-reg * {
-  outline: 1px dashed lime;
-  outline-offset: -1px;
-}
-
-.registration * {
-  outline: 1px dashed darkcyan;
-  outline-offset: -1px;
-}
-
 .registration {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1137,8 +1122,6 @@ th {
 }
 
 .form__agree-wrapper {
-  outline: 1px dashed red;
-  outline-offset: -1px;
   position: relative;
   margin-top: -3px;
   margin-bottom: 17px;
@@ -1165,6 +1148,12 @@ th {
   background-position: center;
   background-size: 18px 18px;
   border: none;
+}
+
+.form__agree_error {
+  border: none;
+  outline: 2px solid #B72929;
+  outline-offset: -2px;
 }
 
 .form__agree-label {
@@ -1256,6 +1245,15 @@ th {
   outline: 1px solid #9AA3AF;
   outline-offset: -1px;
 }
+.form__btn-wrapper:focus-visible {
+  outline: 1px solid magenta;
+  outline-offset: -1px;
+}
+
+input:focus-visible {
+  outline: 1px solid Aquamarine;
+  outline-offset: -1px;
+}
 
 .form__btn-wrapper .form__input-container {
   display: flex;
@@ -1277,6 +1275,10 @@ th {
 
 .form__btn-wrapper:nth-child(3) .form__input-container::before {
   content: "Введите пароль еще раз";
+}
+
+.form__btn-wrapper .form__input-container_error::before {
+  color: #B72929;
 }
 
 .form__password {
@@ -1338,6 +1340,12 @@ th {
 
 .form__email_error::placeholder {
   color: #B72929;
+}
+
+.form__btn_pwd-1:focus-visible,
+.form__btn_pwd-2:focus-visible {
+  outline-offset: -1px;
+  outline: 1px solid #9AA3AF;
 }
 
 .form-login * {

@@ -55,6 +55,7 @@ const loadMain = () => {
       break;
 
     case 'main-reg-trial': console.log(mainName);
+      initRegistration();
       break;
 
     case 'main-reg': console.log(mainName);

@@ -72,33 +72,42 @@
           <p class="registration__text">Сервис дает вам<br><span class="main-reg__title_color-1">бесплатный пробный период на 3 дня</span>. 
             <br>По окончанию пробного периода вам необходимо <br>оплатить услуги сервиса в личном кабинете. 
             <br>Давайте начнем!
-          <form action="" class="registration-form form">
+
+            <form class="registration-form form">
           
-            <div class="form__wrapper">
-
-              <input type="email" class="form__email" placeholder="Введите e-mail">
-              
-              <div class="form__btn-wrapper">
-                <input type="password" class="form__password" size="40" placeholder="Введите пароль">
-                <button class="form__btn form__btn_pwd-1"></button>
-              </div>
+              <div class="form__wrapper">
+  
+                <input type="email" class="form__email" placeholder="Введите e-mail">
                 
-              <div class="form__btn-wrapper">
-                <input type="password" class="form__confirm-password" placeholder="Введите пароль">
-                <button class="form__btn form__btn_pwd-2"></button>
-              </div> 
-            
-              <div class="form__agree-wrapper">
-                <input id="agree" type="checkbox" class="form__agree">
-                <label class="form__agree-label" for="agree">Я согласен с <a class="form__agree-link" href="user-agreement.html">пользовательским соглашением</a> и с <a class="form__agree-link" href="processing-policy.html">политикой обработки персональных данных</a></label>
+                <div class="form__btn-wrapper">
+                  <div class="form__input-container">
+                    <input tabindex='0' type="password" class="form__password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                  </div>
+                  <button type="button" class="form__btn form__btn_pwd-1" tabindex='0'></button>
+                </div>
+                  
+                <div class="form__btn-wrapper">
+                  <div class="form__input-container">
+                    <input tabindex="0" type="password" class="form__password form__password-confirm" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" tabindex='1'>
+                  </div>
+                  <button type="button" class="form__btn form__btn_pwd-2" tabindex='0'></button>
+                </div> 
+              
+                <div class="form__agree-wrapper">
+                  <div class="form__input-container">
+                    <input id="agree" type="checkbox" class="form__agree" tabindex='0'>
+                  </div>
+                  <label class="form__agree-label" for="agree">Я согласен с <a class="form__agree-link" href="user-agreement.html">пользовательским соглашением</a> и с <a class="form__agree-link" href="processing-policy.html">политикой обработки персональных данных</a></label>
+                </div>
+  
+                <input class="form__submit" type="submit" value="Зарегистрироваться" tabindex='0'></input>
               </div>
-
-              <button class="form__submit" type="submit">Зарегистрироваться</button>
-            </div>
-
-          </form>
-
-          <a href="#" class="form__login-with">Войти с помощью</a>
+  
+            </form>
+  
+            
+  
+            <a href="#" class="form__login-with" tabindex='0'>Войти с помощью</a>
         </section>
       </div>
 

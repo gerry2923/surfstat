@@ -57,13 +57,15 @@
     color: $additional-texts;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     outline: 1px solid $additional-texts;
     outline-offset: -1px;
   }
   &:focus-visible::placeholder {
     color: transparent;
   }
+
 }
 
 .form__agree-wrapper {
@@ -87,6 +89,10 @@
 
   &:hover {
     border-color: $texts;
+  }
+
+  &:focus-visible {
+    border-color: $text-bgd-1;
   }
 
   &:checked {
@@ -120,6 +126,11 @@
 .form__agree-link{
   text-decoration: underline;
   color: inherit;
+
+  &:focus-visible {
+    outline: none;
+    color: $text-bgd-1;
+  }
 }
 
 .form__submit {
@@ -128,6 +139,22 @@
   padding-right: 1.84375rem;
   width: 190px;
   margin: 20px auto 9px auto;
+  outline: none;
+
+  &:hover,
+  &:focus-visible {
+    outline: 1px solid white;
+    outline-offset: -1px;
+    color: $text-bgd-2;
+    background-color: transparent;
+  }
+
+  &:active {
+    outline: 1px solid $main-headings;
+    outline-offset: -1px;
+    background-color: transparent;
+    color: $main-headings;
+  }
 }
 
 .form__login-with {
@@ -150,6 +177,20 @@
     background-size: 1.125rem 1.125rem;
 
   }
+
+  &:hover {
+    outline: 1px solid $text-bgd-2;
+    outline-offset: -1px;
+    background-color: $text-bgd-1;
+    color: $text-bgd-2;
+  }
+
+  &:focus-visible,
+  &:active {
+    background-color: $text-bgd-1;
+    outline: none;
+    color: $text-bgd-2;
+  }
 }
 
  .form__btn-wrapper {
@@ -168,15 +209,15 @@
     outline: 1px solid $additional-texts;
     outline-offset: -1px;
   }
+}
 
-  &:focus-visible {
-    outline: 1px solid magenta;
-    outline-offset: -1px;
-  }
+.form__btn-wrapper_in-focus {
+  outline: 1px solid $additional-texts;
+  outline-offset: -1px;
 }
 
 input:focus-visible {
-  outline: 1px solid Aquamarine;
+  outline: 1px solid transparent;
   outline-offset: -1px;
 }
 
@@ -278,14 +319,3 @@ input:focus-visible {
   outline: 1px solid $additional-texts;
  }
 
-//  .form__btn_pwd-2 {
-
-//  }
-
-//  .form__password {
-
-//  }
-
-//  .form__confirm-password {
-
-//  }

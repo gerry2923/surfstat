@@ -1113,7 +1113,7 @@ th {
 .form__email::placeholder {
   color: #9AA3AF;
 }
-.form__email:hover {
+.form__email:hover, .form__email:focus-visible {
   outline: 1px solid #9AA3AF;
   outline-offset: -1px;
 }
@@ -1141,6 +1141,9 @@ th {
 }
 .form__agree:hover {
   border-color: #42494F;
+}
+.form__agree:focus-visible {
+  border-color: #0A6BE5;
 }
 .form__agree:checked {
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='18' height='18' rx='3' fill='%230A6BE5'/%3E%3Cpath d='M13.375 5.5L7.6875 11.625L4.625 8.125' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
@@ -1172,6 +1175,10 @@ th {
   text-decoration: underline;
   color: inherit;
 }
+.form__agree-link:focus-visible {
+  outline: none;
+  color: #0A6BE5;
+}
 
 .form__submit {
   display: block;
@@ -1192,6 +1199,19 @@ th {
   padding-right: 1.84375rem;
   width: 190px;
   margin: 20px auto 9px auto;
+  outline: none;
+}
+.form__submit:hover, .form__submit:focus-visible {
+  outline: 1px solid white;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.form__submit:active {
+  outline: 1px solid #1D1E20;
+  outline-offset: -1px;
+  background-color: transparent;
+  color: #1D1E20;
 }
 
 .form__login-with {
@@ -1228,6 +1248,17 @@ th {
   background-position: center;
   background-size: 1.125rem 1.125rem;
 }
+.form__login-with:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  background-color: #0A6BE5;
+  color: #ffffff;
+}
+.form__login-with:focus-visible, .form__login-with:active {
+  background-color: #0A6BE5;
+  outline: none;
+  color: #ffffff;
+}
 
 .form__btn-wrapper {
   position: relative;
@@ -1245,13 +1276,14 @@ th {
   outline: 1px solid #9AA3AF;
   outline-offset: -1px;
 }
-.form__btn-wrapper:focus-visible {
-  outline: 1px solid magenta;
+
+.form__btn-wrapper_in-focus {
+  outline: 1px solid #9AA3AF;
   outline-offset: -1px;
 }
 
 input:focus-visible {
-  outline: 1px solid Aquamarine;
+  outline: 1px solid transparent;
   outline-offset: -1px;
 }
 

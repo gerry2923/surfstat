@@ -8,6 +8,8 @@ const inputPlaceholderPwd = document.querySelector('.form__btn-wrapper:nth-child
 const inputPlaceholderPwdConfirm = document.querySelector('.form__btn-wrapper:nth-child(3) .form__input-container');
 const inputCheckbox = document.querySelector('.form__agree');
 
+const inputPwdWrapper = document.querySelectorAll('.registration-form .form__btn-wrapper');
+
 const showInputText = (elem) => {
   elem.type = 'text';
   elem.classList.add('form__password_show-text');
@@ -155,20 +157,31 @@ const checkFormValidity = (evt) => {
 };
 
 
-const dkkkd = (evt) => {
+const onTabForm = (evt) => {
   if(evt.key === 'Tab') {
-
-    if(document.activeElement.classList.contains('form__password')) {
-      
+    const activeInput = document.activeElement;
+    if(activeInput.classList.contains('form__password')) {
+      activeInput.parentElement.parentElement.classList.add('form__btn-wrapper_in-focus');
+    } else {
+      inputPwdWrapper.forEach(element => {
+        if(element.classList.contains('form__btn-wrapper_in-focus')) {
+          element.classList.remove('form__btn-wrapper_in-focus');
+        }
+      });
     }
     console.log(document.activeElement);
   }
   console.log('changing visibility');
 };
 
+const onStyleChange = (evt) => {
+  removeClass(evt.target, 'form__agree_error');
+}; 
+
 export const initRegistration = () => {
   formBtnPwd1.addEventListener('pointerdown', toggleInputTextStyle);
   formBtnPwd2.addEventListener('pointerdown', toggleInputTextStyle);
   formSubmit.addEventListener('click', checkFormValidity);
-  document.addEventListener('keyup', dkkkd);
+  inputCheckbox.addEventListener('change', onStyleChange);
+  document.addEventListener('keyup', onTabForm);
 };

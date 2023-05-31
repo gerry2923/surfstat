@@ -957,11 +957,6 @@ th {
   display: none;
 }
 
-.welcome * {
-  outline: 1px dashed limegreen;
-  outline-offset: -1px;
-}
-
 .welcome__title {
   font-family: "NordecoCyrillic", sans-serif;
   font-weight: 400;
@@ -1048,6 +1043,31 @@ th {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.welcome__options-row:first-child .welcome__option-link:hover {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.welcome__options-row:first-child .welcome__option-link:focus {
+  outline: 2px solid darkorange;
+  outline-offset: -2px;
+}
+.welcome__options-row:first-child .welcome__option-link:active {
+  outline: 2px solid #1D1E20;
+  outline-offset: -2px;
+  color: #1D1E20;
+}
+
+.welcome__options-row:nth-child(2) .welcome__option-link:hover, .welcome__options-row:nth-child(2) .welcome__option-link:focus {
+  outline: 2px solid #0A6BE5;
+  outline-offset: -2px;
+}
+.welcome__options-row:nth-child(2) .welcome__option-link:active {
+  background-color: #0A6BE5;
+  color: #ffffff;
 }
 
 .registration {
@@ -1201,6 +1221,21 @@ th {
   margin: 20px auto 9px auto;
   outline: none;
 }
+.form__submit:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.form__submit:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.form__submit:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
+}
 .form__submit:hover, .form__submit:focus-visible {
   outline: 1px solid white;
   outline-offset: -1px;
@@ -1237,6 +1272,16 @@ th {
   flex-direction: row;
   gap: 10px;
   margin: 0 auto;
+}
+.form__login-with:focus {
+  outline-color: #0A6BE5;
+}
+.form__login-with:hover {
+  background-color: #0A6BE5;
+  color: #ffffff;
+}
+.form__login-with:active {
+  outline-color: #ffffff;
 }
 .form__login-with::after {
   content: "";
@@ -1426,43 +1471,82 @@ input:focus-visible {
 .form-login__email::placeholder {
   color: #9AA3AF;
 }
+.form-login__email:hover, .form-login__email:focus-visible {
+  outline: 1px solid #9AA3AF;
+  outline-offset: -1px;
+}
+.form-login__email:focus-visible::placeholder {
+  color: transparent;
+}
 
 .form-login__pwd-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.form-login__pwd {
-  font-family: "Jost", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.375rem;
-  letter-spacing: 0.1em;
-  width: 100%;
   height: 42px;
-  margin: 0px 0px;
-  padding: 8px 20px;
+  width: 100%;
+  background-color: #F0F1F5;
   border-radius: 100px;
   border: none;
-  outline: none;
-  background-color: #F0F1F5;
+  padding: 4px 20px 4px 20px;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.form-login__pwd::placeholder {
+
+@media (min-width: 767px) {
+  .form-login__pwd-wrapper {
+    height: 47px;
+  }
+}
+.form-login__wrapper_in-focus {
+  outline: 1px solid #9AA3AF;
+  outline-offset: -1px;
+}
+
+.form-login__input-container {
+  width: 90%;
+  display: flex;
+  align-items: flex-end;
+}
+.form-login__input-container::before {
+  content: "Введите пароль";
   font-family: "Jost", sans-serif;
-  font-style: normal;
   font-weight: 300;
   font-size: 0.75rem;
-  line-height: 1.416666667em;
+  line-height: 1.445em;
   color: #9AA3AF;
-  vertical-align: top;
-  height: 26px;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+.form-login__input-pwd {
   position: relative;
-  top: -6px;
-  letter-spacing: 0;
-  background-image: url("../img/dots.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 95px 5px;
+  top: 5px;
+  margin-left: -2px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  color: #42494F;
+}
+.form-login__input-pwd::placeholder {
+  position: relative;
+  top: 5px;
+  left: -2px;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+}
+
+.form__password_show-text {
+  color: #42494F;
+  font-size: 0.75rem;
+  line-height: 1.42em;
+  letter-spacing: -0.03em;
+  top: 2px;
+  left: -4px;
 }
 
 .form-login__btn {
@@ -1481,7 +1565,18 @@ input:focus-visible {
   background-position: center;
   background-size: contain;
 }
+.form-login__btn:focus-visible {
+  outline: 1px solid #9AA3AF;
+  outline-offset: -1px;
+}
+.form-login__btn:hover {
+  outline: none;
+}
 .form-login__btn:active {
+  transform: scale(0.7);
+}
+
+.form-login__btn_show-text {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6854 6.99945C10.6854 8.48445 9.48543 9.68445 8.00043 9.68445C6.51543 9.68445 5.31543 8.48445 5.31543 6.99945C5.31543 5.51445 6.51543 4.31445 8.00043 4.31445C9.48543 4.31445 10.6854 5.51445 10.6854 6.99945Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99988 13.2016C10.6474 13.2016 13.1149 11.6416 14.8324 8.94156C15.5074 7.88406 15.5074 6.10656 14.8324 5.04906C13.1149 2.34906 10.6474 0.789062 7.99988 0.789062C5.35238 0.789062 2.88488 2.34906 1.16738 5.04906C0.492383 6.10656 0.492383 7.88406 1.16738 8.94156C2.88488 11.6416 5.35238 13.2016 7.99988 13.2016Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
@@ -1495,6 +1590,13 @@ input:focus-visible {
   margin-left: 19px;
   margin-bottom: 37px;
   margin-top: 6px;
+}
+.form-login__recover:focus {
+  outline: 1px solid orange;
+  outline-offset: -1px;
+}
+.form-login__recover:visited {
+  color: #42494F;
 }
 
 .form-login__submit {
@@ -1514,6 +1616,21 @@ input:focus-visible {
   margin: 0;
   width: 190px;
   margin-bottom: 10px;
+}
+.form-login__submit:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.form-login__submit:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.form-login__submit:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
 }
 
 .form-login__login-with {
@@ -1540,6 +1657,16 @@ input:focus-visible {
   gap: 10px;
   margin: 0 auto;
 }
+.form-login__login-with:focus {
+  outline-color: #0A6BE5;
+}
+.form-login__login-with:hover {
+  background-color: #0A6BE5;
+  color: #ffffff;
+}
+.form-login__login-with:active {
+  outline-color: #ffffff;
+}
 .form-login__login-with::after {
   content: "";
   display: block;
@@ -1549,6 +1676,11 @@ input:focus-visible {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.125rem 1.125rem;
+}
+
+.form-login__wrapper_in-focus {
+  outline: 1px solid #9AA3AF;
+  outline-offset: -1px;
 }
 
 .main-recover * {
@@ -1604,6 +1736,21 @@ input:focus-visible {
   margin: 0;
   width: 171px;
   margin: 0 auto;
+}
+.main-recover__submit:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.main-recover__submit:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.main-recover__submit:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
 }
 
 .pop-up__recover {
@@ -1667,6 +1814,21 @@ input:focus-visible {
   border: none;
   margin: 0;
   margin: 0 auto;
+}
+.pop-up__link_blue:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.pop-up__link_blue:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.pop-up__link_blue:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
 }
 
 .pop-up__greeting-text:nth-child(2) {
@@ -1800,6 +1962,21 @@ input:focus-visible {
   margin: 0;
   width: 171px;
   margin: 0px auto 50px;
+}
+.main-account__btn-pay:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.main-account__btn-pay:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.main-account__btn-pay:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
 }
 
 .main-account__requests-wrapper {
@@ -1985,6 +2162,21 @@ input:focus-visible {
   padding: 10px 13px;
   margin: 0 auto 40px;
 }
+.agreement__link:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.agreement__link:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.agreement__link:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
+}
 
 .agreement__header .agreement__text:nth-child(3) {
   margin-bottom: 28px;
@@ -2138,6 +2330,21 @@ input:focus-visible {
   padding: 10px 13px;
   margin: 0 auto 40px;
   text-decoration: none;
+}
+.policy__link:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.policy__link:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.policy__link:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
 }
 
 .policy__items-wrapper_hide {
@@ -2611,7 +2818,56 @@ input:focus-visible {
   margin-top: 23px;
   width: 177px;
 }
+.successfully-paid-msg__link:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.successfully-paid-msg__link:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.successfully-paid-msg__link:active {
+  background-color: transparent;
+  outline: 1px solid #1D1E20;
+  color: #1D1E20;
+}
 
 .successfully-paid-msg__disabled {
   display: none;
+}
+
+.main-not-found {
+  padding-top: 50px;
+}
+
+.not-found-error {
+  background-color: #2D80EA;
+  background-image: url("../img/404-illustration.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 263px 232px;
+  color: #ffffff;
+  padding-top: 30px;
+  height: 438px;
+}
+
+.not-found-error__title,
+.not-found-error__text {
+  font-family: "NordecoCyrillic", sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.25em;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+.not-found-error__text_small {
+  font-family: "Jost", "sans-serif";
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.470588235em;
+  color: #ffffff;
+  margin-top: 20px;
 }

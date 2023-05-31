@@ -10,6 +10,7 @@ import { initAboutService } from "./modules/about-service.js";
 import { initPolicy } from "./modules/processing-policy.js";
 import { initAgreement } from "./modules/user-agreement.js";
 import { initRegistration } from "./modules/registration.js";
+import { initLogin } from "./modules/login.js";
 
 flsFunctions.isWebp();
 
@@ -48,6 +49,7 @@ const loadMain = () => {
       break;
 
     case 'main-login': console.log(mainName);
+      initLogin();
       break;
 
     case 'policy': console.log(mainName);

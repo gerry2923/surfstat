@@ -66,6 +66,14 @@
 	color: $text-bgd-1;
 }
 
+@mixin text-J-400-17-25 {
+	font-family: 'Jost', "sans-serif";
+	font-weight: 400;
+	font-size: 1.0625rem;
+	line-height: 1.470588235em;
+	color: $text-bgd-2;
+}
+
 
 @mixin text-J-300-12-17 {
 	font-family: 'Jost', sans-serif;
@@ -105,6 +113,25 @@
 	border-radius: 100px;
 	border: none;
 	margin: 0;
+
+	
+	&:focus {
+		outline: 2px solid $text-bgd-2;
+		outline-offset: -2px;
+	}
+
+	&:hover {
+		outline: 1px solid $text-bgd-2;
+		outline-offset: -1px;
+		color: $text-bgd-2;
+		background-color: transparent;
+	}
+
+	&:active {
+		background-color: transparent;
+		outline: 1px solid $main-headings;
+		color: $main-headings;
+	}
 }
 
 @mixin blue-btn_mobile-thin {
@@ -158,6 +185,20 @@
 	vertical-align: middle;
 	border: none;
 	margin: 0;
+
+	&:focus {
+		outline-color: $text-bgd-1;
+	}
+
+	&:hover {
+		background-color: $text-bgd-1;
+		color: $text-bgd-2;
+	}
+
+	&:active {
+		outline-color: $text-bgd-2;
+	}
+
 }
 
 @mixin white-btn_mobile-thin {
@@ -293,9 +334,18 @@
   background-position: center;
   background-size: contain;
 
-  &:active {
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6854 6.99945C10.6854 8.48445 9.48543 9.68445 8.00043 9.68445C6.51543 9.68445 5.31543 8.48445 5.31543 6.99945C5.31543 5.51445 6.51543 4.31445 8.00043 4.31445C9.48543 4.31445 10.6854 5.51445 10.6854 6.99945Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99988 13.2016C10.6474 13.2016 13.1149 11.6416 14.8324 8.94156C15.5074 7.88406 15.5074 6.10656 14.8324 5.04906C13.1149 2.34906 10.6474 0.789062 7.99988 0.789062C5.35238 0.789062 2.88488 2.34906 1.16738 5.04906C0.492383 6.10656 0.492383 7.88406 1.16738 8.94156C2.88488 11.6416 5.35238 13.2016 7.99988 13.2016Z' stroke='%2342494F' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  &:focus-visible {
+		outline: 1px solid $additional-texts;
+		outline-offset: -1px;
   }
+
+	&:hover {
+		outline: none;
+	}
+
+	&:active {
+		transform: scale(0.7);
+	}
 }
 
 @mixin button-close {
@@ -308,4 +358,40 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 18px 18px;
+}
+
+@mixin blue-btn-interaction {
+	&:hover {
+		outline: 2px solid $text-bgd-2;
+		outline-offset: -2px;
+
+		background-color: transparent;
+		color: $text-bgd-2;
+	}
+
+	&:focus {
+		outline: 2px solid darkorange;
+		outline-offset: -2px;
+	} 
+
+	&:active {
+		outline: 2px solid $main-headings;
+		outline-offset: -2px;
+
+		color: $main-headings;
+	}
+	
+}
+
+@mixin white-btn-interaction {
+	&:hover,
+	&:focus {
+		outline: 2px solid $text-bgd-1;
+		outline-offset: -2px;
+	}
+	
+	&:active {
+		background-color: $text-bgd-1;
+		color: $text-bgd-2;
+	}
 }

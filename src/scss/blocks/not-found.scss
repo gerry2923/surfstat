@@ -1,0 +1,27 @@
+.main-not-found {
+  padding-top: 50px;
+}
+
+.not-found-error {
+  background-color: #2D80EA;
+  background-image: url('../img/404-illustration.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 263px 232px;
+  color: $text-bgd-2;
+  padding-top: 30px;
+  height: 438px;
+}
+
+.not-found-error__title,
+.not-found-error__text {
+  @include headline-2;
+  margin: 0px 0px;
+  padding: 0px 0px;
+
+}
+
+.not-found-error__text_small {
+  @include text-J-400-17-25;
+  margin-top: 20px;
+} 

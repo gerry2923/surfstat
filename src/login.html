@@ -14,21 +14,30 @@
       <div class="container">
         <h2 class="form-login__title">Войти в личный кабинет</h2>
         
-        <form action="">
+        <form  class="form-login__form">
           <div class="form-login__wrapper">
-            <input type="email" placeholder="Введите e-mail" class="form-login__email">
-            
+
+            <input type="email" placeholder="Введите e-mail" class="form-login__email" tabindex="0">
+          
+
             <div class="form-login__pwd-wrapper">
-              <input type="password" placeholder="Введите пароль" class="form-login__pwd">
-              <button class="form-login__btn"></button>
+
+              <div class="form-login__input-container">
+                <input type="text" class="form-login__input-pwd form__password_show-text" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" tabindex="0">
+              </div>
+              
+              <button type="button" class="form-login__btn" tabindex="0"></button>
+
             </div>
             
-            <a href="login-recover.html" class="form-login__recover">Не помню пароль</a>
+
+
+            <a href="login-recover.html" class="form-login__recover" tabindex="0">Не помню пароль</a>
             
-            <button class="form-login__submit" type="submit">Войти</button>
+            <button class="form-login__submit" type="submit" tabindex="0">Войти</button>
           </div>
 
-          <a href="#" class="form-login__login-with">Войти с помощью</a>
+          <a href="#" class="form-login__login-with" tabindex="0">Войти с помощью</a>
         
         </form>
 
@@ -37,5 +46,7 @@
     </section>
   </main>
   @@include('html/footer.html', {})
+
+  <script src="js/app.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 .welcome *{
-  @include lineout(limegreen);
+  // @include lineout(limegreen);
 }
 // .welcome {
 //   // height: 100%;
@@ -86,3 +86,11 @@
   background-position: center;
   background-size: contain;
 } 
+
+.welcome__options-row:first-child .welcome__option-link {
+  @include blue-btn-interaction;
+}
+
+.welcome__options-row:nth-child(2) .welcome__option-link{
+  @include white-btn-interaction;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+  title: 'Страница не найдена'
+})
+<body>
+  @@include('html/header.html', {
+    logo:'index.html'
+  })
+  <main class="main-not-found ">
+    <h1 class="visually-hidden">Страница не найдена</h1>
+
+    <section class="not-found-error container">
+      <h2 class="not-found-error__title">Ошибка 404</h2>
+      <p class="not-found-error__text">Что-то пошло не так!</p>
+      <p class="not-found-error__text">Страница не найдена</p>
+      <p class="not-found-error__text not-found-error__text_small">Попробуйте перезагрузить страницу или вернуться на главную.</p>
+    </section>
+  </main>
+  
+  @@include('html/footer.html', {})
+
+
+  <script src="js/app.min.js"></script>
+</body>
+</html>

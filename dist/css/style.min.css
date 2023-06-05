@@ -131,12 +131,24 @@ h1, h2, h3, h4 {
   display: none;
 }
 
+.main-header *:not(.main-header__menu *) {
+  outline: 1px dashed limegreen;
+  outline-offset: -1px;
+}
+
 .main-header {
   box-shadow: none;
 }
 
 .main-header_shadow {
   box-shadow: "0px 5px 13px 4px rgba(0, 0, 0, 0.09)";
+}
+
+.main-header__nav {
+  background-color: magenta;
+}
+.main-header__nav.container {
+  padding: 0;
 }
 
 .main-header__top-menu {
@@ -243,6 +255,63 @@ h1, h2, h3, h4 {
   color: #1D1E20;
 }
 
+@media (min-width: 1024px) {
+  .main-header__nav.container {
+    padding: 0 57px;
+  }
+  .main-header__nav {
+    display: flex;
+    flex-direction: row;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 13px 4px rgba(0, 0, 0, 0.01);
+  }
+  .site-nav_show {
+    display: none;
+  }
+  .main-header__menu {
+    display: flex;
+    padding: 0px 0px;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  .main-header__account-data {
+    order: 0;
+    margin-bottom: 0px;
+  }
+  .main-header__menu-list {
+    flex-direction: row;
+    order: -1;
+    padding-bottom: 0px;
+  }
+  .main-header__menu-item {
+    padding: 0px;
+    border: none;
+  }
+  .main-header__menu-link {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 1.1875rem;
+    line-height: 1.421052632em;
+    color: #1D1E20;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 100px;
+  }
+  .main-header__menu-link:active, .main-header__menu-link:focus {
+    outline: 1px solid #1D1E20;
+    outline-offset: -1px;
+  }
+  .main-header__menu-link:hover {
+    background-color: #F0F1F5;
+  }
+}
+@media (min-width: 1440px) {
+  .main-header__nav.container {
+    padding: 0 135px;
+  }
+}
 .account-data {
   display: flex;
   flex-direction: row;
@@ -278,6 +347,66 @@ h1, h2, h3, h4 {
   margin: 0px;
 }
 
+@media (min-width: 1024px) {
+  .account-data__pic,
+  .account-data__email {
+    display: none;
+  }
+  .account-data__login {
+    font-family: "Jost", "sans-serif";
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.470588235em;
+    color: #ffffff;
+    color: #1D1E20;
+    padding: 11px 20px 11px 47px;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #1D1E20;
+    position: relative;
+  }
+  .account-data__login::before {
+    content: "";
+    width: 17px;
+    height: 18px;
+    background-image: url("../img/finger-print-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+  }
+  .account-data__login:hover {
+    font-family: "Jost", "sans-serif";
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.470588235em;
+    color: #ffffff;
+    padding: 11px 20px 11px 47px;
+    height: 47px;
+    width: 189px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background-color: #0A6BE5;
+    color: #ffffff;
+    position: relative;
+  }
+  .account-data__login:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    width: 17px;
+    height: 18px;
+    background-image: url("../img/fingerprint_white_login.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
 .button {
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -824,6 +953,11 @@ th {
 .rates__buy {
   background-color: #ffffff;
   color: #1D1E20;
+}
+
+.main-footer * {
+  outline: 1px dashed lime;
+  outline-offset: -1px;
 }
 
 .main-footer {

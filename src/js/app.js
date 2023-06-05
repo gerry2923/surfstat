@@ -86,6 +86,8 @@ const appInit = () => {
   setCopyLinkBtnEvt();
   // 
   // загрузка header и footer
+
+
 };
 
 

@@ -27,3 +27,19 @@
   padding: 12px 0px 0px 0px;
   margin: 0px;
 }
+
+
+@media (min-width: $tablet-width) {
+  .account-data__pic,
+  .account-data__email {
+    display: none;
+  }
+
+  .account-data__login {
+    @include white-btn-tablet;
+
+    &:hover {
+      @include blue-btn-tablet;
+    }
+  }
+}

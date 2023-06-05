@@ -395,3 +395,64 @@
 		color: $text-bgd-2;
 	}
 }
+
+
+@mixin blue-btn-tablet {
+	@include text-J-400-17-25;
+	padding: 11px 20px 11px 47px;
+	height: 47px;
+	width: 189px;
+	border-radius: 100px;
+	border: none;
+	outline: none;
+	background-color: $text-bgd-1;
+	color: $text-bgd-2;
+	position: relative;
+
+	&:before {
+		content:"";
+		display: block;
+		position: absolute;
+		top: 14px;
+		left: 20px;
+
+		width: 17px;
+		height: 18px;
+
+		background-image: url('../img/fingerprint_white_login.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+	// @include blue-btn-interaction;
+}
+
+
+@mixin white-btn-tablet {
+	@include text-J-400-17-25;
+	color: $main-headings;
+	padding: 11px 20px 11px 47px;
+
+	background-color: transparent;
+	border-radius: 100px;
+	border: 1px solid $main-headings;
+	position: relative;
+
+
+	&::before {
+		content: "";
+		width: 17px; 
+		height: 18px;
+		background-image: url('../img/finger-print-black.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		position: absolute;
+		top: 14px;
+		left: 20px;
+	}
+
+	&:hover {
+
+	}
+}

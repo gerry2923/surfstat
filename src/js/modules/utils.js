@@ -7,6 +7,19 @@ export const addRemoveClass = (element, className) => {
 
 };
 
+export const checkRemoveClass = (element, className) => {
+  if( element.classList.contains(className) ) {
+    element.classList.remove(className);
+  }
+};
+
+export const checkAddClass = (element, className) => {
+  if( !element.classList.contains(className) ) {
+    element.classList.add(className);
+  }
+};
+
+
 export const getCoords = (elem) => {
   // (1)
   var box = elem.getBoundingClientRect();

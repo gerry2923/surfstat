@@ -119,14 +119,14 @@
   line-height: 1.466666667em;
   color: $main-headings;
 }
-
+// -------------------- T A B L E T ----------------------------
 
 @media (min-width: $tablet-width) {
   .main-header__nav.container {
     padding: 0 57px;
   }
 
-  .main-header__nav {
+  .main-header .main-header__nav {
     display: flex;
     flex-direction: row;
     padding-top: 17px;
@@ -135,13 +135,24 @@
     box-shadow: 0px 5px 13px 4px rgba($color:black, $alpha: 0.01);
   }
 
+
+  .main-header__top-menu {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 3px;
+    padding-right: 66px;
+    padding-top: 11px;
+  }
+
   .site-nav_show {
     display: none;
   }
 
   .main-header__login {
+    display: none;
   }
   .main-header__menu {
+    flex-grow: 1;
     display: flex;
     padding: 0px 0px;
     border-radius: 0px;
@@ -151,20 +162,31 @@
   .main-header__account-data {
     order: 0;
     margin-bottom: 0px;
+    margin-left: auto;
   }
+
   .main-header__menu-list {
     flex-direction: row;
     order: -1;
     padding-bottom: 0px;
+    // flex-grow: 1;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .main-header__menu-item {
-    padding: 0px;
+    // padding: 10px 15px;
     border: none;
+    padding: 0px;
+    // border-radius: 100px;
+    @include lineout(orange);
   }
 
   .main-header__menu-link {
+    @include lineout(Orchid);
     @include text-J-400-19-27;
+    display: block;
     padding: 10px 15px;
     border: none;
     border-radius: 100px;
@@ -184,7 +206,7 @@
 
 
 
-
+// -------------------- D E S K T O P  ----------------------------
 
 
 @media (min-width: $desktop-width) {

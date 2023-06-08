@@ -5,6 +5,7 @@ import { setMainMenuEvt, setUnregSearchBtnEvt} from "./modules/main-menu.js";
 import { setShowLinkBtnEvt, setCopyLinkBtnEvt } from "./modules/footer.js";
 import { initTips } from "./modules/tips.js"; 
 import { initFilters } from "./modules/filters.js";
+import { initTimeIntervalSelection } from "./modules/time-interval-order.js";
 import { initAcoountPay } from "./modules/account.js";
 import { initAboutService } from "./modules/about-service.js";
 import { initPolicy } from "./modules/processing-policy.js";
@@ -23,7 +24,8 @@ const loadMain = () => {
 
   switch(mainName) {
     case 'main-layout': console.log(mainName);
-      setUnregSearchBtnEvt();  
+      setUnregSearchBtnEvt();
+      initTimeIntervalSelection();
     // modals
       initTips();
       initFilters();

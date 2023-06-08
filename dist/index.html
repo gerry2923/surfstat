@@ -70,7 +70,7 @@
               <li class="promo__item">Похожие товары</li>
               <li class="promo__item">Взрывные тренды</li>
             </ul>
-            <p class="promo__subtitle">Первым достается все, остальным остальное</p>
+            <p class="promo__subtitle">Первым достается все, остальным остальное!</p>
             <a href="registration-trial.html" class="promo__button">Попробовать бесплатно</a>
           </div>
         </div>
@@ -81,7 +81,10 @@
           <h2 class="visually-hidden">Аналитическая таблица поисковых запросов</h2>
   
           <div class="requests-table__header t-header">
+
             <p class="t-header__text">Введите интересующий вас запрос и отслеживайте растущие тренды с низкой конкуренцией.</p>
+
+            <p class="t-header__text">Введите интересующий вас запрос и получите подробную статистику по актуальным трендам.</p>
   
             <div class="t-header__search">
               <input type="text" class="t-header__input" id="requestInput" placeholder="Введите запрос">
@@ -98,10 +101,26 @@
               <input type="radio" name="requests-filter" id="rq-similar">
               <label class="button t-header__requests-filters_similar" for="rq-similar">Похожие запросы</label>
             </div>
+
             <div class="t-header__results-filter">
               <button type="button" class="t-header__results-filter_ditails button button_small">Подробнее</button> 
+
               <button class="t-header__results-filter_filter button button_small" type="button" id="filters">Фильтры</button>
-              <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button>
+              
+
+
+              <div class="t-header__results-filter_time time-interval__container">
+                <button type="button" class="time-interval__btn" data-order="asc"></button>
+                <select class="time-interval" name="time-interval" id="time-interval">
+                  <option value="week">За неделю</option>
+                  <option value="month" >За месяц</option>
+                  <option value="quarter">За квартал</option>
+                  <option value="year">За год </option>
+                </select>
+              </div>
+
+<!-- 
+              <button class="t-header__results-filter_time button button_small" type="button">За 1 неделю</button> -->
             </div>
   
           </div>
@@ -309,7 +328,7 @@
     </tr>
 
     <tr class="table__row">
-      <td class="table__cell request" rowspan="2">беендер погружной</td>
+      <td class="table__cell request" rowspan="2">блендер погружной</td>
       <td class="table__cell demand">169982</td>
       <td class="table__cell tb-pc-show trend table__cell_negative" rowspan="2">-3,63%</td>
       <td class="table__cell supply">567</td>
@@ -378,9 +397,30 @@
     </div>
 
     <div class="main-footer__nav">
+
       <button class="main-footer__btn main-footer__btn_prev" type="button">Назад</button>
       <button class="main-footer__btn main-footer__btn_share" type="button">Поделиться</button>
       <button class="main-footer__btn main-footer__btn_next">Вперед</button>  
+
+      <section class="main-footer__nav-info container">
+        <div class="main-footer__cell">
+          <p class="main-footer__text_copyright main-footer__text">&copy; Surfstat 2023</p>
+          <p class="main-footer__text">Анализ запросов на Wildberries</p>
+        </div>
+
+        <div class="main-footer__cell">
+          <a href="user-agreement.html" class="main-footer__link">Пользовательское соглашение</a>
+          <a href="processing-policy.html" class="main-footer__link">Политика обработки персональных данных</a>
+          <p class="main-footer__text">Связаться с нами</p>
+        </div>
+        
+        <div class="main-footer__cell">
+          <a href="mailto:info@surfstat.ru" class="main-footer__link">info@surfstat.ru</a>
+          <p class="main-footer__text">ИП Стольников Д.С.</p>
+          <p class="main-footer__text">ИНН 500602717127</p>
+        </div>
+      </section>
+
     </div>
       
   <!-- </div> -->

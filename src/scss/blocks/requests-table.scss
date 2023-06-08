@@ -28,3 +28,13 @@
 // }
 // .btn-share {
 // }
+
+// -------------------- tablet ----------------------
+
+@media (min-width: $tablet-width) {
+  .requests-table__wrapper {
+    background-color: $text-bgd-2;
+    border-radius: 20px;
+    border: 1px solid $main-headings;
+  }
+}

@@ -30,14 +30,20 @@
 
 
 @media (min-width: $tablet-width) {
+  .account-data {
+    min-width: unset;
+  }
+  
   .account-data__pic,
-  .account-data__email {
+  .account-data__email{
     display: none;
   }
 
   .account-data__login {
     @include white-btn-tablet;
-
+    width: 189px;
+    white-space: nowrap;
+    display: block;
     &:hover {
       @include blue-btn-tablet;
     }

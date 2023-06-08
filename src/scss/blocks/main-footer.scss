@@ -137,3 +137,58 @@
 .main-footer__copy-link_hide {
   display: none;
 }
+.main-footer__nav-info {
+  display: none;
+}
+
+// ----------- T A B L E T ----------------------
+
+@media (min-width: $tablet-width) {
+
+  .main-footer {
+    background-color: $strock;
+    padding-bottom: 0px;
+  }
+
+  .main-footer__nav {
+    padding: 40px 0px;
+    margin-bottom: 0px;
+   
+  }
+
+  .main-footer::after {
+    content: none;
+  }
+
+ .main-footer__copy-link,
+ .main-footer__btn {
+  display: none;
+ }
+ 
+ .main-footer__nav-info * {
+  @include text-J-400-17-25;
+  color: $texts;
+ }
+
+ .main-footer__nav-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+ }
+
+ .main-footer__cell:nth-child(1),
+ .main-footer__cell:nth-child(3) {
+  width: 163px;
+ }
+
+ .main-footer__text,
+ .main-footer__link {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+ }
+
+}
+
+// ---------- D E S K T O P ---------------------

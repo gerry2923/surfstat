@@ -106,3 +106,53 @@ z-index: -1;
   color: $text-bgd-2;
 }
 
+// --------------- tablet -------------------------
+
+  @media (min-width: $tablet-width) {
+    .promo__title {
+      @include text-N-400-42-53;
+      font-weight: bold;
+      padding-top: 68px;
+      margin-bottom: 29px;
+    }
+
+    .promo__list {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 594px;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+  
+    .promo__item {
+      @include text-J-400-19-27;
+      height: 47px;
+      padding: 10px 20px 10px 59px;
+      border: none;
+      display: block;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-size: contain;
+        top: 12px;
+        left: 19px;
+      }
+    }
+
+    .promo__item:nth-child(3) {
+      margin-left: auto;
+    }
+
+    .promo__button {
+      @include text-J-400-17-25;
+      padding: 11px 20px;
+      border: none;
+      outline: none;
+    }
+  }
+
+// --------------- desktop -------------------------

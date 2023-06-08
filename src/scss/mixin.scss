@@ -27,6 +27,14 @@
 	text-align: center;
 }
 
+
+@mixin text-N-400-42-53 {
+	font-family: 'NordecoCyrillic', sans-serif;
+	font-weight: 400;
+	font-size: 2.625rem; // 42
+	line-height: 1.25em; // 53.5
+}
+
 @mixin text {
 	font-family: 'Jost', sans-serif;
 	font-weight: 400;
@@ -95,7 +103,7 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   white-space: nowrap;
-  scrollbar-width: none;
+  scrollbar-width: 50px;
 }
 
 @mixin blue-btn {
@@ -452,7 +460,4 @@
 		left: 20px;
 	}
 
-	&:hover {
-
-	}
 }

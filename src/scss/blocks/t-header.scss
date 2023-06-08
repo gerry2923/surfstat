@@ -9,6 +9,11 @@
   margin: 0px 0px 20px 0px;
   line-height: 1.4375em;
 }
+
+.t-header__text:nth-child(2) {
+  display: none;
+}
+
 .t-header__search {
   position: relative;
   margin-bottom: 20px;
@@ -120,4 +125,220 @@
 .t-header__results-filter_time {
   padding-left: 13px;
   padding-right: 18px;
+}
+
+// -------------------- tablet ----------------------
+
+@media (min-width: $tablet-width) {
+  .t-header {
+    background-color: rgba(khaki, 0.1);
+    width: 100%;
+    padding: 47px 45px 27px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 40px 20px;
+
+    & > * {
+      margin-bottom: 0px;
+    }
+  }
+
+
+  .t-header__text {
+    @include text-J-400-19-27;
+
+    order: -1;
+    width: 36.5%;
+
+    &:nth-child(1) {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      display: block;
+    }
+  }
+
+  .t-header__search {
+    width: 58.5%;
+    order: 1;
+
+  }
+
+  .t-header__requests-filters {
+    order: 0;
+    width: 61%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px; 
+    // overflow-x: scroll;
+
+    & > label {
+      @include text-J-400-19-27;
+      display: block;
+      width: 209px;
+      margin-right: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      text-align: center;
+    }
+  }
+
+  .t-header__requests-filters_top {
+    width: 209px;
+    padding-left: 49px;
+    padding-right: 49px;
+  }
+
+  .t-header__results-filter {
+    order: 2;
+    width: 39%;
+
+    & .t-header__results-filter_ditails {
+      display:  none;
+    }
+
+  }
+
+
+  .t-header__input {
+    @include text-J-300-16-23;
+    padding: 12px 64px 12px 20px;
+
+    &:focus-visible,
+    &:hover {
+      outline: 1px solid $main-headings;
+      outline-offset: -1px;
+    }
+  }
+
+  .t-header__input-btn {
+    top: 11.5px;
+    right: 20px;
+  }
+
+  .t-header__results-filter {
+    gap: 20px;
+  }
+
+  .t-header__results-filter .button:not(:first-child) {
+    @include text-J-400-17-25;
+    color: $main-headings;
+    border: none;
+    display: block;
+    position: relative;
+
+    &::before {
+      position: absolute;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: 1px solid $main-headings;
+    }
+
+    &:active {
+      background-color: $text-bgd-1;
+      color: $text-bgd-2;
+      border: none;
+      outline: none;
+    }
+
+  }
+
+  .t-header__results-filter_filter {
+    padding: 11px 27px 11px 40px;
+
+    &::before {
+      top: 15.5px;
+      left: 20px;
+      width: 16px;
+      height: 15px;
+    }
+
+    &:active::before {
+      background-image: url('../img/filter-white.svg');
+    }
+      
+  }
+
+  .t-header__results-filter_time {
+    padding: 11px 20px 11px 46px;
+
+    &:before {
+      top: 20px;
+      left: 20px;
+
+      width: 10px;
+      height: 7px;
+    }
+
+    &:active::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5.5L5 0.5L1 5.5L9 5.5Z' fill='%23FFFFFF' stroke='%23FFFFFF' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+}
+
+
+// select-button style in t-header
+
+.t-header__results-filter_time::before {
+  content: none;
+}
+
+.time-interval__container {
+  padding: 0px;
+  position: relative;
+}
+
+.time-interval__btn {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 11.5px;
+  left: 17px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: url('../img/sort-up-blue.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 10px 7px;
+  border: 1px solid yellow;
+}
+
+.time-interval__btn_desc {
+  background-image: url("../img/sort-down-blue.svg");
+}
+
+.time-interval__btn_active-desc {
+  background-image: url('../img/sort-down-gray.svg');
+}
+
+
+.time-interval__btn_active-asc {
+  background-image: url('../img/sort-up-gray.svg');
+}
+
+.time-interval {
+  @include text-J-400-15-22;
+  appearance: none;
+  color: $main-headings;
+  padding: 4px 17px 4px 32px;
+  border: 1px solid $main-headings;
+  outline: none;
+  background-color: $hover;
+  border-radius: 20px;
+  text-align: center;
+
+  &:active,
+  &:focus-visible {
+    background-color: $text-bgd-1;
+    color: $text-bgd-2;
+  }
 }

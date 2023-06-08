@@ -210,3 +210,10 @@ th {
   }
 }
 
+  // -------------------- tablet ----------------------
+
+  @media (min-width: $tablet-width) {
+    .table__body .table__row:nth-child(n+19) {
+      display: table-row;
+    }
+  }

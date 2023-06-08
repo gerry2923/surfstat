@@ -16,21 +16,22 @@ html {
 
 body {
   min-width: 320px;
+  max-width: $desktop-width;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 auto;
   
   font-size: 16px;
   color: $main-headings;
-  background-color: $bg; //ivory; 
+  background-color: ivory; //$bg; //ivory; 
 
   position: relative;
   
-  @media (min-width: $tablet-width) {
-    font-size: 1.143em;
-    line-height: 1.2em;
-  }
+  // @media (min-width: $tablet-width) {
+  //   font-size: 1.143em;
+  //   line-height: 1.2em;
+  // }
 }
 
 .wrapper {
